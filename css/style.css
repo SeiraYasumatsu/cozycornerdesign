@@ -17,3 +17,29 @@ body{
   line-height: 1.5;
   margin: 0;
 }
+
+
+@media (min-width: 500px) {}
+
+
+@media screen and (min-width: 768px) { /*----TABLET-----*/
+}
+
+@media screen and (min-width: 991px){/*----Desktop---*/
+
+.logo{
+  padding-left: 5rem;
+}
+
+.logo img{ /*desktop logo size*/
+ width: 40%;
+}
+
+.page a{
+  padding-right: 5rem;
+}
+
+.title p{
+  font-size: 2rem;
+  width:140vh;
+}
