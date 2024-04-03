@@ -18,6 +18,129 @@ body{
   margin: 0;
 }
 
+.nav { /*container for the top nav*/
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.logo{
+  padding: 2rem 0.5rem 2rem 2rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex:1
+}
+
+.logo img{
+width: 60%;
+}
+
+.header .menu{/*flex container*/
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  list-style:none;
+  justify-content: center;
+}
+
+#btnScrollToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #A9A9A9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-default {
+  background-color: #0B6254;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-right: 2rem;
+}
+
+/* Hover effect */
+.btn-default:hover {
+    background-color: #ffffff;
+    color: #0B6254;
+    border: 2px solid #0B6254;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  flex-wrap: wrap; /* Wrap items to a new line if needed */
+  background-image: url('images/heroBG.png'); /* Replace 'path/to/your/image.jpg' with the path to your background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  background-position: center; /* Center the background image */
+}
+
+.content {
+  flex: 1; /* Occupy remaining space */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.statement h1{
+  color: black;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.2;
+  position: relative;
+}
+
+.statement h2{
+  color: black;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.2;
+  position: relative;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.work1 {
+  flex: 1; /* Occupy remaining space */
+  /*padding: 20px; /* Adjust padding as needed */
+}
+
+.statement {
+  /*margin-bottom: 40px; /* Add margin between text and button */
+  padding-left: 10rem;
+  padding-top: 10rem;
+}
+
+.work1 img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  width: 70%;
+}
+
+
 
 @media (min-width: 500px) {}
 
@@ -27,12 +150,13 @@ body{
 
 @media screen and (min-width: 991px){/*----Desktop---*/
 
+
 .logo{
   padding-left: 5rem;
 }
 
 .logo img{ /*desktop logo size*/
- width: 40%;
+ width: 15%;
 }
 
 .page a{
@@ -42,4 +166,6 @@ body{
 .title p{
   font-size: 2rem;
   width:140vh;
+}
+
 }
