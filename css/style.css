@@ -172,6 +172,58 @@ width: 60%;
   width: 60%;
 }
 
+/*----How we Work Together---*/
+.how-we-work {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 120px;
+  margin-top: 5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.work-step {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0B6254;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.step-content {
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+  color: #073E35;
+}
+
+.step-description {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.2;
+
+}
+
+
 
 @media (min-width: 500px) {}
 
