@@ -281,6 +281,73 @@ width: 60%;
   color: #073E35;
 }
 
+/*---recentWork---*/
+.recent-work-cover{
+    background-color: #F5F5F5;
+}
+
+.recent-work {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+.recent-work .section-title {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.work-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.work-image {
+  flex: 0 0 50%; /* Take up 50% of the container width */
+  margin-right: 20px; /* Add spacing between image and testimonial */
+}
+
+.work-image img {
+  width: 100%; /* Ensure the image fills its container */
+  display: block;
+}
+
+.website-link {
+  display: block;
+  margin-top: 5px; /* Add spacing between image and link */
+  color: #828282;
+}
+
+.testimonial {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.testimonial img {
+  display: block;
+  width: 60px; /* Adjust size of the quotation mark */
+  margin-bottom: 10px; /* Add spacing between quotation mark and text */
+}
+
+.testimonial-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-style: italic; /* Italicize the testimonial text */
+  margin-bottom: 10px; /* Add spacing between text and author */
+}
+
+.testimonial-author {
+  font-weight: bold; /* Make author name bold */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+}
+
 
 @media (min-width: 500px) {}
 
