@@ -220,9 +220,66 @@ width: 60%;
   font-size: 18px;
   font-weight: normal;
   letter-spacing: 0.2;
-
 }
 
+/*---What we offer---*/
+.services {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 20px;
+}
+
+.services .section-title {
+  text-align: left;
+  margin-bottom: 22px;
+  margin-top: 5rem;
+}
+
+.service-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service {
+  width: calc(50% - 20px); /* Each service takes up one-third of the space with 20px spacing between */
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #0B6254; /* Border around each service */
+  border-radius: 5px;
+  text-align: left;
+}
+
+.service-icon img {
+  max-width: 60px; /* Adjust size of the icon */
+  margin-bottom: 10px; /* Spacing between icon and title */
+}
+
+.service-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #333333;
+  padding-bottom: 2rem;
+}
+
+.call-to-action {
+  width: calc(50% - 20px);
+  padding: 20px;
+  text-align: left;
+}
+
+.call-to-action p {
+  margin-bottom: 3rem; /* Adjust spacing between paragraph and button */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.2;
+  color: #073E35;
+}
 
 
 @media (min-width: 500px) {}
