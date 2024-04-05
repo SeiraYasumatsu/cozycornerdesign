@@ -348,6 +348,53 @@ width: 60%;
   font-size: 14px;
 }
 
+/*---Footer---*/
+.footer {
+  background-color: #ffffff; /* Footer background color */
+  color: #333333; /* Text color */
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 100px; /* Adjust logo size as needed */
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.footer-contact .email-link {
+  color: #333333; /* Link color */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.footer-contact .email-link i {
+  margin-right: 10px; /* Adjust icon spacing */
+}
+
+/* Copyright styling */
+.footer .copyright {
+  margin-top: 20px; /* Adjust spacing between content and copyright */
+  text-align: center;
+}
+
+.footer .copyright h4 {
+  font-size: 14px;
+}
+
 
 @media (min-width: 500px) {}
 
