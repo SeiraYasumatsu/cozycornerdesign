@@ -92,7 +92,7 @@ width: 60%;
 
 .hero {
   display: flex;
-  flex-direction: row; /* Align items horizontally */
+  flex-direction: column; /* Align items horizontally */
   flex-wrap: wrap; /* Wrap items to a new line if needed */
   background-image: linear-gradient(to top, #FFEDD7, #ffffff);
   background-size: cover; /* Cover the entire element with the background image */
@@ -108,7 +108,7 @@ width: 60%;
 .statement h1{
   color: black;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 45px;
+  font-size: 27px;
   font-weight: 700;
   letter-spacing: 0.2;
   position: relative;
@@ -117,41 +117,39 @@ width: 60%;
 .statement h2{
   color: black;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   letter-spacing: 0.2;
   position: relative;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
 }
 
 .work1 {
   flex: 1; /* Occupy remaining space */
+  padding-left: 4rem;
+  padding-top: 3rem;
   /*padding: 20px; /* Adjust padding as needed */
 }
 
 .statement {
   /*margin-bottom: 40px; /* Add margin between text and button */
-  padding-left: 10rem;
-  padding-top: 10rem;
+  padding-left: 2rem;
 }
 
 .work1 img {
   max-width: 100%; /* Ensure image does not exceed container width */
-  width: 70%;
 }
 
 .about{
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-  /*gap: 30px;*/
-  margin-top: 5rem;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
 }
 
 .about .content{
   /*padding:20px;*/
-  padding-left: 20rem;
-  padding-right: 5rem;
+ text-align: left;
 }
 
 .about p{
@@ -169,27 +167,30 @@ width: 60%;
 
 .about .image img{
   max-width: 100%;
-  width: 60%;
+  width: 70%;
+  padding-left: 4rem
 }
 
 /*----How we Work Together---*/
 .how-we-work {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 120px;
   margin-top: 5rem;
   background-size: cover;
   background-position: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .section-title {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 22px;
 }
 
 .work-step {
   display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
   align-items: center;
 }
@@ -204,14 +205,15 @@ width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin-bottom:5px;
 }
 
 .step-content {
   flex: 1;
-  padding: 20px;
   border-radius: 5px;
   color: #073E35;
+  padding: 5px 20px;
+  margin-bottom: 2rem;
 }
 
 .step-description {
@@ -399,10 +401,106 @@ width: 60%;
 
 
 @media screen and (min-width: 768px) { /*----TABLET-----*/
+
+  .hero {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    flex-wrap: wrap; /* Wrap items to a new line if needed */
+  }
+
+  .statement h1{
+    font-size: 45px;
+  }
+
+  .statement h2{
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0.2;
+    position: relative;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .work1 img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    width: 70%;
+  }
+
+  .work1 {
+    flex: 1; /* Occupy remaining space */
+    padding-left: -4rem;
+    padding-top: -3rem;
+    /*padding: 20px; /* Adjust padding as needed */
+  }
+
+  .about{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    /*gap: 30px;*/
+    margin-top: 5rem;
+  }
+
+  .about .content{
+    /*padding:20px;*/
+    padding-left: 20rem;
+    padding-right: 5rem;
+  }
+
+  .about p{
+    font-size: 18px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    max-width: 680px;
+    line-height: 1.7;
+  }
+
+  .about .image img{
+    max-width: 100%;
+    width: 60%;
+  }
+
+  /*----How we Work Together---*/
+  .how-we-work {
+    padding: 40px 120px;
+    margin-top: 5rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+
+  .work-step {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0B6254;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .step-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .step-description {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 991px){/*----Desktop---*/
-
 
 .logo{
   padding-left: 5rem;
@@ -421,4 +519,9 @@ width: 60%;
   width:140vh;
 }
 
+.statement {
+  /*margin-bottom: 40px; /* Add margin between text and button */
+  padding-left: 10rem;
+  padding-top: 10rem;
+}
 }
