@@ -171,7 +171,7 @@ width: 60%;
   padding-left: 4rem
 }
 
-/*----How we Work Together---*/
+/*----How we Work Together-phone---*/
 .how-we-work {
   max-width: 900px;
   margin: 0 auto;
@@ -224,7 +224,7 @@ width: 60%;
   letter-spacing: 0.2;
 }
 
-/*---What we offer---*/
+/*---What we offer-phone---*/
 .services {
  max-width: 900px;
  margin: 0 auto;
@@ -234,17 +234,17 @@ width: 60%;
 .services .section-title {
   text-align: left;
   margin-bottom: 22px;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .service-container{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 3rem;
 }
 
 .service {
-  width: calc(50% - 20px); /* Each service takes up one-third of the space with 20px spacing between */
+  width: 100%;
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #0B6254; /* Border around each service */
@@ -269,21 +269,21 @@ width: 60%;
 }
 
 .call-to-action {
-  width: calc(50% - 20px);
-  padding: 20px;
+  width: 100%;
+  padding: 10px;
   text-align: left;
 }
 
 .call-to-action p {
   margin-bottom: 3rem; /* Adjust spacing between paragraph and button */
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   letter-spacing: 0.2;
   color: #073E35;
 }
 
-/*---recentWork---*/
+/*---recentWork-phone---*/
 .recent-work-cover{
     background-color: #F5F5F5;
 }
@@ -304,12 +304,7 @@ width: 60%;
 
 .work-item {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
-}
-
-.work-image {
-  flex: 0 0 50%; /* Take up 50% of the container width */
-  margin-right: 20px; /* Add spacing between image and testimonial */
+  flex-direction: column;
 }
 
 .work-image img {
@@ -321,6 +316,7 @@ width: 60%;
   display: block;
   margin-top: 5px; /* Add spacing between image and link */
   color: #828282;
+  font-size: 12px;
 }
 
 .testimonial {
@@ -328,7 +324,8 @@ width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 6rem;
+  margin-top: 3rem;
+  padding: 10px;
 }
 
 .testimonial img {
@@ -340,6 +337,7 @@ width: 60%;
 .testimonial-text {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
+  letter-spacing: 0.5px; /*---added for mobile styling---*/
   font-style: italic; /* Italicize the testimonial text */
   margin-bottom: 10px; /* Add spacing between text and author */
 }
@@ -355,20 +353,19 @@ width: 60%;
   background-color: #ffffff; /* Footer background color */
   color: #333333; /* Text color */
   padding: 20px;
-  margin-left: 20px;
-  margin-bottom: 2rem;
+  margin: 0 20px 2rem;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   padding-bottom: 10px;
-  padding-right: 100px;
 }
 
 .footer-logo img {
-  width: 15%; /* Adjust logo size as needed */
+  width: 50%; /* Adjust logo size as needed */
+  margin-bottom: 20px;
 }
 
 .footer-contact .email-link {
@@ -386,18 +383,49 @@ width: 60%;
 
 /* Copyright styling */
 .footer .copyright {
-  text-align: start;
+  text-align: left;
+  margin-top: 5px;
 }
 
 .footer .copyright h4 {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 500;
-
 }
 
 
-@media (min-width: 500px) {}
+@media (min-width: 500px) {
+  .statement h1{
+    font-size: 32px;
+  }
+
+  .about {
+    padding: 20px;
+  }
+
+  .about p{
+    margin-top: 0rem;
+  }
+
+  .work-step{
+    padding: 20px;
+    margin-bottom: 0rem;
+  }
+
+  .services{
+    padding: 30px;
+  }
+
+.recent-work {
+  padding:30px;
+}
+
+.footer-content {
+  justify-content: left;
+  align-item: left;
+}
+
+}
 
 
 @media screen and (min-width: 768px) { /*----TABLET-----*/
@@ -408,8 +436,11 @@ width: 60%;
     flex-wrap: wrap; /* Wrap items to a new line if needed */
   }
 
+.logo img{
+  width: 25%;
+ }
   .statement h1{
-    font-size: 45px;
+    font-size: 35px;
   }
 
   .statement h2{
@@ -418,12 +449,12 @@ width: 60%;
     letter-spacing: 0.2;
     position: relative;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .work1 img {
     max-width: 100%; /* Ensure image does not exceed container width */
-    width: 70%;
+    width: 90%;
   }
 
   .work1 {
@@ -433,30 +464,21 @@ width: 60%;
     /*padding: 20px; /* Adjust padding as needed */
   }
 
-  .about{
-    display:grid;
-    grid-template-columns: 2fr 1fr;
-    /*gap: 30px;*/
-    margin-top: 5rem;
-  }
-
   .about .content{
     /*padding:20px;*/
-    padding-left: 20rem;
-    padding-right: 5rem;
+    padding: 20px 5rem;
   }
 
   .about p{
     font-size: 18px;
     margin-bottom: 2rem;
-    margin-top: 2rem;
     max-width: 680px;
     line-height: 1.7;
   }
 
   .about .image img{
     max-width: 100%;
-    width: 60%;
+    width: 40%;
   }
 
   /*----How we Work Together---*/
@@ -473,7 +495,7 @@ width: 60%;
 
   .work-step {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     align-items: center;
   }
 
@@ -493,11 +515,97 @@ width: 60%;
   .step-content {
     flex: 1;
     padding: 20px;
+    padding-bottom: 0;
   }
 
   .step-description {
     font-size: 18px;
   }
+
+  /*---What we offer-Tablet&up---*/
+
+  .services .section-title {
+    margin-top: 5rem;
+  }
+
+  .service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: unset;
+  }
+
+  .service {
+    width: calc(50% - 20px); /* Each service takes up one-third of the space with 20px spacing between */
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .service-icon img {
+    max-width: 60px; /* Adjust size of the icon */
+    margin-bottom: 10px; /* Spacing between icon and title */
+  }
+
+  .call-to-action {
+    width: calc(50% - 20px);
+    padding: 20px;
+  }
+
+  .call-to-action p {
+    font-size: 18px;
+  }
+
+/*---recentWork-tablet---*/
+.work-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  flex-direction: row;
+}
+
+.work-image {
+  flex: 0 0 50%; /* Take up 50% of the container width */
+  margin-right: 20px; /* Add spacing between image and testimonial */
+}
+
+.testimonial {
+  margin-top: 3rem;
+  padding: 0px; /*---padding added to mobile---*/
+}
+
+/*---Footer--Tablet---*/
+.footer {
+  padding: 20px;
+  margin-left: 20px;
+  margin-bottom: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  flex-direction: row;
+  /*padding-right: 100px;*/
+}
+
+.footer-logo img {
+  width: 15%; /* Adjust logo size as needed */
+}
+
+.footer-contact .email-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer .copyright {
+  text-align: start;
+}
+
+.footer .copyright h4 {
+  font-size: 12px;
+}
+
+
 }
 
 @media screen and (min-width: 991px){/*----Desktop---*/
@@ -524,4 +632,48 @@ width: 60%;
   padding-left: 10rem;
   padding-top: 10rem;
 }
+
+.statement h1{
+  font-size: 45px;
+}
+
+.about{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  /*gap: 30px;*/
+  margin-top: 5rem;
+}
+
+.about .content{
+  /*padding:20px;*/
+  padding-left: 20rem;
+  padding-right: 5rem;
+}
+
+.about p{
+  font-size: 18px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.about .image img{
+  max-width: 100%;
+  width: 60%;
+}
+
+.step-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.work-step {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+
+
 }
