@@ -1,3 +1,3 @@
-offering website and logo services through a collaborative approach.
+offering website and logo design services through a collaborative approach.
 
 Any inquires, please reach out to: cozycornerdesign.ca@gmail.com
