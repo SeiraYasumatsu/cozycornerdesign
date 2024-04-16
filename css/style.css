@@ -395,6 +395,10 @@ width: 60%;
 
 
 @media (min-width: 500px) {
+  .logo img{
+  width: 30%;
+  }
+
   .statement h1{
     font-size: 32px;
   }
@@ -423,6 +427,10 @@ width: 60%;
 .footer-content {
   justify-content: left;
   align-item: left;
+}
+
+.footer-logo img {
+  width: 20%; /* Adjust logo size as needed */
 }
 
 }
@@ -672,6 +680,10 @@ width: 60%;
   display: flex;
   /*margin-bottom: 20px;*/
   align-items: center;
+}
+
+.footer-logo img {
+  width: 15%; /* Adjust logo size as needed */
 }
 
 
