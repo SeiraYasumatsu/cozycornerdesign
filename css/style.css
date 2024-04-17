@@ -282,6 +282,115 @@ width: 60%;
   letter-spacing: 0.2;
   color: #073E35;
 }
+/*---Website Clinique---*/
+.website-clinique-cover{
+  background-color: #073E35;
+}
+
+.website-clinique {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
+}
+
+.left-content {
+  flex: 1;
+  text-align: center;
+  margin-bottom:2rem;
+}
+
+.left-content img {
+  width: 60%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.book-button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.2;
+  background-color: #073E35;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.book-button:hover {
+    background-color: #ffffff;
+    color: #073E35;
+    border: 2px solid #073E35;
+}
+
+.right-content {
+  flex: 2;
+  padding: 20px;
+}
+
+.right-content h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 27px;
+  font-weight: normal;
+  letter-spacing: 0.2;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.right-content p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  /*font-weight: 600;*/
+  letter-spacing: 0.2px;
+  color: #cbd5d0;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+
+.right-content h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding-bottom: 5px;
+}
+
+.right-content ul {
+  list-style: inside;
+  /*padding-left: 20px;*/
+}
+
+.right-content li {
+  margin-bottom: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #cbd5d0;
+  line-height: 1.5;
+}
+
+.right-content h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: #FFEED9;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+  padding-top: 2rem;
+}
+
 
 /*---recentWork-phone---*/
 .recent-work-cover{
@@ -562,6 +671,38 @@ width: 60%;
   .call-to-action p {
     font-size: 18px;
   }
+
+/*---Website Clinique---*/
+.website-clinique {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding:20px;
+}
+
+.left-content {
+  flex: 1;
+  text-align: center;
+}
+
+.left-content img {
+  width: 60%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.right-content li {
+  margin-bottom: 5px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #cbd5d0;
+  line-height: 1.5;
+}
 
 /*---recentWork-tablet---*/
 .work-item {
