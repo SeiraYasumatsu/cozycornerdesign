@@ -113,8 +113,10 @@ width: 60%;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 27px;
   font-weight: 700;
-  letter-spacing: 0.2;
+  letter-spacing: 0.2px;
   position: relative;
+  line-height: 1.4;
+  padding-bottom: 5px;
 }
 
 .statement h2{
@@ -511,6 +513,9 @@ width: 60%;
   width: 30%;
   }
 
+ .statement{
+  padding: 20px;
+ }
   .statement h1{
     font-size: 32px;
   }
@@ -559,8 +564,13 @@ width: 60%;
 .logo img{
   width: 25%;
  }
+
+ .statement{
+    padding: 20px 0 0 20px;
+ }
+
   .statement h1{
-    font-size: 35px;
+    font-size: 32px;
   }
 
   .statement h2{
@@ -790,7 +800,7 @@ width: 60%;
 }
 
 .statement h1{
-  font-size: 45px;
+  font-size: 42px;
 }
 
 .about{
