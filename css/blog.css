@@ -1,0 +1,281 @@
+*, *::before, *::after {
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  color: #333333;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.nav { /*container for the top nav*/
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.logo{
+  padding: 2rem 0.5rem 2rem 2rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex:1
+}
+
+.logo img{
+width: 60%;
+}
+
+.header .menu{/*flex container*/
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  list-style:none;
+  justify-content: center;
+}
+
+#btnScrollToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #A9A9A9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-default {
+  background-color: #0B6254;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-right: 2rem;
+}
+
+/* Hover effect */
+.btn-default:hover {
+    background-color: #ffffff;
+    color: #0B6254;
+    border: 2px solid #0B6254;
+}
+
+/*blog design*/
+.heroBlog{
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin:2rem;
+}
+
+/*blog card design-phone*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.card {
+  width: 80%; /* Adjust for responsiveness */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.content {
+  padding-top: 10px;
+}
+
+.tag {
+  background-color: none;
+  border-color: #7EB29A;
+  color: #7EB29A;
+  padding: 5px 10px;
+  border: 2px solid;
+  border-radius: 2px;
+}
+
+.blog-title {
+  margin-top: 10px;
+}
+
+.blog-text {
+  margin-top: 10px;
+}
+
+.read-more {
+  margin-top: 10px;
+  text-decoration: underline;
+  color: #073E35;
+  display: inline-block;
+}
+
+.published-date {
+  margin-top: 10px;
+  display: block;
+}
+
+@media (min-width: 500px) {
+  .logo img{
+  width: 30%;
+  }
+
+  .title {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px; /* Adjust as needed */
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 45%; /* Adjust for responsiveness */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* padding: 20px;*/
+    margin-bottom: 20px;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+
+
+@media screen and (min-width: 768px) { /*----TABLET-----*/
+  .logo img{
+    width: 25%;
+   }
+
+   .title {
+     color: white;
+     font-size: 3rem;
+     text-align: center;
+   }
+
+   .container {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin: 20px; /* Adjust as needed */
+     flex-wrap: wrap;
+   }
+
+   .card {
+     width: 40%; /* Adjust for responsiveness */
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding: 20px;*/
+     margin-bottom: 20px;
+     flex-direction: column;
+     margin: 10px;
+   }
+
+   .card img {
+     width: 100%;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+   }
+
+@media screen and (min-width: 991px){/*----Desktop---*/
+   .hero{
+     max-width: 1400px;
+     margin: 0 auto;
+   }
+
+   .logo{
+     padding-left: 5rem;
+   }
+
+   .logo img{ /*desktop logo size*/
+    width: 15%;
+   }
+
+   .page a{
+     padding-right: 5rem;
+   }
+
+   .container {
+     max-width: 1400px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-top: 20px;
+   }
+
+   .card {
+     width: 25%; /* Adjust for responsiveness */
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* padding: 20px;*/
+     margin-bottom: 20px;
+     flex-direction: column;
+     margin: 20px;
+   }
+
+   .card img {
+     width: 100%;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+   }
