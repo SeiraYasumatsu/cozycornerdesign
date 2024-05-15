@@ -102,14 +102,33 @@ width: 60%;
 
 .tag {
   background-color: none;
-  border-color: #7EB29A;
-  color: #7EB29A;
   padding: 5px 10px;
   border: 2px solid;
   border-radius: 2px;
   margin-right: 20px;
   font-size:14px;
 }
+
+.tag.community{
+  border-color: #7EB29A;
+  color: #7EB29A;
+}
+
+.tag.business{
+  border-color: #8696EA;
+  color: #8696EA;
+}
+
+.tag.how-to{
+  border-color: #F9B35E;
+  color: #F9B35E;
+}
+
+.tag.inspiration{
+  border-color: #B994BC;
+  color: #B994BC;
+}
+
 
 .post-title {
   margin-top: 10px;
@@ -170,11 +189,17 @@ width: 60%;
 .post-content p{
   font-size: 18px;
   padding-bottom:3rem;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
 }
 
 .post-content h2{
   font-size: 20px;
   padding-bottom:5px;
+}
+
+.link{
+  text-decoration: underline;
 }
 
 .share-section {

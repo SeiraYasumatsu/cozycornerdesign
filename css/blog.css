@@ -151,11 +151,31 @@ a:hover {
 
 .tag {
   background-color: none;
-  border-color: #7EB29A;
-  color: #7EB29A;
   padding: 5px 10px;
   border: 2px solid;
   border-radius: 2px;
+  margin-right: 20px;
+  font-size:14px;
+}
+
+.tag.community{
+  border-color: #7EB29A;
+  color: #7EB29A;
+}
+
+.tag.business{
+  border-color: #8696EA;
+  color: #8696EA;
+}
+
+.tag.how-to{
+  border-color: #F9B35E;
+  color: #F9B35E;
+}
+
+.tag.inspiration{
+  border-color: #B994BC;
+  color: #B994BC;
 }
 
 .blog-title {
@@ -165,6 +185,8 @@ a:hover {
 
 .blog-text {
   margin-top: 10px;
+  font-size: 15px;
+  letter-spacing: 0.2px;
 }
 
 .read-more {
@@ -172,6 +194,7 @@ a:hover {
   text-decoration: underline;
   color: #073E35;
   display: inline-block;
+  font-size: 14px;
 }
 
 .published-date {
@@ -201,7 +224,7 @@ a:hover {
 
   .card {
     width: 45%; /* Adjust for responsiveness */
-    height: 500px;
+    height: 600px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -220,8 +243,9 @@ a:hover {
 
    .title {
      color: white;
-     font-size: 3rem;
+     font-size: 2.8rem;
      text-align: center;
+     letter-spacing: 1px;
    }
 
    .container {
@@ -235,7 +259,7 @@ a:hover {
 
    .card {
      width: 40%; /* Adjust for responsiveness */
-     height: 550px;
+     height: 600px;
      background-color: #fff;
      border-radius: 10px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -281,7 +305,7 @@ a:hover {
 
    .card {
      width: 25%; /* Adjust for responsiveness */
-     height: 550px;
+     height: 600px;
      background-color: #fff;
      border-radius: 10px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
