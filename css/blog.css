@@ -224,7 +224,7 @@ a:hover {
 
   .card {
     width: 45%; /* Adjust for responsiveness */
-    height: 600px;
+    height: 650px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -259,7 +259,7 @@ a:hover {
 
    .card {
      width: 40%; /* Adjust for responsiveness */
-     height: 600px;
+     height: 650px;
      background-color: #fff;
      border-radius: 10px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -305,7 +305,7 @@ a:hover {
 
    .card {
      width: 25%; /* Adjust for responsiveness */
-     height: 600px;
+     height: 650px;
      background-color: #fff;
      border-radius: 10px;
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

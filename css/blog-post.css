@@ -202,6 +202,53 @@ width: 60%;
   text-decoration: underline;
 }
 
+.simple-line {
+    border: none;
+    border-top: 1.5px solid #073e35;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.resources{
+  margin-top: 3rem;
+}
+
+
+.resource-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  font-size: 18px;
+  color: #333333;
+  padding-top: 5rem;
+}
+
+
+.resources p{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333333;
+  padding-top:5px;
+}
+
+.resources h2{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #333333;
+  padding-top: 25px;
+}
+
+.resources a{
+    text-decoration: underline;
+    text-decoration-color: #EFBB3F;
+}
+
 .share-section {
   text-align: center;
   margin-top: 20px;
