@@ -198,6 +198,12 @@ width: 60%;
   padding-bottom:5px;
 }
 
+p.list-p {
+  font-size: 18px;
+  padding-bottom:1rem;
+  letter-spacing: 0.2px;
+}
+
 .link{
   text-decoration: underline;
 }
