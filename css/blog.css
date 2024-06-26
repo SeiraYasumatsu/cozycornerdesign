@@ -127,9 +127,10 @@ a:hover {
 /* Filter Button Styles */
 .filter-buttons button {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: #709176; /* Green background */
+  /*background-color: #709176; /* Green background */
+  background-color; EDF5FC;
   border: none; /* Remove borders */
-  color: white; /* White text */
+  color: #333333; /* White text */
   padding: 10px 20px; /* Add some padding */
   text-align: center; /* Center the text */
   text-decoration: none; /* Remove underline */
@@ -144,7 +145,9 @@ a:hover {
 /* Hover Effect */
 .filter-buttons button:hover {
   /*background-color: #073E35; /* Darker green */
-  background-color: #0B6254;
+  /*background-color: #0B6254;*/
+  background-color: #efbb3f;
+  font-weight: bold;
 }
 
 /* Active Button Style */
