@@ -35,8 +35,16 @@
                 <h1 class="title">Explore, Learn, & Elevate your business Journey with us</h1>
           </section>
 
+          <div class="filter-buttons">
+             <button data-filter="all">All</button>
+             <button data-filter="community">Community</button>
+             <button data-filter="business">Business</button>
+             <button data-filter="how-to">How-To</button>
+             <!--<button data-filter="inspiration">Inspiration</button>-->
+           </div>
+
           <div class="container">
-             <div class="card"><a href="blog/Unlocking-Growth-Why-your-Business-needs-a-website.html">
+             <div class="card" data-category="community"><a href="blog/Unlocking-Growth-Why-your-Business-needs-a-website.html">
                <a href="blog/Unlocking-Growth-Why-your-Business-needs-a-website.html">
                <img src="images/blog1TN4.png" alt="Blog 1 Image"></a>
              <div class="content">
@@ -49,7 +57,7 @@
             </a>
             </div>
 
-               <div class="card"><a href="blog/Introducing-Abejitas-Montessori.html">
+               <div class="card" data-category="business"><a href="blog/Introducing-Abejitas-Montessori.html">
                  <a href="blog/Introducing-Abejitas-Montessori.html">
                  <img src="images/blog2TN.png" alt="Blog 2 Image"></a>
                <div class="content">
@@ -62,11 +70,11 @@
               </a>
               </div>
 
-                <div class="card">
+                <div class="card" data-category="community">
                    <img src="images/blog3TN.png" alt="Beginner's guide to SEO Image">
                    <a href="blog/A-Beginners-Guide-to-SEO.html">
                  <div class="content">
-                   <span class="tag how-to">How To</span>
+                   <span class="tag community">Community</span>
                      <h2 class="blog-title"><a href="blog/A-Beginners-Guide-to-SEO.html">Boost Your Online Presence: A Beginner's Guide to SEO</a></h2>
                      <p class="blog-text"><a href="blog/A-Beginners-Guide-to-SEO.html">If you want your website to appear in search results, Search Engine Optimization (SEO) should be a crucial part of your business and marketing strategy.</a></p>
                      <a href="blog/A-Beginners-Guide-to-SEO.html" class="read-more">Continue Reading</a>
@@ -74,19 +82,19 @@
                 </div>
               </div>
 
-              <div class="card">
+              <div class="card" data-category="community">
                  <img src="images/blog4TN.png" alt="Why User Experience Matters TN Image">
                  <a href="blog/Why-User-Experience-Matters.html">
                <div class="content">
                  <span class="tag community">Community</span>
-                   <h2 class="blog-title"><a href="blog/Why-User-Experience-Matters.html"> Why User Experience Matters: The Key to Business Success</a></h2>
+                   <h2 class="blog-title"><a href="blog/Why-User-Experience-Matters.html">Why User Experience Matters: The Key to Business Success</a></h2>
                    <p class="blog-text"><a href="blog/Why-User-Experience-Matters.html">In today's fast-paced digital landscape, where consumers have countless options at their fingertips, delivering an exceptional user experience (UX) has become more crucial than ever.</a></p>
                    <a href="blog/Why-User-Experience-Matters.html" class="read-more">Continue Reading</a>
                 <span class="published-date">May 29, 2024</span>
                </div>
              </div>
 
-              <div class="card">
+              <div class="card" data-category="how-to">
                  <img src="images/blog5TN-2.png" alt="How to create a User-Centered website TN Image">
                  <a href="blog/How-to-Create-a-User-Centered-Website.html">
                <div class="content">
@@ -98,7 +106,7 @@
                </div>
              </div>
 
-             <div class="card">
+             <div class="card" data-category="community">
                 <img src="images/blog6TN.png" alt="Boosting Website Engagement with Interactive Elements TN Image">
                 <a href="blog/Boosting-Website-Engagement-with-InteractiveElements.html">
               <div class="content">
@@ -109,7 +117,7 @@
                <span class="published-date">June 12, 2024</span>
               </div>
             </div>
-            <div class="card">
+            <div class="card" data-category="how-to">
                <img src="images/blog7TN-2.png" alt="How to build a Brand Identity: From Concept to Execution TN Image">
                <a href="blog/Steps-to-create-a-Strong-Brand-Identity.html">
              <div class="content">
@@ -120,7 +128,7 @@
               <span class="published-date">June 19, 2024</span>
              </div>
            </div>
-           <div class="card">
+           <div class="card" data-category="how-to">
               <img src="images/blog8TN.png" alt="How to Design Your Own Website Using Existing Resources: Tips and Strategies for Beginners (Part 1) TN Image">
               <a href="blog/How-to-Design-Your-Own-Website-Tips-and-Strategies-for-Beginners-Part1.html">
             <div class="content">
@@ -153,6 +161,27 @@
                 </div>
                 <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
         </footer>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const filterButtons = document.querySelectorAll('.filter-buttons button');
+          const cards = document.querySelectorAll('.card');
+
+          filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+              const filter = button.getAttribute('data-filter');
+
+              cards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                  card.style.display = 'block';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            });
+          });
+        });
+      </script>
+
            <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
               <script>
