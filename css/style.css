@@ -24,6 +24,7 @@ body{
     z-index: 999;
     display: flex;
     width: 100%;
+  
 }
 
 .header{
@@ -60,6 +61,7 @@ width: 60%;
   margin-left: 3rem;
   list-style:none;
   justify-content: center;
+  font-size:1.3rem;
 }
 
 .page a{ /*flex item*/
@@ -897,4 +899,9 @@ width: 60%;
   }
 
 
+}
+@media (max-width: 768px) {
+  .header .btn-default {
+    display: none;
+  }
 }
