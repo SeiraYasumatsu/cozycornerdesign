@@ -335,13 +335,31 @@
     width: 100%;
     padding: 40px;
     text-align: left;   
+    padding-bottom: 8rem;
   }
+
+
+ .image-container img {
+    width: 100%;
+    max-width: 250px; /* Adjust size */
+    height: auto;
+}
+
 
   .calltoaction p {
     margin-bottom: 3rem; /* Adjust spacing between paragraph and button */
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 18px;
     font-weight: normal;
+    letter-spacing: 0.2;
+    color: #ffffff;
+  }
+
+  .calltoaction h2 {
+    margin-bottom: 3rem; /* Adjust spacing between paragraph and button */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
     letter-spacing: 0.2;
     color: #ffffff;
   }
@@ -469,7 +487,7 @@
   /*---recentWork-phone---*/
   .recent-work-cover{
       background-color: #F5F5F5;
-      padding-bottom: 5rem;
+      padding-bottom: 7rem;
   }
   
   .recent-work {
@@ -538,6 +556,7 @@
     color: #333333; /* Text color */
     padding: 20px;
     margin: 0 20px 2rem;
+    margin-top: 3rem;
   }
   
   .footer-content {
@@ -812,12 +831,17 @@
   .work-item {
     display: flex;
     align-items: flex-start; /* Align items to the top */
-    flex-direction: row;
+    flex-direction: column;
   }
   
   .work-image {
     flex: 0 0 50%; /* Take up 50% of the container width */
     margin-right: 20px; /* Add spacing between image and testimonial */
+  }
+
+  .work-image img {
+    width: 60%;
+    display:block;
   }
   
   .testimonial {
