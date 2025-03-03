@@ -55,15 +55,6 @@ width: 60%;
   justify-content: center;
 }
 
-.header .menu{/*flex container*/
-  display: flex;
-  align-items: center;
-  margin-left: 3rem;
-  list-style:none;
-  justify-content: center;
-  font-size:1.3rem;
-}
-
 .page a{ /*flex item*/
   color: black;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -74,6 +65,7 @@ width: 60%;
   text-align: center;
   align-items: center;
   transition: all 0.5s;
+  font-size: 1.3rem;
 }
 
 .page a:hover{
@@ -552,7 +544,11 @@ width: 60%;
 
 @media (min-width: 500px) {
   .logo img{
-  width: 30%;
+  width: 40%;
+  }
+
+  .header .menu{/*flex container*/
+    font-size: 1.3rem;
   }
 
  .statement{
@@ -604,7 +600,7 @@ width: 60%;
   }
 
 .logo img{
-  width: 25%;
+  width: 35%;
  }
 
  .statement{
@@ -823,7 +819,7 @@ width: 60%;
 }
 
 .logo img{ /*desktop logo size*/
- width: 15%;
+ width: 25%;
 }
 
 .page a{
