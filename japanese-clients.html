@@ -51,14 +51,17 @@
          </div>
 
            <div class="about">
-             <div class="content">
+             <div class="content fade-in">
                 <p>今アメリカのサンフランシスコ在住で、アメリカに来て20年、私は日本語・英語のバイリンガル ウェブデザイナーとして、お客様のグローバルな挑戦をサポートしています。日本と英語圏をつなぐシームレスで円滑なウェブサイトを通して、ブランドやビジネスの可能性を広げるお手伝いができることにやりがいを感じています。<br></br>
                     これまで スタートアップ、非営利団体、また個人のお客様に対し、UX/UIデザインを提供してまいりました。お客様がアプローチしたいターゲット層に響くウェブサイト、さらにお客様にとってもシンプルで使いやすいウェブサイト制作を得意としています。
                      技術的なスキルはもちろん、言葉のニュアンスや文化の違いにも細やかに配慮し、あなたの存在感をグローバルに確立できるようサポートいたします。
                 </p>
              </div>
-             <div class ="image">
+             <div class ="image fade-in">
                 <img src="images/aboutMe.png" alt="Seira Working">
+                <a href="https://www.instagram.com/cozycornerdesignca" class="instagram-link" target="_blank">
+                  <i class="fab fa-instagram"></i> インスタグラムはこちらから
+                </a>
              </div>
           </div>
 
@@ -218,7 +221,7 @@
                 <i class="fas fa-envelope"></i>
                cozycornerdesign.ca@gmail.com
                </a>
-               <span class="instagram-link">
+               <span class="footer-instagram-link">
                 <a href="https://www.instagram.com/cozycornerdesignca/?next=%2F" target="_blank">
                     <i class="fab fa-instagram"></i>
                     cozycornerdesignca
@@ -227,6 +230,23 @@
             </div>
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
+        <!--scroll Detection-->
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+           const fadeElements = document.querySelectorAll(".fade-in");
+         
+           const observer = new IntersectionObserver((entries) => {
+             entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                 entry.target.classList.add("show");
+               }
+             });
+           }, { threshold: 0.2 });
+         
+           fadeElements.forEach((el) => observer.observe(el));
+         });
+       </script>
+
        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
           <script>

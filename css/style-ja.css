@@ -130,6 +130,19 @@
     align-items: center;
   }
   
+/* Initial state: hidden and slightly shifted */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  }
+  
+  /* When in view, make it visible */
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .content {
     flex: 1; /* Occupy remaining space */
     padding: 20px; /* Adjust padding as needed */
@@ -202,6 +215,37 @@
     max-width: 100%;
     width: 70%;
     padding-left: 4rem
+  }
+
+  /* Instagram Link Styling */
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    padding: 10px 20px;
+    background-color: #EFBB3F; /* Instagram's brand color */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .instagram-link i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px;
+  }
+  
+  /* Instagram Link Hover Effect */
+  .instagram-link:hover {
+    background-color: #b38c31; /* Darker Instagram color on hover */
+    transform: scale(1.1); /* Slightly enlarge button */
+  }
+  
+  .instagram-link:active {
+    transform: scale(1); /* Reset scale when clicked */
   }
   
   /*----How we Work Together-phone---*/
@@ -308,6 +352,7 @@
     font-size: 16px;
     color: #333333;
     padding-bottom: 2rem;
+    line-height: 1.8;
   }
   
   .call-to-action {
@@ -323,6 +368,7 @@
     font-weight: normal;
     letter-spacing: 0.2;
     color: #073E35;
+    line-height: 1.8;
   }
 
   .calltoaction{
@@ -503,6 +549,12 @@
     margin-bottom: 20px;
     margin-top: 30px;
   }
+
+  .section-title {
+        text-align: center;
+        font-size: 18px;
+      }
+
   
   .work-item {
     display: flex;
@@ -584,7 +636,7 @@
     margin-right: 10px; /* Adjust icon spacing */
   }
   
-  .instagram-link a {
+  .footer-instagram-link a {
     display: flex;
     align-items: center;
     color: #333333; /* Link color */
@@ -594,7 +646,7 @@
     padding-top: 5px;
   }
   
-  .instagram-link i {
+  .footer-instagram-link i {
     margin-right: 10px; /* Adjust icon spacing */
   }
   
@@ -725,7 +777,7 @@
   
     .section-title {
       text-align: center;
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 22px;
     }
   

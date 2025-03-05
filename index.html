@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   </head>
 
   <body>
@@ -49,11 +50,14 @@
          </div>
 
            <div class="about">
-             <div class="content">
+             <div class="content fade-in">
                 <p>Hello there! I'm Seira, a seasoned designer dedicated to crafting simple yet stunning websites and logos tailored to elevate your brand. With a background in user experience and product design for both non-profits and startups, I bring a wealth of expertise to every project. My passion lies in creating beautiful, easy-to-navigate websites that effortlessly connect your audience with what they seek. I'm eager to collaborate with you, understand your vision, and assist in realizing your business goals through professional and captivating design. Let's transform your online presence together!</p>
              </div>
-             <div class ="image">
+             <div class ="image fade-in">
                 <img src="images/aboutMe.png" alt="Seira Working">
+                <a href="https://www.instagram.com/cozycornerdesignca" class="instagram-link" target="_blank">
+                  <i class="fab fa-instagram"></i> Follow me on Instagram
+                </a>
              </div>
           </div>
 
@@ -167,7 +171,7 @@
                 <i class="fas fa-envelope"></i>
                cozycornerdesign.ca@gmail.com
                </a>
-               <span class="instagram-link">
+               <span class="footer-instagram-link">
                 <a href="https://www.instagram.com/cozycornerdesignca/?next=%2F" target="_blank">
                     <i class="fab fa-instagram"></i>
                     cozycornerdesignca
@@ -176,6 +180,24 @@
             </div>
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
+     <!--scroll Detection-->
+     <script>
+     document.addEventListener("DOMContentLoaded", () => {
+      const fadeElements = document.querySelectorAll(".fade-in");
+    
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, { threshold: 0.2 });
+    
+      fadeElements.forEach((el) => observer.observe(el));
+    });
+  </script>
+    
+    
        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
           <script>

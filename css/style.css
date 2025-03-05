@@ -127,6 +127,19 @@ width: 60%;
   padding: 20px; /* Adjust padding as needed */
 }
 
+/* Initial state: hidden and slightly shifted */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* When in view, make it visible */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .statement h1{
   color: black;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -193,6 +206,37 @@ width: 60%;
   max-width: 100%;
   width: 70%;
   padding-left: 4rem
+}
+
+/* Instagram Link Styling */
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  padding: 10px 20px;
+  background-color: #EFBB3F; /* Instagram's brand color */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.instagram-link i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 20px;
+}
+
+/* Instagram Link Hover Effect */
+.instagram-link:hover {
+  background-color: #b38c31; /* Darker Instagram color on hover */
+  transform: scale(1.1); /* Slightly enlarge button */
+}
+
+.instagram-link:active {
+  transform: scale(1); /* Reset scale when clicked */
 }
 
 /*----How we Work Together-phone---*/
@@ -515,7 +559,7 @@ width: 60%;
   margin-right: 10px; /* Adjust icon spacing */
 }
 
-.instagram-link a {
+.footer-instagram-link a {
   display: flex;
   align-items: center;
   color: #333333; /* Link color */
@@ -525,9 +569,10 @@ width: 60%;
   padding-top: 5px;
 }
 
-.instagram-link i {
+.footer-instagram-link i {
   margin-right: 10px; /* Adjust icon spacing */
 }
+
 
 /* Copyright styling */
 .footer .copyright {
@@ -564,6 +609,13 @@ width: 60%;
 
   .about p{
     margin-top: 0rem;
+  }
+
+  .instagram-link {
+    width: 60%; /* Full-width button */
+    justify-content: center;
+    text-align: center; /* Center text */
+    padding: 12px 0; /* Adjust padding for better mobile spacing */
   }
 
   .work-step{
@@ -648,6 +700,7 @@ width: 60%;
     max-width: 100%;
     width: 40%;
   }
+
 
   /*----How we Work Together---*/
   .how-we-work {
