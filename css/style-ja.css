@@ -967,9 +967,9 @@
   }
   
   .statement h1{
-    font-size: 42px;
+    font-size: 48px;
   }
-  
+
   .about{
     display:grid;
     grid-template-columns: 2fr 1fr;
