@@ -533,21 +533,22 @@
   /*---recentWork-phone---*/
   .recent-work-cover{
       background-color: #F5F5F5;
-      padding-bottom: 7rem;
+      padding-top: 1rem;
   }
   
   .recent-work {
-    max-width: 900px;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
     position: relative;
     padding-bottom: 5rem;
   }
   
   .recent-work .section-title {
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
     margin-top: 30px;
+    color: #333333
   }
 
   .section-title {
@@ -559,18 +560,29 @@
   .work-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-  
+  .work-image {
+    display: flex; /* Set display to flex */
+    flex-direction: column; /* Stack the children (image and link) vertically */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    width: 100%; /* Ensure it takes full width */
+  }
+
   .work-image img {
-    width: 100%; /* Ensure the image fills its container */
+    width: 50%; /* Ensure the image fills its container */
     display: block;
+    margin: 0 auto; /* Center the image horizontally */
   }
   
   .website-link {
     display: block;
-    margin-top: 5px; /* Add spacing between image and link */
+    margin-top: 10px; /* Add spacing between image and link */
     color: #828282;
-    font-size: 12px;
+    font-size: 16px;
+    text-align: center;
   }
   
   .testimonial {
@@ -580,6 +592,9 @@
     justify-content: space-between;
     margin-top: 3rem;
     padding: 10px;
+    max-width: 70%; /* Limits the width to 80% of the container */
+    margin-left: auto;
+    margin-right: auto; /* Centers the content */
   }
   
   .testimonial img {
@@ -594,6 +609,7 @@
     letter-spacing: 0.5px; /*---added for mobile styling---*/
     font-style: italic; /* Italicize the testimonial text */
     margin-bottom: 10px; /* Add spacing between text and author */
+    line-height: 1.8;
   }
   
   .testimonial-author {
@@ -601,6 +617,67 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
   }
+
+  .swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: visible !important;
+  }
+
+  .swiper-pagination {
+    bottom: 10px; /* Ensure it’s placed correctly */
+    display: flex !important; /* Make sure it appears */
+    justify-content: center; /* Center the pagination dots */
+    align-items: center; /* Align dots vertically */
+    width: 100%; /* Ensure pagination spans the full width */
+  }
+
+  /* Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex !important; /* Ensures they are visible */
+  color: #073E35 !important; /* Match your color scheme */
+  width: 20px; /* Smaller arrow size */
+  height: 20px;
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+    left: 10rem; /* Move left arrow towards the left side */
+  }
+
+  /* Right Arrow */
+.swiper-button-next {
+    right: 10rem; /* Move right arrow towards the right side */
+
+  }
+
+
+/* Adjust the arrow icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px; /* Reduce arrow icon size */
+  font-weight: bold;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background-color: #073E35 !important; /* Change dot color */
+  opacity: 0.5; /* Reduce opacity for inactive dots */
+  width: 20px;
+  height: 20px;
+  margin: 0 10px; /* Space out the dots */
+  margin-top: 6rem;
+}
+
+/* Active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #073E35 !important;
+  opacity: 1; /* Make active dot more visible */
+}
+
   
   /*---Footer---*/
   .footer {
@@ -693,6 +770,7 @@
     }
   
   .recent-work {
+    width: 90%;
     padding:30px;
   }
   
@@ -880,20 +958,38 @@
   }
   
   /*---recentWork-tablet---*/
+  .recent-work-cover{
+    padding-bottom: 7rem;
+    padding-top: 1rem;
+}
+
+.recent-work {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.section-title {
+      font-size: 20px;
+    }
+
   .work-item {
     display: flex;
-    align-items: flex-start; /* Align items to the top */
+    align-items: center; /* Align items to the top */
     flex-direction: column;
+    justify-content: center;
   }
   
   .work-image {
-    flex: 0 0 50%; /* Take up 50% of the container width */
-    margin-right: 20px; /* Add spacing between image and testimonial */
+    display: flex; /* Set display to flex to align the content */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 100%; /* Ensure it takes full width */
   }
 
   .work-image img {
     width: 60%;
     display:block;
+    margin: 0 auto; /* Center the image horizontally */
   }
   
   .testimonial {
@@ -998,6 +1094,10 @@
     width: 60%;
   }
   
+  .section-title{
+    font-size: 24px;
+  }
+
   .step-content {
     flex: 1;
     padding: 20px;

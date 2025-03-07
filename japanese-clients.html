@@ -13,6 +13,11 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -158,42 +163,56 @@
 
         <section class="recent-work-cover">
           <div class="recent-work">
-            <h2 class="section-title">Recent Work</h2>
-
-          <div class="work-item">
-            <div class="work-image">
-              <a href="https://www.hisamishirahama.com/" target="_blank" rel="noopener noreferrer"> <img src="images/hisami-review.png" alt="HisamiShirahama Work Image"></a>
-              <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
-            </div>
-            <div class="testimonial">
-               <img src="images/quotationIcon.png" alt="Quotation Mark">
-               <p class="testimonial-text">一番印象的なのは、セイラさんのデザインセンスの素晴らしさと英語の表現力です。
-                私にとってロゴやウェブサイトを作るのは今回が初めてのことでした。ミーティングでは丁寧にヒアリングしてくれ、どんなサイトにしたいかイメージを引き出してくれました。また私がやる事を明確に説明してくれ、目標としていた完成日にもきちんと間に合い、とても助かりました。
-                <br></br>
-                またわたしは文章作家なので、自分の書いた文章（詩や物語）の英語翻訳もお願いしました。翻訳は両言語どちらにも深く精通していること、そして両文化の理解も必須です。聖良さんは私の予想以上に素敵に翻訳してくれ、私自身の英語力・表現力では到底成し得ないことが実現し、感動しています。彼女に英語翻訳してもらえたことで、読者が「日本人」から「世界中の人」へと広がりました。本当にすごいことだと思います。
-                <br></br>
-                聖良さんはいつも穏やかで、素敵なアイデアに溢れています。彼女の持ち前のセンスとアイディアはずば抜けていて、本当に安心してお任せすることができました。もちろん私の意見や感想もしっかり尊重してくれたので、「やっぱりこっちがいい！」など、妥協することなく一緒に作り上げることができました。自分の中で想像していた以上、期待していた以上のウェブサイトが出来上がり、本当に嬉しく思っています。
-                <br></br>
-                ウェブサイトが完成してからも、修正したい部分をお伝えするとすぐに対応してくれ、本当に有り難く思っています。サイトの方にはすでに、作品を読んでの感想が寄せられたり、<span style="background-color:yellow;">インスタグラムのフォロワーが<strong>１週間で80人程</strong>増えたりと反響があります。</span>これからも、末永くお世話になるつもりです！
-                </p>
-               <p class="testimonial-author">- 白浜ひさみ様 | 作家、クリエーター</p>
+            <h2 class="section-title">クライアントからのお言葉</h2>
+        
+            <!-- Swiper container -->
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <!-- Testimonial Slide 1 -->
+                <div class="swiper-slide work-item">
+                  <div class="work-image">
+                    <a href="https://www.hisamishirahama.com/" target="_blank" rel="noopener noreferrer">
+                      <img src="images/hisami-review.png" alt="HisamiShirahama Work Image">
+                    </a>
+                    <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
+                  </div>
+                  <div class="testimonial">
+                    <img src="images/quotationIcon.png" alt="Quotation Mark">
+                    <p class="testimonial-text">一番印象的なのは、セイラさんのデザインセンスの素晴らしさと英語の表現力です。
+                      私にとってロゴやウェブサイトを作るのは今回が初めてのことでした。ミーティングでは丁寧にヒアリングしてくれ、どんなサイトにしたいかイメージを引き出してくれました。また私がやる事を明確に説明してくれ、目標としていた完成日にもきちんと間に合い、とても助かりました。
+                      <br></br>
+                      またわたしは文章作家なので、自分の書いた文章（詩や物語）の英語翻訳もお願いしました。翻訳は両言語どちらにも深く精通していること、そして両文化の理解も必須です。聖良さんは私の予想以上に素敵に翻訳してくれ、私自身の英語力・表現力では到底成し得ないことが実現し、感動しています。彼女に英語翻訳してもらえたことで、読者が「日本人」から「世界中の人」へと広がりました。本当にすごいことだと思います。
+                      <br></br>
+                      聖良さんはいつも穏やかで、素敵なアイデアに溢れています。彼女の持ち前のセンスとアイディアはずば抜けていて、本当に安心してお任せすることができました。もちろん私の意見や感想もしっかり尊重してくれたので、「やっぱりこっちがいい！」など、妥協することなく一緒に作り上げることができました。自分の中で想像していた以上、期待していた以上のウェブサイトが出来上がり、本当に嬉しく思っています。
+                      <br></br>
+                      ウェブサイトが完成してからも、修正したい部分をお伝えするとすぐに対応してくれ、本当に有り難く思っています。サイトの方にはすでに、作品を読んでの感想が寄せられたり、<span style="background-color:yellow;">インスタグラムのフォロワーが<strong>１週間で80人程</strong>増えたりと反響があります。</span>これからも、末永くお世話になるつもりです！</p>
+                    <p class="testimonial-author">- 白浜ひさみ様 | 作家、クリエーター</p>
+                  </div>
+                </div>
+        
+                <!-- Testimonial Slide 2 -->
+                <div class="swiper-slide work-item">
+                  <div class="work-image">
+                    <img src="images/abejitasWork.png" alt="Recent Work Image">
+                    <a href="https://www.abejitasmontessori.com/" class="website-link">Abejitasモンテッソーリ幼稚園</a>
+                  </div>
+                  <div class="testimonial">
+                    <img src="images/quotationIcon.png" alt="Quotation Mark">
+                    <p class="testimonial-text">セイラさんにはまず私のロゴのデザインをしてもらいました。そのロゴも素晴らしかったのと、真剣にビジネスの話を受け止め、相談ができたため、ウェブサイトの制作と開発を手伝ってもらう事にしました。最初から最後まで、忍耐強く丁寧に細かい対応をしてくれました。その結果にとても満足したので、一緒に働いている友人や家族にためらうことなく共有しました。初めての小規模ビジネスオーナーとして、自分の幼稚園の個性を反映し、提供したい高品質なサービスを示すものが欲しかったので、それを形にしてもらって、本当に感謝しています。ロゴとウェブサイトの両方がそれを実現してくれて、これ以上嬉しいことはありません。セイラさんを心から推薦しますし、また彼女と仕事をすることは間違いないでしょう。</p>
+                    <p class="testimonial-author">- Elizabeth, Abejitasモンテッソーリ幼稚園オーナー　|　カリフォルニア州、アメリカ合衆国</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Swiper Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+        
+              <!-- Swiper Pagination -->
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-
-          <!--<div class="work-item">
-            <div class="work-image">
-              <img src="images/abejitasWork.png" alt="Recent Work Image">
-              <a href="https://www.abejitasmontessori.com/" class="website-link">Abejitas Montessori Early Care Center</a>
-            </div>
-            <div class="testimonial">
-               <img src="images/quotationIcon.png" alt="Quotation Mark">
-               <p class="testimonial-text">Seira was patient and diligent in helping design my logo first and then my website. I was so happy with the results, I didn't hesitate to share it with friends and families I was working with. Being a small-first time business owner I wanted something that reflected my personality and show case  a high quality service I wanted to provide; both the logo and website demonstrate that and I couldn't be happier. I highly recommend Seira and would definitely work with her again. </p>
-               <p class="testimonial-author">- Elizabeth, the owner of Abejitas Montessori</p>
-            </div>
-          </div>-->
-    
-        </div>
-       </section>
+        </section>
 
        <section class="calltoaction">
         <div class="calltoaction-content">
@@ -239,6 +258,31 @@
             </div>
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper", {
+          loop: false, // Enables infinite scrolling
+          autoplay: false,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 1,
+            }
+          }
+        });
+      });
+    </script>
+    
         <!--scroll Detection-->
         <script>
           document.addEventListener("DOMContentLoaded", () => {
