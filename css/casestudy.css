@@ -1,0 +1,1049 @@
+*, *::before, *::after {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+  }
+  
+  html{
+    font-size: 10px;
+  }
+  
+  body{
+    color: #333333;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .nav { /*container for the top nav*/
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      width: 100%;
+    
+  }
+  
+  .header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+  }
+  
+  .logo{
+    padding: 2rem 0.5rem 2rem 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex:1
+  }
+  
+  .logo img{
+  width: 60%;
+  }
+  
+  .header .menu{/*flex container*/
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    list-style:none;
+    justify-content: center;
+  }
+  
+  .page a{ /*flex item*/
+    color: black;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    padding: 2rem 2rem 1rem 1rem;
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s;
+    font-size: 1.3rem;
+  }
+  
+  .page a:hover{
+    color: #EFBB3F;
+    font-weight: 800;
+  }
+  
+  #btnScrollToTop {
+      position: fixed;
+      right: 2rem;
+      bottom: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #A9A9A9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+      color: white;
+      outline: none;
+      cursor: pointer;
+      border: none;
+  }
+  
+  .btn-default {
+    background-color: #0B6254;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-right: 2rem;
+  }
+  
+  /* Hover effect */
+  .btn-default:hover {
+      background-color: #ffffff;
+      color: #0B6254;
+      border: 2px solid #0B6254;
+  }
+
+  .language-link {
+    text-align: left;          /* Align link to the left */
+    margin-bottom: 5px;       /* Add space below the link */
+    margin-left: 2rem;   
+    padding-top: 10rem         /* Reset any extra margin */
+    max-width: 90%;            /* Match the same max-width as .content */
+    box-sizing: border-box;    /* Include padding in the width calculation */
+}
+
+.language-link a {
+    font-size: 16px;
+    color: #0B6254;            /* Link color */
+    text-decoration: underline;
+    transition: 0.3s;
+    font-weight: bold;
+    display: inline-block;     /* Ensures consistent alignment */
+}
+
+.language-link a:hover {
+    color: #333333;               /* Hover color */
+    background-color: #EFBB3F; 
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+
+  
+  /* Hero Section */
+  /* General Mobile Styles (default) */
+.hero-container {
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 3rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column; /* Stack content and image in a column */
+    align-items: center;
+    gap: 20px;
+}
+
+/* Text Section */
+.content {
+    max-width: 90%; /* Limit width for better readability */
+    text-align: left; 
+}
+
+/* Ensures paragraphs and headings are left-aligned */
+.statement h1,
+h3.title,
+h3.client-name,
+.project-tasks,
+.hero p {
+    text-align: left;
+}
+
+.statement h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h3.title {
+    font-size: 14px;
+    color: #073E35;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+}
+
+h3.client-name {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* Project Tasks */
+.project-tasks {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    gap: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.task-item {
+    display: flex;
+    align-items: left;
+    text-align: left;
+    gap: 8px;
+}
+
+.project-number {
+    font-size: 16px;
+    color: #073E35;
+    text-align: right;
+}
+
+.task {
+    font-size: 16px;
+    color: #333333;
+}
+
+/* Paragraph */
+.hero p {
+    padding-top: 2rem;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Image Section */
+.work1 {
+    max-width: 80%;
+    /*padding-bottom: 5rem;*/
+}
+
+.work1 img {
+    width: 100%;
+    height: auto;
+}
+
+/* The fist point */
+/* Container for the section */
+.section-container {
+    display: flex;
+    flex-direction: column; /* Stack image and content */
+    align-items: center; /* Center align everything */
+    gap: 20px; /* Space between image and text */
+    max-width: 90%; /* Prevents content from stretching too wide */
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 7rem;
+}
+
+/* Image Styling */
+.image-container {
+    width: 70%; /* Full width for mobile */
+    text-align: center; /* Center the image */
+}
+
+.image-container img {
+    width: 100%; /* Responsive image */
+    max-width: 500px; /* Optional: Prevents image from being too large */
+    height: auto;
+    border-radius: 10px; /* Rounded corners for aesthetics */
+}
+
+/* Content Styling */
+.content-container {
+    width: 100%; /* Full width for mobile */
+    text-align: left; /* Align text to the left */
+    padding-bottom: 3rem;
+}
+
+.content-container h2 {
+    font-size: 22px;
+    color: #073E35;
+    margin-bottom: 15px;
+}
+
+.content-container p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content-container h3 {
+    font-size: 18px;
+    color: #073E35;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+.content-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.content-container ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Custom bullet points */
+.content-container ul li::before {
+    content: "•";
+    color: #073E35;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Section with Gradient Background */
+.centered-image-section {
+    background-image: linear-gradient(to top, #FFEDD7, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; /* Adjust padding as needed */
+    min-height: auto; /* Ensures it covers the viewport */
+    padding-bottom: 5rem;
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Adjust as needed */
+}
+
+/* Ensure Image Fits Well */
+.image-wrapper img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px; /* Adds soft edges */
+}
+
+/* Section with White Background */
+.three-images-section {
+    background-color: #ffffff; /* White background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px; /* Adjust padding as needed */
+    width: 100%;
+}
+
+/* Container for Images */
+.three-images-container {
+    display: flex;
+    flex-direction: column; /* Stack images in a column on smaller screens */
+    align-items: center;
+}
+
+/* Image Styling */
+    .three-images-container img {
+        max-width: 50%; /* Images take more width on mobile */
+    }
+
+/* Branding Section (Mobile First) */
+.branding-section {
+    display: flex;
+    flex-direction: column; /* Stack elements for mobile */
+    align-items: center;
+    gap: 20px; /* Space between content and image */
+    padding: 30px 20px;
+}
+
+/* Content Styling */
+.branding-content {
+    max-width: 100%; /* Full width for mobile */
+    text-align: left;
+    margin: 5rem;
+}
+
+.branding-content h2{
+    font-size: 22px;
+    color: #073E35;
+    margin-bottom: 15px;
+}
+
+.branding-content p{
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* Image Styling */
+.branding-image {
+    width: 100%;
+}
+
+.branding-image img {
+    width: 100%; /* Make image fully responsive */
+    height: auto;
+    display: block;
+}
+
+/*---desktop mock---*/
+.full-width-image {
+    width: 100%; /* Ensure full width */
+    overflow: hidden; /* Prevent any overflow if needed */
+    padding: 0; /* Remove any padding */
+}
+
+.full-width-image img {
+    width: 100%; /* Make the image stretch to fill its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Removes bottom space/gap */
+}
+
+/*---testimonials---*/
+.testimonial-section {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align items vertically */
+    /*padding: 40px 20px;*/
+    background-color: #f9f9f9;
+    padding-top: 18rem;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically on mobile */
+    align-items: flex-start; /* Center-align content */
+    text-align: left; /* Align text to the left */
+    max-width: 740px; /* Control the max-width for content */
+    gap: 20px; /* Space between the text and image */
+}
+
+/* Testimonial Text */
+.testimonial-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 10px;
+    text-align: left;  /* Center-align text */
+}
+
+.testimonial-author {
+    font-size: 14px;
+    color: #073E35;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Testimonial Link Styling */
+.testimonial-link {
+    display:flex;
+    flex-direction:column;
+    margin-top: 20px;
+    text-align: center; /* Center the link */
+    width: 60%;
+    padding-bottom: 10rem;
+
+}
+
+.testimonial-link a {
+    font-size: 18px;
+    color: #073E35;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #073E35;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.testimonial-link a:hover {
+    background-color: #073E35;
+    color: #fff;
+}
+
+.testimonial-text h2 {
+    font-size: 24px;
+    color: #073E35;
+    margin-bottom: 15px;
+}
+
+.testimonial-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.testimonial-text .client-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #073E35;
+}
+
+/* Testimonial Image */
+.testimonial-image {
+    max-width: 60%; /* Set a max-width for the quotation mark image */
+    height: auto;
+    align-self: flex-start;  /* Left-align the image */
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: auto;
+}
+/* CTA Section */
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.cta-section {
+    text-align: left;
+    max-width: 800px;         /* Limit section width */
+    margin: 0 auto;           /* Center the content */
+}
+
+/* Image Styling */
+.cta-image-container {
+    display: flex;
+    justify-content: center;  /* Center the image horizontally */
+    margin-bottom: 20px;      /* Add spacing between image and title */
+}
+
+.cta-image-container img {
+    max-width: 150px;         /* Adjust image size */
+    height: auto;             
+    box-shadow: none;
+    border-radius: 0;
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+.cta-image-container img:hover {
+    transform: scale(1.05);   /* Slight zoom effect on hover */
+}
+
+/* Text and Button Styling */
+.cta-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cta-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    
+}
+
+.cta-btn {
+    background-color: #0B6254;
+    color: white;
+    font-size: 18px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #094d43;
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/*---CTA styling1---
+.cta{
+    background-color: #073E35;
+    padding-top: 1rem;
+  }
+  
+  .cta h3{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 23px;
+    color: white;
+    margin-top: 3rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .cta p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    line-height: 1.8;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .cta-section {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: left;
+    margin-top: 10rem;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  a {
+    color: inherit; /* Use the parent's text color 
+    text-decoration: none; /* Remove underline 
+  }
+  
+  .cta-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.2;
+    background-color: #073E35;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid;
+    margin-bottom: 5rem;
+  }
+  
+  .cta-btn:hover {
+      background-color: #ffffff;
+      color: #073E35;
+      border: 2px solid #073E35;
+  }--*/
+
+
+  /*---Footer---*/
+.footer {
+    background-color: #ffffff; /* Footer background color */
+    color: #333333; /* Text color */
+    padding: 20px;
+    margin: 0 20px 2rem;
+    margin-top: 3rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .footer-logo img {
+    width: 50%; /* Adjust logo size as needed */
+    margin-bottom: 20px;
+  }
+  
+  .footer-contact .email-link {
+    color: #333333; /* Link color */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-contact .email-link i {
+    margin-right: 10px; /* Adjust icon spacing */
+  }
+  
+  .footer-instagram-link a {
+    display: flex;
+    align-items: center;
+    color: #333333; /* Link color */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 5px;
+  }
+  
+  .footer-instagram-link i {
+    margin-right: 10px; /* Adjust icon spacing */
+  }
+  
+  
+  /* Copyright styling */
+  .footer .copyright {
+    text-align: left;
+    margin-top: 5px;
+  }
+  
+  .footer .copyright h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+  }
+  
+  
+  @media (min-width: 500px) {
+    .logo img{
+    width: 30%;
+    }
+  
+    .header .menu{/*flex container*/
+      font-size: 1.3rem;
+    }
+
+    .hero {
+        gap: 40px;
+    }
+  
+   .statement{
+    padding: 20px;
+   }
+    .statement h1{
+      font-size: 32px;
+    }
+
+    .content-container h2 {
+        font-size: 32px;
+    }
+
+    .branding-content {
+        max-width: 80%; /* Limit text width */
+        margin-left: 2rem;
+    }
+
+    .branding-content h2{
+        font-size: 32px;
+    }
+
+     /* Text and Button Styling */
+   .cta-title {
+    font-size: 24px;
+    }
+
+    .cta-text {
+    font-size: 18px;
+    }
+
+    .footer-content {
+        justify-content: left;
+        align-item: left;
+      }
+      
+      .footer-logo img {
+        width: 20%; /* Adjust logo size as needed */
+      }
+      
+      }
+      
+      
+      @media screen and (min-width: 768px) { /*----TABLET-----*/
+      .logo img{
+        width: 25%;
+       }
+      
+       .statement{
+          padding: 20px 0 0 20px;
+       }
+      
+      
+        .statement h2{
+          font-size: 32px;
+          font-weight: normal;
+          letter-spacing: 0.2;
+          position: relative;
+          margin-bottom: 2rem;
+          margin-top: 1rem;
+        }
+      
+          /* Hero Section */
+          .hero {
+            flex-direction: row; /* Side-by-side layout */
+            align-items: flex-end;
+            text-align: left; /* Align text to the left */
+            gap: 100px;
+            padding-bottom: 5rem;
+        }
+    
+        .content {
+            flex: 1;
+            max-width: 50%;
+        }
+    
+        .project-tasks {
+            align-items: flex-start;
+        }
+    
+        .task-item {
+            justify-content: flex-start;
+        }
+    
+        .hero p {
+            padding-top: 5rem;
+            font-size: 18px;
+        }
+    
+        /* Image Section */
+        .work1 {
+            flex: none;
+            max-width: 35%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .section-container {
+            flex-direction: row; /* Side by side layout */
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+    
+        .image-container {
+            flex: 1;
+            max-width: 40%; /* Ensures image takes 40% of space */
+        }
+    
+        .content-container {
+            flex: 1;
+            max-width: 60%; /* Ensures text takes 60% of space */
+        }
+
+        
+         .work1 img {
+          max-width: 100%; /* Ensure image does not exceed container width */
+          width: 90%;
+        }
+      
+        /*.work1 {
+          flex: 1; 
+          padding-left: -4rem;
+          padding-top: -3rem;
+          /*padding: 20px; 
+        }*/
+
+        .centered-image-section {
+            min-height: 60vh; 
+            padding: 30px 15px;
+            margin-top: -3rem;
+            padding-bottom: 10rem;
+        }
+    
+        .image-wrapper img {
+            max-width: 800px;
+            width: 100%;
+        } 
+
+    /* Container for Images */
+       .three-images-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between images */
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    max-width: 1000px; /* Keeps it from being too wide */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+     }
+
+    /* Image Styling */
+    .three-images-container img {
+    max-width: 25%; /* Each image takes up roughly 30% of the container */
+    height: auto;
+    border-radius: 8px; /* Optional: Rounds corners slightly */
+    }
+    
+    /*---branding---*/
+    .branding-section {
+        flex-direction: row; /* Arrange in a row on larger screens */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .branding-content {
+        flex: 1;
+        max-width: 45%; /* Limit text width */
+        margin-left:10rem;
+    }
+
+    .branding-image {
+        flex: 1;
+        max-width: 40%; /* Make image take half of the screen */
+        display: flex;
+        justify-content: flex-end; /* Push image to the right */
+    }
+
+    .branding-image img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        object-fit: cover; /* Ensure it fills the right edge */
+    }
+    
+    /*---testimonials---*/
+       /* Testimonial Container (flex row for larger screens) */
+       .testimonial-container {
+        flex-direction: column;  /* Align image and text in a row for tablet and larger screens */
+        align-items: flex-start;  /* Align items to the start */
+    }
+
+    /* Testimonial Image (left aligned) */
+    .testimonial-image {
+        max-width: 100px; /* Increase image size on larger screens */
+        align-self: flex-start; /* Ensures image stays left aligned */
+    }
+
+    /* Testimonial Text */
+    .testimonial-text {
+        font-size: 18px;
+        text-align: left;  /* Align text to the left for desktop */
+    }
+
+    .testimonial-link {
+        text-align: center;  /* Align the button to the left on desktop */
+        width: auto;  /* Set button width to auto for larger screens */
+        padding-bottom: 12rem;
+    }
+
+    .testimonial-link a {
+        width: auto;  /* Remove full width on larger screens */
+        padding: 10px 20px; /* Adjust padding for desktop */
+    }
+
+        /*---Footer--Tablet---*/
+.footer {
+    padding: 20px;
+    margin-left: 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    flex-direction: row;
+    /*padding-right: 100px;*/
+  }
+  
+  .footer-logo img {
+    width: 15%; /* Adjust logo size as needed */
+  }
+  
+  .footer-contact .email-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer .copyright {
+    text-align: start;
+  }
+  
+  .footer .copyright h4 {
+    font-size: 12px;
+  }
+  
+  
+  }
+  
+  @media screen and (min-width: 991px){/*----Desktop---*/
+  .hero{
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .logo{
+    padding-left: 5rem;
+  }
+  
+  .logo img{ /*desktop logo size*/
+   width: 25%;
+  }
+  
+  .page a{
+    padding-right: 5rem;
+  }
+  
+  .title p{
+    font-size: 2rem;
+    width:140vh;
+  }
+
+  .language-link{
+    margin-bottom: -3rem;
+    margin-top: 5rem;
+    margin-left: 10rem;
+  }
+  
+  .statement {
+    /*margin-bottom: 40px; /* Add margin between text and button */
+    padding-left: 10rem;
+    padding-top: 5rem;
+  }
+  
+  .statement h1{
+    font-size: 42px;
+  }
+
+
+.work1 img {
+    width: 80%;
+    height: auto;
+}
+
+  /* Responsive Design */
+    
+    .image-container, .content-container {
+        max-width: 40%;
+    }
+}
+  @media screen and (min-width: 1600px){/*----LargeDesktop---*/
+    .logo img{ /*desktop logo size*/
+     width: 10%;
+    }
+
+    .branding-content {
+        max-width: 35%; /* Limit text width */
+        margin-left:20rem;
+    }
+
+
+  
+    .footer-logo img {
+      width: 10%; /* Adjust logo size as needed */
+    }
+  
+  
+  }
+  @media (max-width: 768px) {
+    .header .btn-default {
+      display: none;
+    }
+  }
+  

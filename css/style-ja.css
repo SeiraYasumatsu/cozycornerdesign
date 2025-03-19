@@ -248,6 +248,91 @@
     transform: scale(1); /* Reset scale when clicked */
   }
   
+  /*---case study---*/
+.case-study-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 10rem;
+    background-color: #FFFFFF;
+    position: relative;
+    margin: 0 auto;
+    background: url(../images/casestudy-BG4.jpg)no-repeat center center/cover;
+  }
+  
+  .case-study-title-wrapper {  /* Added wrapper to contain the title */
+    width: 100%;                /* Full width of the section */
+    max-width: 1400px;          /* Keep it within the section width */
+    padding: 0 40px;            /* Add padding for spacing */
+    box-sizing: border-box;     /* Ensure padding is included in width */
+    z-index: 10;
+  }
+  
+  .case-study-section-title {
+    font-size: 56px;
+    font-weight: bold;
+    color: #CBCBCB;
+    text-align: left;
+    margin: 0;           /* Remove extra margin */
+  }
+  
+  .case-study-card {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 100px;
+    transition: transform 0.3s;
+  }
+  
+  .case-study-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  } 
+  
+  .case-study-image-container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: none;
+  }
+  .case-study-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .case-content {
+    padding: 32px;
+    text-align: center;
+    background-color: #fff;
+    /*height: 50%;*/
+  }
+  .case-content h3 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+  .case-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: underline;
+    color: #0B6254;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+  
+  .case-link:hover {
+    color: white;
+    background-color: #0B6254;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
   /*----How we Work Together-phone---*/
   .how-we-work {
     max-width: 900px;

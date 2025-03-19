@@ -239,6 +239,91 @@ width: 60%;
   transform: scale(1); /* Reset scale when clicked */
 }
 
+/*---case study---*/
+.case-study-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:flex-start;
+  padding: 10rem;
+  background-color: #FFFFFF;
+  position: relative;
+  margin: 0 auto;
+  background: url(../images/casestudy-BG4.jpg)no-repeat center center/cover;
+}
+
+.case-study-title-wrapper {  /* Added wrapper to contain the title */
+  width: 100%;                /* Full width of the section */
+  max-width: 1400px;          /* Keep it within the section width */
+  padding: 0 40px;            /* Add padding for spacing */
+  box-sizing: border-box;     /* Ensure padding is included in width */
+  z-index: 10;
+}
+
+.case-study-section-title {
+  font-size: 56px;
+  font-weight: bold;
+  color: #CBCBCB;
+  text-align: left;
+  margin: 0;           /* Remove extra margin */
+}
+
+.case-study-card {
+  width: 90%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-top: 100px;
+  transition: transform 0.3s;
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+} 
+
+.case-study-image-container {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background: none;
+}
+.case-study-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-content {
+  padding: 32px;
+  text-align: center;
+  background-color: #fff;
+  /*height: 50%;*/
+}
+.case-content h3 {
+  margin: 0;
+  font-size: 1.8em;
+}
+.case-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: #0B6254;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.case-link:hover {
+  color: white;
+  background-color: #0B6254;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 /*----How we Work Together-phone---*/
 .how-we-work {
   max-width: 900px;
@@ -252,8 +337,8 @@ width: 60%;
 
 .section-title {
   text-align: center;
-  font-size: 20px;
   margin-bottom: 22px;
+
 }
 
 .work-step {
@@ -459,71 +544,159 @@ width: 60%;
   padding-top: 2rem;
 }
 
-
-/*---recentWork-phone---*/
+/*---recentWork-phone v2---*/
 .recent-work-cover{
-    background-color: #F5F5F5;
+  background-color: #F5F5F5;
+  padding-top: 1rem;
 }
 
 .recent-work {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  padding-bottom: 5rem;
+max-width: 1000px;
+width: 100%;
+margin: 0 auto;
+position: relative;
+padding-bottom: 5rem;
 }
 
 .recent-work .section-title {
-  text-align: left;
-  margin-bottom: 20px;
-  margin-top: 30px;
+text-align: center;
+margin-bottom: 20px;
+margin-top: 30px;
+color: #828282;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 18px;
+    color:#333333;
+  }
+
+
 .work-item {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+}
+.work-image {
+display: flex; /* Set display to flex */
+flex-direction: column; /* Stack the children (image and link) vertically */
+justify-content: center; /* Center the content horizontally */
+align-items: center; /* Center the content vertically */
+width: 100%; /* Ensure it takes full width */
 }
 
 .work-image img {
-  width: 100%; /* Ensure the image fills its container */
-  display: block;
+width: 50%; /* Ensure the image fills its container */
+display: block;
+margin: 0 auto; /* Center the image horizontally */
 }
 
 .website-link {
-  display: block;
-  margin-top: 5px; /* Add spacing between image and link */
-  color: #828282;
-  font-size: 12px;
+display: block;
+margin-top: 10px; /* Add spacing between image and link */
+color: #828282;
+font-size: 16px;
+text-align: center;
 }
 
 .testimonial {
-  flex: 1; /* Take up remaining space */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 3rem;
-  padding: 10px;
+flex: 1; /* Take up remaining space */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin-top: 3rem;
+padding: 10px;
+max-width: 70%; /* Limits the width to 80% of the container */
+margin-left: auto;
+margin-right: auto; /* Centers the content */
 }
 
 .testimonial img {
-  display: block;
-  width: 60px; /* Adjust size of the quotation mark */
-  margin-bottom: 10px; /* Add spacing between quotation mark and text */
+display: block;
+width: 60px; /* Adjust size of the quotation mark */
+margin-bottom: 10px; /* Add spacing between quotation mark and text */
 }
 
 .testimonial-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.5px; /*---added for mobile styling---*/
-  font-style: italic; /* Italicize the testimonial text */
-  margin-bottom: 10px; /* Add spacing between text and author */
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-size: 16px;
+letter-spacing: 0.5px; /*---added for mobile styling---*/
+font-style: italic; /* Italicize the testimonial text */
+margin-bottom: 10px; /* Add spacing between text and author */
+line-height: 1.8;
 }
 
 .testimonial-author {
-  font-weight: bold; /* Make author name bold */
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 14px;
+font-weight: bold; /* Make author name bold */
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-size: 14px;
 }
+
+.swiper-container {
+width: 100%;
+height: auto;
+overflow: visible !important;
+}
+
+.swiper-pagination {
+bottom: 10px; /* Ensure it’s placed correctly */
+display: flex !important; /* Make sure it appears */
+justify-content: center; /* Center the pagination dots */
+align-items: center; /* Align dots vertically */
+width: 100%; /* Ensure pagination spans the full width */
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+display: flex !important; /* Ensures they are visible */
+color: #073E35 !important; /* Match your color scheme */
+width: 20px; /* Smaller arrow size */
+height: 20px;
+position: absolute;
+top: 80%;
+transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+left: 10rem; /* Move left arrow towards the left side */
+}
+
+/* Right Arrow */
+.swiper-button-next {
+right: 10rem; /* Move right arrow towards the right side */
+
+}
+
+
+/* Adjust the arrow icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+font-size: 16px; /* Reduce arrow icon size */
+font-weight: bold;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+background-color: #073E35 !important; /* Change dot color */
+opacity: 0.5; /* Reduce opacity for inactive dots */
+width: 20px;
+height: 20px;
+margin: 0 10px; /* Space out the dots */
+margin-top: 6rem;
+}
+
+/* Active pagination bullet */
+.swiper-pagination-bullet-active {
+background-color: #073E35 !important;
+opacity: 1; /* Make active dot more visible */
+}
+
+
+
+
+
 
 /*---Footer---*/
 .footer {
@@ -627,7 +800,9 @@ width: 60%;
     padding: 30px;
   }
 
+
 .recent-work {
+  width: 90%;
   padding:30px;
 }
 
@@ -712,6 +887,7 @@ width: 60%;
     text-align: center;
     font-size: 24px;
     margin-bottom: 22px;
+    color:#333333;
   }
 
   .work-step {
@@ -808,23 +984,51 @@ width: 60%;
   line-height: 1.5;
 }
 
+
 /*---recentWork-tablet---*/
+.recent-work-cover{
+  padding-bottom: 7rem;
+  padding-top: 1rem;
+}
+
+.recent-work {
+padding: 20px;
+margin: 0 auto;
+}
+
+.recent-work .section-title {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #CBCBCB;
+  font-size: 56px;
+  }
+
+
 .work-item {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
-  flex-direction: row;
+  align-items: center; /* Align items to the top */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .work-image {
-  flex: 0 0 50%; /* Take up 50% of the container width */
-  margin-right: 20px; /* Add spacing between image and testimonial */
+  display: flex; /* Set display to flex to align the content */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.work-image img {
+  width: 60%;
+  display:block;
+  margin: 0 auto; /* Center the image horizontally */
 }
 
 .testimonial {
   margin-top: 3rem;
   padding: 0px; /*---padding added to mobile---*/
 }
-
 /*---Footer--Tablet---*/
 .footer {
   padding: 20px;
@@ -901,6 +1105,8 @@ width: 60%;
   margin-top: 5rem;
   max-width: 1400px;
   margin: 0 auto;
+  padding-top: 7rem;
+  padding-bottom: 10rem;
 }
 
 .about .content{
@@ -920,6 +1126,11 @@ width: 60%;
 .about .image img{
   max-width: 100%;
   width: 60%;
+}
+
+.how-we-work {
+  margin-top: 10rem;
+  padding-top: 7rem;
 }
 
 .step-content {

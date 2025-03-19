@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
 
   <body>
@@ -21,6 +26,7 @@
          <div class="header">
            <div class="logo"><a href="index.html"><img src="images/Logo2.png" alt="Logo"></a></div>
            <ul class="menu">
+              <li class= "page"><a href="#case-study-section">CASE STUDY</a></li>
               <li class= "page"><a href="blog.html">BLOG</a></li>
               <li class= "page"><a href="japanese-clients.html">日本のお客様へ</a></li>
               <!--hide other menu items
@@ -60,6 +66,23 @@
                 </a>
              </div>
           </div>
+         
+          <section id="case-study-section"  section class="case-study-section">
+            <!-- Wrapper to contain the title within the section width -->
+          <div class="case-study-title-wrapper">
+            <h2 class="case-study-section-title">CASE STUDY</h2> 
+          </div>
+
+            <div class="case-study-card">
+                <div class="case-study-image-container">
+                    <img src="images/hisami-tn2.png" alt="Case Study Image for Hisami Shirahama">
+                </div>
+                <div class="case-content">
+                    <h3>Helping Hisami Reach a Global Audience – 80 Followers in 7 Days!</h3>
+                    <a href="casestudy-hisami.html" class="case-link">Read the Case Study</a>
+                </div>
+            </div>
+        </section>
 
           <section class="how-we-work" style="background-image: url('images/paper.png');">
                 <h2 class="section-title">How We Work Together</h2>
@@ -144,6 +167,58 @@
 
         <section class="recent-work-cover">
           <div class="recent-work">
+            <h2 class="section-title">Testimonials</h2>
+        
+            <!-- Swiper container -->
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <!-- Testimonial Slide 1 -->
+                <div class="swiper-slide work-item">
+                  <div class="work-image">
+                    <a href="https://www.hisamishirahama.com/" target="_blank" rel="noopener noreferrer">
+                      <img src="images/hisami-review.png" alt="HisamiShirahama Work Image">
+                    </a>
+                    <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
+                  </div>
+                  <div class="testimonial">
+                    <img src="images/quotationIcon.png" alt="Quotation Mark">
+                    <p class="testimonial-text">What impressed me most was Seira's outstanding design sense and English language skills. Creating a logo and website was a completely new experience for me. During our meetings, she listened attentively and helped draw out my vision for the site. She clearly explained what I needed to do, and delivered everything by our target completion date, which was incredibly helpful.
+                      <br></br>
+                      As a writer, I also asked her to translate my written work (poems and stories) into English. Translation requires deep familiarity with both languages and an understanding of both cultures. Seira translated my work more beautifully than I could have imagined, achieving results that were far beyond my own English abilities and expression. Thanks to her English translations, my readership expanded from 'Japanese people' to 'people around the world.' This is truly remarkable.
+                      <br></br>
+                      Seira is always calm and full of wonderful ideas. Her natural sense and creativity are exceptional, and I felt completely comfortable entrusting my project to her. Of course, she also respected my opinions and feedback, so we could create together without compromising—I could always say 'I prefer this!' The finished website exceeded all my expectations and imagination, which makes me truly happy.
+                      <br></br>
+                      Even after the website was completed, she responded quickly whenever I wanted to make adjustments, and I'm deeply grateful for that. The site has already received feedback from readers, and <span style="background-color:yellow;">my Instagram followers <strong>increased by about 80 people in just one week.</strong></span> I look forward to continuing to work with her for a long time to come!</p>
+                    <p class="testimonial-author">- Hisami Shirahama | author, writer & creator</p>
+                  </div>
+                </div>
+        
+                <!-- Testimonial Slide 2 -->
+                <div class="swiper-slide work-item">
+                  <div class="work-image">
+                    <img src="images/abejitasWork.png" alt="Recent Work Image">
+                    <a href="https://www.abejitasmontessori.com/" class="website-link">Abejitas Montessori</a>
+                  </div>
+                  <div class="testimonial">
+                    <img src="images/quotationIcon.png" alt="Quotation Mark">
+                    <p class="testimonial-text">Seira was patient and diligent in helping design my logo first and then my website. I was so happy with the results, I didn't hesitate to share it with friends and families I was working with. Being a small-first time business owner I wanted something that reflected my personality and show case  a high quality service I wanted to provide; both the logo and website demonstrate that and I couldn't be happier. I highly recommend Seira and would definitely work with her again. </p>
+                    <p class="testimonial-author">- Elizabeth, the owner of Abejitas Montessori in Menlo park, CA</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Swiper Navigation -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+        
+              <!-- Swiper Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+
+       <!----<section class="recent-work-cover">
+          <div class="recent-work">
             <h2 class="section-title">Recent Work</h2>
 
            <div class="work-item">
@@ -158,7 +233,7 @@
             </div>
           </div>
         </div>
-       </section>
+       </section>-->
     </main>
 
     <footer class="footer">
@@ -180,24 +255,48 @@
             </div>
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
-     <!--scroll Detection-->
-     <script>
-     document.addEventListener("DOMContentLoaded", () => {
-      const fadeElements = document.querySelectorAll(".fade-in");
-    
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper", {
+          loop: false, // Enables infinite scrolling
+          autoplay: false,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 1,
+            },
+            1024: {
+              slidesPerView: 1,
+            }
           }
         });
-      }, { threshold: 0.2 });
+      });
+    </script>
     
-      fadeElements.forEach((el) => observer.observe(el));
-    });
-  </script>
-    
-    
+        <!--scroll Detection-->
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+           const fadeElements = document.querySelectorAll(".fade-in");
+         
+           const observer = new IntersectionObserver((entries) => {
+             entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                 entry.target.classList.add("show");
+               }
+             });
+           }, { threshold: 0.2 });
+         
+           fadeElements.forEach((el) => observer.observe(el));
+         });
+       </script>
+
        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
           <script>
