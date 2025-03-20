@@ -247,17 +247,18 @@
   .instagram-link:active {
     transform: scale(1); /* Reset scale when clicked */
   }
-  
+
   /*---case study---*/
-.case-study-section {
+  .case-study-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items:flex-start;
-    padding: 10rem;
+    padding: 10px;
     background-color: #FFFFFF;
     position: relative;
-    margin: 0 auto;
+    margin: 5rem auto;
+    padding-bottom: 7rem;
     background: url(../images/casestudy-BG4.jpg)no-repeat center center/cover;
   }
   
@@ -931,6 +932,13 @@
       max-width: 100%;
       width: 40%;
     }
+
+      /*---case study TABLET---*/
+    .case-study-section {
+    padding: 10rem;
+    position: relative;
+    margin: 0 auto;
+  }
   
     /*----How we Work Together---*/
     .how-we-work {
