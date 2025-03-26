@@ -34,6 +34,7 @@ body{
   flex-wrap: wrap;
   background-color: white;
   padding-bottom: 3rem;
+  padding-bottom: 0 !important;
 }
 
 .logo{

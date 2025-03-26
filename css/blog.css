@@ -43,8 +43,8 @@ body{
 }
 
 .logo img{
-width: 60%;
-}
+  width: 30%;
+  }
 
 .header .menu{/*flex container*/
   display: flex;
@@ -356,3 +356,21 @@ a:hover {
      border-top-left-radius: 10px;
      border-top-right-radius: 10px;
    }
+
+   @media screen and (min-width: 1600px){/*----LargeDesktop---*/
+    .logo img{ /*desktop logo size*/
+     width: 10%;
+    }
+  
+    .footer-logo img {
+      width: 10%; /* Adjust logo size as needed */
+    }
+  
+  
+  }
+  @media (max-width: 768px) {
+    .header .btn-default {
+      display: none;
+    }
+  }
+  
