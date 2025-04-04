@@ -22,21 +22,45 @@
   </head>
 
   <body>
-       <nav class="nav">
-         <div class="header">
-           <div class="logo"><a href="index.html"><img src="images/logo6.png" alt="Logo"></a></div>
-           <ul class="menu">
-              <li class= "page"><a href="#case-study-section">CASE STUDY</a></li>
-              <li class= "page"><a href="blog.html">BLOG</a></li>
-              <li class= "page"><a href="japanese-clients.html">日本のお客様へ</a></li>
-              <!--hide other menu items
-              <li class= "page"><a href="#casestudy_page">CASES</a></li>
-              <li class= "page"><a href="documents/SeiraYasumatsuResume.pdf" target="_blank">RESUME</a>-->
-            </ul>
-           <div><a href="mailto:cozycornerdesign.ca@gmail.com"><button type="button" class="btn-default">Let's Chat!</button></a> </div>
-         </div>
-       </nav>
+    <nav class="nav">
+      <div class="header">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+        </div>
+    
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+    
+        <div class="nav-right">
+        <ul class="menu" id="menu">
+          <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
+          <li class="page"><a href="service.html">SERVICE</a></li>
+          <li class="page"><a href="blog.html">BLOG</a></li>
+          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+        </ul>
+    
+        <div class="cta-desktop">
+          <a href="mailto:cozycornerdesign.ca@gmail.com">
+            <button type="button" class="btn-default">Let's Chat!</button>
+          </a>
+        </div>
+       </div> 
+      </div>
 
+      <!-- Mobile Menu Wrapper -->
+  <div class="mobile-menu-wrapper">
+    <ul class="menu" id="menu-mobile">
+      <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
+      <li class="page"><a href="service.html">SERVICE</a></li>
+      <li class="page"><a href="blog.html">BLOG</a></li>
+      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+    </ul>
+  </div>
+</nav>
+    
        <main>
          <div class="hero-container">
            <div class="hero">
@@ -255,6 +279,19 @@
             </div>
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
+
+    <!--humburger menu-->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("open");
+  menuWrapper.classList.toggle("active");
+});
+
+    </script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const swiper = new Swiper(".swiper", {
