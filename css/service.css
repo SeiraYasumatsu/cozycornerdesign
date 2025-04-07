@@ -266,6 +266,7 @@ font-weight: bold;
 /* Make the "All-Inclusive" service card stand out */
 .service-card-all {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -286,7 +287,7 @@ font-weight: bold;
 /* Service Cards Below */
 .services-question-container {
   display: flex;
-  flex-direction: column; /* Stack cards vertically on mobile */
+  flex-direction: column !important; /* Stack cards vertically on mobile */
   gap: 20px;
   align-items: center;
   padding: 0 1rem;
@@ -295,7 +296,8 @@ font-weight: bold;
 /* Individual Service Cards */
 .service-card {
   width: 100%;
-  max-width: 350px; /* Make cards uniform */
+  /*max-width: 350px; /* Make cards uniform */
+  max-width: 100% !important;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -442,7 +444,7 @@ font-weight: bold;
     padding: 15px;
     background-color: #DEE4E1;
     border-radius: 8px;
-    width: 80%;
+    /*width: 80%;*/
 }
 
 .why-it-matters h4 {
@@ -1014,7 +1016,7 @@ textarea {
       }
 
         .services-question-container {
-            flex-direction: row;
+            flex-direction: row !important;
             /*flex-wrap: wrap;*/
             justify-content: space-between;  /* Distribute cards evenly */
         }
@@ -1054,10 +1056,6 @@ textarea {
             width: 70%; 
         }
         
-        .why-it-matters {
-            font-size: 1.2rem;
-            padding: 20px;
-        }
 
         #website,
         #all-inclusive,
