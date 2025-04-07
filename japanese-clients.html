@@ -22,18 +22,43 @@
 
   <body>
        <nav class="nav">
-         <div class="header">
-           <div class="logo"><a href="index.html"><img src="images/Logo6.png" alt="Logo"></a></div>
-           <ul class="menu">
-              <li class= "page"><a href="blog.html">BLOG</a></li>
-              <li class= "page"><a href="japanese-clients.html">日本のお客様へ</a></li>
-              <!--hide other menu items
-              <li class= "page"><a href="#casestudy_page">CASES</a></li>
-              <li class= "page"><a href="documents/SeiraYasumatsuResume.pdf" target="_blank">RESUME</a>-->
-            </ul>
-           <div><a href="mailto:cozycornerdesign.ca@gmail.com"><button type="button" class="btn-default">ご相談はこちら</button></a> </div>
-         </div>
-       </nav>
+        <div class="header">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+          </div>
+      
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+      
+          <div class="nav-right">
+          <ul class="menu" id="menu">
+            <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
+            <li class="page"><a href="service-ja.html">サービス</a></li>
+            <li class="page"><a href="blog.html">BLOG</a></li>
+            <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          </ul>
+      
+          <div class="cta-desktop">
+            <a href="mailto:cozycornerdesign.ca@gmail.com">
+              <button type="button" class="btn-default">ご相談はこちら</button>
+            </a>
+          </div>
+         </div> 
+        </div>
+  
+        <!-- Mobile Menu Wrapper -->
+    <div class="mobile-menu-wrapper">
+      <ul class="menu" id="menu-mobile">
+        <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
+        <li class="page"><a href="service-ja.html">サービス</a></li>
+        <li class="page"><a href="blog.html">BLOG</a></li>
+        <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      </ul>
+    </div>
+  </nav>
 
        <main>
          <div class="hero-container">
@@ -85,7 +110,7 @@
                 </div>
                 <div class="case-content">
                     <h3>世界中の読者にリーチするお手伝い – 7日間で80人のフォロワー獲得！</h3>
-                    <a href="casestudy-hisami-japanese.html" class="case-link">ケーススタディを読む</a>
+                    <a href="casestudy-hisami-ja.html" class="case-link">ケーススタディを読む</a>
                 </div>
             </div>
         </section>
@@ -122,6 +147,22 @@
               <h2 class="section-title">提供サービス:</h2>
 
             <div class="service-container">
+              <div class="service">
+                <div class="service-icon">
+                    <img src="images/webDesignIcon2.png" alt="Website Design Icon">
+                </div>
+                    <h3 class="service-title">多言語カスタムウェブサイト制作</h3>
+                    <p class="service-description">お客様のニーズに合わせた完全オリジナルの多言語対応ウェブサイトを制作します。日本のユーザーと海外のユーザー双方に最適な体験を提供するデザインと機能性を実現します。</p>
+             </div>
+
+             <div class="service">
+               <div class="service-icon">
+                  <img src="images/redesign-icon2.png" alt="Website Redesign Icon">
+                </div>
+                  <h3 class="service-title">ウェブサイトアップグレードサービス</h3>
+                 <p class="service-description">既存のウェブサイトをお持ちの方に向けて、多言語プラットフォームでのデザインとユーザビリティの向上を提供します。現在のブランドイメージを維持しながら、グローバル市場に対応するウェブサイトへとアップグレードします。</p>
+              </div>
+
                <div class="service">
                   <div class="service-icon">
                      <img src="images/branding-icon2.png" alt="Logo & Branding Icon">
@@ -132,27 +173,17 @@
                     </p>
                </div>
 
-              <div class="service">
-                 <div class="service-icon">
-                     <img src="images/webDesignIcon2.png" alt="Website Design Icon">
-                 </div>
-                     <h3 class="service-title">多言語カスタムウェブサイト制作</h3>
-                     <p class="service-description">お客様のニーズに合わせた完全オリジナルの多言語対応ウェブサイトを制作します。日本のユーザーと海外のユーザー双方に最適な体験を提供するデザインと機能性を実現します。</p>
-              </div>
-
-              <div class="service">
-                <div class="service-icon">
-                   <img src="images/redesign-icon2.png" alt="Website Redesign Icon">
-                 </div>
-                   <h3 class="service-title">ウェブサイトアップグレードサービス</h3>
-                  <p class="service-description">既存のウェブサイトをお持ちの方に向けて、多言語プラットフォームでのデザインとユーザビリティの向上を提供します。現在のブランドイメージを維持しながら、グローバル市場に対応するウェブサイトへとアップグレードします。</p>
-               </div>
 
               <div class ="call-to-action">
-                <p>ブランドの価値を高めたい、またはオンラインでの存在感を一新したいとお考えですか？
-                    まずは一度ご相談ください。オーダーメイドのロゴ・ブランディング、ウェブサイト制作、そしてリニューアルサービスで、あなたのブランドとビジネスに新たな可能性をもたらしましょう。あなたのビジネスの潜在能力を最大限に引き出しましょう！
-                    </p>
-                <div><a href="mailto:cozycornerdesign.ca@gmail.com"><button type="button" class="btn-default">今すぐお問い合わせ</button></a> </div>
+                <p>ブランドの魅力をもっと伝えたい。
+                  自分らしさがしっかり伝わるウェブサイトを持ちたい。
+                  日本語と英語のどちらにも対応できるサイトで、世界に向けて一歩踏み出したい。
+                  
+                  そんなあなたの想いをカタチにするために、
+                  ウェブサイト制作・開発、多言語対応サイト、ロゴ・ブランディングなど、
+                  あなたのビジネスにぴったりのサービスをご提案しています。
+                </p>
+                <div><a href="service-ja.html"><button type="button" class="btn-default">提供サービスページ</button></a> </div>
               </div>
             </div>
         </section>
@@ -275,6 +306,19 @@
             </div>
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
+
+    <!--humburger menu-->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("open");
+  menuWrapper.classList.toggle("active");
+});
+
+    </script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const swiper = new Swiper(".swiper", {
