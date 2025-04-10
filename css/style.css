@@ -199,6 +199,130 @@ margin-left: 1rem;
   padding: 20px; /* Adjust padding as needed */
 }
 
+.cta-tagline {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 0.875rem;
+  color: #555;
+  max-width: 300px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+a:hover + .cta-tagline,
+a:focus + .cta-tagline {
+  opacity: 1;
+}
+
+.google-review {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.google-review-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  font-size: 1.5rem; /* 14px */
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.google-review-link:hover {
+  color: #b38c31; /* Google red */
+}
+
+.google-review .rating {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.google-review .stars {
+  color: #fbbc04; /* Google yellow */
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.google-review .review-label {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* Problem Statement */
+/* Mobile-first styles */
+.problem-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.problem-container {
+  display: flex;
+  flex-direction: column; /* Default to column on mobile */
+  align-items: center; /* Center the content */
+  gap: 1.5rem;
+  margin: 0.5rem;
+}
+
+.problem-image img {
+  width: 40%; /* Make sure the image is responsive */
+  max-width: 400px; /* Limit image size on mobile */
+  height: auto;
+  border-radius: 8px; /* Optional: to give the image rounded corners */
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Center the image horizontally on mobile */
+}
+
+.problem-content {
+  text-align: center; /* Center the content */
+  max-width: 700px; /* Limit the width of the content */
+}
+
+.problem-title {
+  font-size: 22px; /* 24px */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.problem-subtitle {
+  font-size: 18px; /* 16px */
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.problem-list {
+  list-style: square inside;
+  padding: 0;
+  margin: 0;
+  /*display: flex;
+  flex-direction: column;*/
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the left */
+  text-align: left;
+}
+
+.problem-item {
+  line-height: 1.5;
+  max-width: 90%;
+  color: black;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.2;
+  position: relative;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  max-width: 680px;
+}
+
+
 /* Initial state: hidden and slightly shifted */
 .fade-in {
   opacity: 0;
@@ -309,6 +433,51 @@ margin-left: 1rem;
 
 .instagram-link:active {
   transform: scale(1); /* Reset scale when clicked */
+}
+
+/*---why work with us---*/
+.why-work-with-us {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.why-work-with-us h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.benefits-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on mobile */
+  gap: 3rem;
+}
+
+.benefit {
+  text-align: left;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #fffbf2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.benefit img {
+  width: 30%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.benefit h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.benefit p {
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /*---case study---*/
@@ -448,6 +617,14 @@ margin-left: 1rem;
   font-size: 18px;
   font-weight: normal;
   letter-spacing: 0.2;
+}
+
+.step-title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom:1.5rem;
+  padding-top:1rem;
+  text-align: center;
 }
 
 /*---What we offer-phone---*/
@@ -766,6 +943,51 @@ background-color: #073E35 !important;
 opacity: 1; /* Make active dot more visible */
 }
 
+/*---FAQ---*/
+.faq-section {
+  max-width: 800px;
+  margin: 8rem auto;
+  padding: 0 2rem;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 2rem 0;
+}
+
+.faq-item summary {
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '-';
+}
+
+.faq-item p {
+  margin-top: 1.5rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /*---Footer---*/
 .footer {
   background-color: #ffffff; /* Footer background color */
@@ -976,9 +1198,10 @@ opacity: 1; /* Make active dot more visible */
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.4rem;
+  font-size: 18px;
   font-weight: 600;
   margin-right: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 /* Hover effect */
@@ -1054,6 +1277,64 @@ opacity: 1; /* Make active dot more visible */
     flex-wrap: wrap; /* Wrap items to a new line if needed */
   }
 
+  .cta-tagline {
+    font-size: 1.5rem; /* 16px */
+    padding-top: 10px;
+    max-width: 400px;
+  }
+
+  .google-review-link {
+    font-size: 1.5rem;
+  }
+
+  .google-review .rating,
+  .google-review .stars {
+    font-size: 1.5rem;
+  }
+
+/* problem statement */
+.problem-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+  .problem-container {
+    flex-direction: row; /* Arrange in a row on larger screens */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Center everything horizontally */
+  }
+
+  .problem-image {
+    flex: 1;
+    margin-right: 1rem; /* Space between image and text */
+  }
+
+  .problem-image img {
+    width: 50%; /* Make sure the image is responsive */
+    margin-left: auto;
+    margin-right: auto; /* Center the image horizontally */
+  }
+
+  .problem-content {
+    flex: 2;
+    text-align: left; /* Align text to the left for larger screens */
+  }
+
+  .problem-title {
+    font-size: 24px; /* 32px */
+    padding-top: 3rem;
+  }
+
+  .problem-subtitle {
+    font-size: 18px; /* 18px */
+  }
+
+  .problem-item {
+    font-size: 18px; /* 18px */
+  }
+
+
  .statement{
     padding: 20px 0 0 20px;
  }
@@ -1099,6 +1380,38 @@ opacity: 1; /* Make active dot more visible */
     max-width: 100%;
     width: 40%;
   }
+
+ /*---why work with us---*/
+ 
+ .benefits-container {
+  flex-direction: row; /* Arrange items in a row on tablet and larger screens */
+  justify-content: space-between;
+  /*gap: 1rem;*/
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 12rem;
+}
+
+.benefit {
+  width: 30%; /* Ensure each benefit takes up about 1/3 of the space */
+  text-align: left;
+  padding: 2rem;
+ 
+}
+
+.why-work-with-us{
+padding: 5rem 0;
+}
+
+.why-work-with-us h2 {
+  font-size: 24px;
+  padding-bottom: 3rem;
+}
+
+.benefit p {
+  font-size: 18px;
+  line-height: 1.7;
+}
 
   /*---case study TABLET---*/
 .case-study-section {
@@ -1148,6 +1461,12 @@ opacity: 1; /* Make active dot more visible */
   .step-description {
     font-size: 18px;
   }
+
+
+  .step-title {
+    font-size: 20px;
+  }
+
 
   /*---What we offer-Tablet&up---*/
 
@@ -1259,6 +1578,24 @@ margin: 0 auto;
   margin-top: 3rem;
   padding: 0px; /*---padding added to mobile---*/
 }
+
+/*---FAQ---*/
+.faq-title {
+  font-size: 24px;
+}
+
+.faq-section {
+  margin: 10rem auto;
+}
+
+.faq-item summary {
+  font-size: 18px;
+}
+
+.faq-item p {
+  font-size: 18px;
+}
+
 /*---Footer--Tablet---*/
 .footer {
   padding: 20px;
@@ -1340,7 +1677,7 @@ margin: 0 auto;
   max-width: 1400px;
   margin: 0 auto;
   padding-top: 7rem;
-  padding-bottom: 10rem;
+  /*padding-bottom: 10rem;*/
 }
 
 .about .content{
@@ -1388,7 +1725,7 @@ margin: 0 auto;
   .logo img{ /*desktop logo size*/
     width: 15%;
    }
-   
+
   .footer-logo img {
     width: 10%; /* Adjust logo size as needed */
   }
