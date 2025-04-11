@@ -1019,6 +1019,11 @@ textarea {
           max-width: 80%;
       }
 
+      .web-design-container {
+        /*padding: 50px 0;           /* Padding inside the section */
+        padding-bottom: 50px;
+    }
+
         .services-question-container {
             flex-direction: row !important;
             /*flex-wrap: wrap;*/
