@@ -369,7 +369,8 @@ font-weight: bold;
 .web-design-development {
     background-color: #ffffff;   /* White background for the full section */
     width: 100%;                 /* Full-width background */
-    /*padding: 50px 0;            /* Padding inside the section */
+    /*padding: 50px 0;           /* Padding inside the section */
+    padding: 1rem;
 }
 
 
@@ -377,7 +378,7 @@ font-weight: bold;
 .web-design-container {
     max-width: 1200px;           /* Content constraint */
     margin: 0 auto;              /* Center the container */
-    padding: 30px 15px;          /* Inner padding */
+    padding: 20px 15px;          /* Inner padding */
     margin-top: 5rem;
    /*border: 3px solid lightseagreen;*/
    justify-items:center;
@@ -426,6 +427,7 @@ font-weight: bold;
 .subtitle p {
     font-size: 18px;
     color: #333;
+    padding-bottom: 1.5rem;
 }
 
 /* Optional Maintenance Plan */
@@ -456,6 +458,7 @@ font-weight: bold;
 .why-it-matters p{
     font-size: 18px;
     font-weight: 600;
+    padding-bottom: 1rem;
 }
 
 .why-it-matters ul {
@@ -930,7 +933,8 @@ textarea {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
     font-weight: 600;
     margin-right: 2rem;
   }
@@ -1030,7 +1034,6 @@ textarea {
         .web-design-subtitles {
             flex-direction: column;
             justify-content: space-between;
-            margin-bottom: 60px;
         }
     
         .subtitle {

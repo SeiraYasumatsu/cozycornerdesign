@@ -170,6 +170,12 @@ margin-left: 1rem;
     border: 2px solid #0B6254;
 }
 
+.mobile-center-button {
+  display: flex;
+  justify-content: center;
+}
+
+
 .cta-desktop {
   display: none;
   flex-shrink: 0; /* ✅ Don't let it shrink */
@@ -988,6 +994,61 @@ opacity: 1; /* Make active dot more visible */
   line-height: 1.5;
 }
 
+/* Booking Section */
+.booking-section {
+  padding: 5rem 2rem;
+  /*background-color: #f9f9f9;*/
+  align-items: center;
+  background-color: #fffbf2;
+}
+
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-text {
+  text-align: left;
+}
+
+.booking-text h2 {
+  font-size: 22px;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.booking-text p {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-booking {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-booking:hover {
+  background-color: #333;
+}
+
+.booking-calendly {
+  padding-top:5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+}
+
 /*---Footer---*/
 .footer {
   background-color: #ffffff; /* Footer background color */
@@ -1209,6 +1270,10 @@ opacity: 1; /* Make active dot more visible */
     background-color: #ffffff;
     color: #0B6254;
     border: 2px solid #0B6254;
+}
+
+.mobile-center-button {
+  justify-content: flex-start;
 }
 
 /*edited nav menu
@@ -1594,6 +1659,34 @@ margin: 0 auto;
 
 .faq-item p {
   font-size: 18px;
+}
+
+/*---Booking---*/
+.booking-container {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10rem;
+}
+
+.booking-section {
+  padding-bottom: 7rem;
+}
+
+.booking-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.booking-text h2 {
+  font-size: 32px;
+  text-align: left;
+}
+
+.booking-calendly {
+  flex: 1;
+  min-width: 320px;
+  height: 700px;
 }
 
 /*---Footer--Tablet---*/
