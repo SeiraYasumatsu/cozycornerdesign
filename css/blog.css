@@ -310,6 +310,11 @@ a:hover {
   color: #B994BC;
 }
 
+.tag.multi{
+  border-color: #B994BC;
+  color: #B994BC;
+}
+
 .blog-title {
   margin-top: 10px;
   font-weight: 900;

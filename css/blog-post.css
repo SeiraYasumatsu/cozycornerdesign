@@ -129,6 +129,11 @@ width: 60%;
   color: #B994BC;
 }
 
+.tag.multi{
+  border-color: #B994BC;
+  color: #B994BC;
+}
+
 
 .post-title {
   margin-top: 10px;
@@ -302,7 +307,7 @@ p.list-p {
   line-height: 1.5;
   font-size: 23px;
   color: white;
-  margin-top: 3rem;
+  /*margin-top: 3rem;*/
 }
 
 .cta p{
@@ -319,7 +324,7 @@ p.list-p {
   margin: 50px auto;
   text-align: left;
   margin-top: 10rem;
-  padding:20px;
+  padding:60px;
   display:flex;
   flex-direction:column;
   align-items: center;
