@@ -37,6 +37,14 @@
         <div class="nav-right">
         <ul class="menu" id="menu">
           <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
+           <li class="page dropdown">
+                        <a href="#clients">CLIENTS</a>
+                        <ul class="dropdown-content">
+                            <li><a href="b2b.html">B2B | Professional Services</a></li>
+                           <!--- <li><a href="#creatives-consultants">Creatives | Consultants</a></li>
+                            <li><a href="#travel-lodging">Travel | Lodging</a></li>-->
+                        </ul>
+                    </li>
           <li class="page"><a href="service.html">SERVICE</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
           <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
@@ -54,6 +62,14 @@
   <div class="mobile-menu-wrapper">
     <ul class="menu" id="menu-mobile">
       <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
+      <li class="page dropdown">
+                    <a href="#clients">CLIENTS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="b2b.html">B2B | Professional Services</a></li>
+                       <!--- <li><a href="#creatives-consultants">Creatives | Consultants</a></li>
+                        <li><a href="#travel-lodging">Travel | Lodging</a></li>-->
+                    </ul>
+                </li>
       <li class="page"><a href="service.html">SERVICE</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
       <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
@@ -381,9 +397,9 @@
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
 
-    <!--humburger menu-->
-    <script>
-      const hamburger = document.getElementById("hamburger");
+   <!--hamburger menu-->
+<script>
+const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 
 hamburger.addEventListener("click", function () {
@@ -391,7 +407,28 @@ hamburger.addEventListener("click", function () {
   menuWrapper.classList.toggle("active");
 });
 
-    </script>
+// Mobile dropdown toggle
+const mobileDropdowns = document.querySelectorAll('.mobile-menu-wrapper .dropdown');
+mobileDropdowns.forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+  
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+  });
+});
+
+// Close mobile menu when clicking on a non-dropdown link
+const mobileLinks = document.querySelectorAll('.mobile-menu-wrapper a:not(.dropdown > a)');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    menuWrapper.classList.remove('active');
+  });
+});
+</script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {

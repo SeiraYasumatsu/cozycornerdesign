@@ -91,7 +91,7 @@ margin-left: 1rem;
 }
 
 .mobile-menu-wrapper.active {
-  max-height: 400px; /* Adjust depending on menu height */
+  max-height: 500px; /* Adjust depending on menu height */
 }
 
 /* Menu (mobile default hidden) */
@@ -137,6 +137,56 @@ margin-left: 1rem;
   text-decoration: none; /* <— add this */
 }
 
+/* Mobile Dropdown Styles */
+.dropdown {
+            position: relative;
+        }
+
+.dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background-color: #f8f9fa;
+            margin-left: 1rem;
+        }
+
+ .dropdown-content.active {
+            max-height: 300px;
+        }
+
+        .dropdown-content li {
+            list-style: none;
+        }
+
+        .dropdown-content a {
+            color: black;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            text-align: left;
+            display: block;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .dropdown-content a:hover {
+            color: #EFBB3F;
+            font-weight: 700;
+        }
+
+        /* Dropdown arrow indicator for mobile */
+        .dropdown > a::after {
+            content: ' ▼';
+            font-size: 0.8em;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown.active > a::after {
+            transform: rotate(180deg);
+        }
 
 /*#btnScrollToTop {
     position: fixed;
@@ -417,7 +467,7 @@ a:hover {
   .logo img{
     /*width: 30%;*/
     width: 120px;
-    padding-left: 3rem;
+    padding-left: 1rem;
     }
 
   /*
@@ -485,25 +535,9 @@ a:hover {
     border: 2px solid #0B6254;
 }
 
-/*edited nav menu
-  .header {
-    flex-direction: row; 
-    justify-content: space-between;
-    padding-bottom: 0;
-  }
-
-  .logo {
-    padding: 2rem;
-    justify-content: flex-start;
-    width: auto;
-  }
-
-  .menu {
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center;
-  } */
-
+.mobile-center-button {
+  justify-content: flex-start;
+}
   .cta-desktop {
     display: block;
     margin-left: 2rem;
@@ -519,6 +553,56 @@ a:hover {
     font-size: 1.3rem;
   }
   
+  /* Desktop Dropdown */
+ .dropdown-content {
+     position: absolute;
+     top: 100%;
+     left: 0;
+     background: white;
+     min-width: 220px;
+     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+     border-radius: 8px;
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(-10px);
+     transition: all 0.3s ease;
+     z-index: 1001;
+     max-height: none;
+     overflow: visible;
+     margin-left: 0;
+    }
+
+ .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+ }
+
+ .dropdown-content a {
+    padding: 0.8rem 1.2rem;
+    font-size: 16px;
+    text-align: left;
+    margin: 0.2rem;
+    border-radius: 6px;
+}
+
+.dropdown-content li:first-child a {
+    margin-top: 0.5rem;
+}
+
+.dropdown-content li:last-child a {
+   margin-bottom: 0.5rem;
+}
+
+.dropdown > a::after {
+    font-size: 0.7em;
+}
+
+.dropdown:hover > a::after {
+   transform: rotate(180deg);
+ }
+
+ 
   .header {
     display: flex;
     justify-content: space-between;

@@ -19,7 +19,6 @@ body{
 }
 
 /*---Top-navigation-mobile---*/
-
 .nav {
   position: sticky;
   top: 0;
@@ -548,7 +547,7 @@ margin-left: 1rem;
 .why-work-title {
   font-size: 22px;
   text-align: center;
-  color: #073E35;
+  color: black;
   margin-bottom: 0.5rem;
 }
 
@@ -817,7 +816,7 @@ margin-left: 1rem;
   .logo img{
     /*width: 30%;*/
     width: 120px;
-    padding-left: 3rem;
+    padding-left: 1rem;
     }
 
 

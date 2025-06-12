@@ -91,7 +91,7 @@
 }
 
 .mobile-menu-wrapper.active {
-  max-height: 400px; /* Adjust depending on menu height */
+  max-height: 500px; /* Adjust depending on menu height */
 }
 
 /* Menu (mobile default hidden) */
