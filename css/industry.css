@@ -1002,7 +1002,7 @@ margin-left: 1rem;
   }
 
   .problem-image img {
-    width: 65%; /* Make sure the image is responsive */
+    width: 75%; /* Make sure the image is responsive */
     margin-left: auto;
     margin-right: auto; /* Center the image horizontally */
   }
