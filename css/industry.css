@@ -353,7 +353,7 @@ margin-left: 1rem;
 
 .problem-subtitle {
   font-size: 18px; /* 16px */
-  color: #555;
+  color: #333333;
   margin-bottom: 1.5rem;
   text-align: left;
 }
@@ -570,7 +570,7 @@ margin-left: 1rem;
 /* Individual card */
 .why-work-card {
   background-color: #ffffff;
-  padding: 2rem;
+  padding: 4rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.06);
   text-align: left;
@@ -641,9 +641,8 @@ margin-left: 1rem;
 }
 
 .problem-list {
-  list-style: disc;
   padding-left: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .problem-item {
@@ -1043,7 +1042,8 @@ margin-left: 1rem;
   }
 
   .insight-right p {
-    font-size: 18px;
+    font-size: 20px;
+    padding-top: 10rem;
   }
 
 /*---benefits---*/
@@ -1062,7 +1062,6 @@ margin-left: 1rem;
 .benefits-title {
   font-size: 32px;
 }
-
 
 
 /*---Why-work-withMe---*/
@@ -1114,7 +1113,6 @@ margin-left: 1rem;
 .footer .copyright h4 {
   font-size: 12px;
 }
-
 
 }
 
