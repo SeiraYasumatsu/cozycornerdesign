@@ -183,6 +183,12 @@ margin-left: 1rem;
             transform: rotate(180deg);
         }
 
+.button-wrapper {
+  max-width: 1200px; /* optional: match container width */
+  margin: 4rem auto 0; /* adds top spacing and centers the wrapper */
+  /*padding: 0 15px;*/
+  text-align: left; /* aligns the button to the left */
+}
 
 .btn-default {
   background-color: #0B6254;
@@ -451,7 +457,6 @@ margin-left: 1rem;
   flex-direction: column !important; /* Stack cards vertically on mobile */
   gap: 20px;
   align-items: center;
-  padding: 0 1rem;
 }
 
 /* Card styling */

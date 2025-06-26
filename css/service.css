@@ -273,6 +273,8 @@
     margin-bottom: 2rem;
     margin-top: 1rem;
     width: 100%;
+    padding-bottom: 20px;
+    line-height: 1.6;
   }
 
   .work1 {
@@ -469,12 +471,26 @@
 .web-design-container {
     max-width: 1200px;           /* Content constraint */
     margin: 0 auto;              /* Center the container */
-    padding: 20px 15px;          /* Inner padding */
+    padding: 20px;          /* Inner padding */
     margin-top: 5rem;
    /*border: 3px solid lightseagreen;*/
    justify-items:center;
 }
 
+.web-design-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.web-design-left,
+.web-design-right {
+    width: 100%;
+}
+
+p.subtitle{
+font-size: 16px;
+}
 
 .web-design-title {
     font-size: 3rem;
@@ -491,48 +507,10 @@
     align-items: center;
 }
 
-/*.wavy-line {
-  position: relative;
-  height: 8px; /* Adjust height of the wavy line */
-  background: #FFDB58;
-  margin: 30px 0; /* Optional margin around the line 
-}
-
-.wavy-line::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 20"%3E%3Cpath fill="%23fff" d="M0,10 C 20,0, 40,0, 60,10 C 80,20, 100,20, 120,10 C 140,0, 160,0, 180,10 L 180,10 Z"%3E%3C/path%3E%3C/svg%3E') repeat-x;
-  background-size: contain;
-}*/
-
-.divider-dash {
-  height: 2px;
-  margin: 30px 0;
-  background: repeating-linear-gradient(90deg, #AABBB3, #AABBB3 6px, transparent 6px, transparent 12px);
-  position: relative;
-  opacity: 0.6;
-}
-
-.divider-dash::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #f9f9f9, transparent, #f9f9f9);
-  animation: dash-fade 3s ease-in-out infinite;
-  pointer-events: none;
-  opacity: 0.3; /* Always partially transparent */
-} 
-
-@keyframes dash-fade {
-  0%, 100% { opacity: 0.2; }  /* Never fully transparent */
-  50% { opacity: 0.8; }       /* Peak visibility of overlay */
+.web-design-right p{
+  font-size: 18px;
+  line-height: 1.6;
+  padding-bottom: 15px;
 }
 
 
@@ -546,6 +524,7 @@
     color: #333;
     padding-bottom: 1.5rem;
     line-height: 1.6;
+    letter-spacing: 0.2px;
 }
 
 /* Optional Maintenance Plan */
@@ -557,20 +536,23 @@
 
 /* Why It Matters Section */
 .why-it-matters {
-    font-size: 20px;
+    font-size: 18px;
     color: #333;
     margin-top: 3rem;
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #DEE4E1;
+    background-color: #ffffff;
+    border: 2px solid #DEE4E1; 
+
     border-radius: 8px;
     /*width: 80%;*/
 }
 
 .why-it-matters h4 {
-    font-size: 20px;
-    color: #073E35;
-    margin-bottom: 10px;
+    font-size: 18px;
+    color: #1a7f6e;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .why-it-matters p{
@@ -588,12 +570,13 @@
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
+    font-weight: 400;
 }
 
 /* Call-to-Action Button */
 .cta-button {
     padding: 12px 25px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     background-color: #1a7f6e;
     color: white;
     border: none;
@@ -606,39 +589,8 @@
     background-color: #126b52;
 }
 
-/* Multilingual Web Design Section */
-.multilingual-web-design {
-    padding: 30px 15px;
-    border-radius: 8px;
-    max-width: 1200px;
-    margin: 5rem auto;
-}
-
-.multilingual-web-design-container {
-    text-align: left;
-    justify-items: center;
-}
-
-/* Multilingual Subtitles */
-.multilingual-web-design-subtitles {
-    display: flex;
-    flex-direction: column; /* Stack vertically by default */
-    gap: 20px;
-    width: 100%; /* Ensure it takes the full width */
-    align-items: center;
-}
-
 .subtitle {
     width: 100%;  /* Makes sure the single subtitle takes the full width */
-}
-
-.why-it-matters {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 30px;
-    padding: 15px;
-    background-color: #e9f5f0;
-    border-radius: 8px;
 }
 
 .subtitle ul {
@@ -654,7 +606,7 @@
 
 .cta-button {
     padding: 12px 25px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     background-color: #1a7f6e;
     color: white;
     border: none;
@@ -1006,8 +958,12 @@ textarea {
 
 .overview-card{
   padding: 2rem;
-  
 }
+
+.content{
+  width: 80%;
+}
+
 }
 
 @media screen and (min-width: 768px) { /*----TABLET-----*/
@@ -1184,9 +1140,6 @@ textarea {
           flex-wrap: wrap; /* Wrap items to a new line if needed */
         }
       
-        .content{
-          width: 70%;
-        }
       
        .statement{
           padding: 20px 0 0 20px;
@@ -1218,6 +1171,7 @@ textarea {
       .web-design-container {
         /*padding: 50px 0;           /* Padding inside the section */
         padding-bottom: 50px;
+        width: 90%;
     }
 
     /*--Service Overview Tablet and up---*/
@@ -1233,34 +1187,28 @@ textarea {
   .services-question-title {
     font-size: 3rem;
 }
-    
+
+.web-design-development{
+  padding:4rem;
+}
 
         .web-design-subtitles {
             flex-direction: column;
             justify-content: space-between;
         }
     
-        .subtitle {
+       /* .subtitle {
             width: 48%;
-        }
+        }*/
     
         .why-it-matters {
             font-size: 1.2rem;
             padding: 20px;
-            width: 70%;
+            /*width: 70%;*/
         }
     
         .cta-button {
-            font-size: 1.5rem;
-        }
-
-        /* multilingual-web-design-service-Tablet and up */
-        .multilingual-web-design-subtitles {
-            flex-direction: column; /* For larger screens, keep them in a row if you have more items */
-        }
-    
-        .subtitle {
-            width: 70%; 
+            font-size: 1.6rem;
         }
         
 
@@ -1273,9 +1221,7 @@ textarea {
         }
         
     
-        .cta-button {
-            font-size: 1.5rem;
-        }
+  
 
         /*---recentWork-tablet---*/
 .recent-work-cover{
@@ -1398,6 +1344,10 @@ textarea {
               font-size: 2rem;
               width:140vh;
             }
+          
+      .content{
+          width: 70%;
+        }
             
             .statement {
               /*margin-bottom: 40px; /* Add margin between text and button */
@@ -1411,6 +1361,7 @@ textarea {
 
             .statement h2{
               line-height: 1.8;
+              width: 90%;
             }
             
     .services-question {
@@ -1420,6 +1371,36 @@ textarea {
   .services-question-container {
     grid-template-columns: repeat(4, 1fr);
   }
+
+   .web-design-flex {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+    .web-design-container {
+    max-width: 1200px;           /* Content constraint */
+    margin: 0 auto;              /* Center the container */
+    padding: 20px 15px;          /* Inner padding */
+    margin-top: 5rem;
+   justify-items:center;
+}
+
+    .web-design-left {
+        flex: 1;
+    }
+
+    .web-design-right {
+        flex: 1;
+    }
+
+    .web-design-title {
+        text-align: left;
+    }
+
+    .web-design-subtitles {
+        align-items: flex-start;
+    }
 
     .footer-logo img {
         width: 15%; /* Adjust logo size as needed */
