@@ -1654,6 +1654,7 @@ padding: 3rem 0;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: unset;
+    padding-bottom: 8rem;
   }
 
   .service {
@@ -1669,7 +1670,7 @@ padding: 3rem 0;
 
   .call-to-action {
     width: calc(50% - 20px);
-    padding: 20px;
+    /*padding: 20px;*/
   }
 
   .call-to-action p {
