@@ -295,6 +295,9 @@ p.list-p {
   font-size: 18px;
   padding-bottom:1rem;
   letter-spacing: 0.2px;
+  text-indent: -1em;      /* aligns first line with bullet */
+  margin-left: 1em;       /* keeps full block aligned */
+    
 }
 
 .link{

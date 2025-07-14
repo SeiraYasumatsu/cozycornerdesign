@@ -388,6 +388,8 @@ margin-left: 1rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
   max-width: 680px;
+  text-indent: -1.5em;      /* aligns first line with bullet */
+  margin-left: 1.5em; 
 }
 
 
