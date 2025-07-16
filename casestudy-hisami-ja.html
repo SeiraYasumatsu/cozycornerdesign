@@ -34,6 +34,7 @@
             <li class="page"><a href="service.html">サービス</a></li>
             <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
             <li class="page"><a href="blog-ja.html">BLOG</a></li>
+            <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
             <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
           </ul>
       
@@ -51,6 +52,7 @@
         <li class="page"><a href="service.html">サービス</a></li>
         <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
         <li class="page"><a href="blog-ja.html">BLOG</a></li>
+        <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
         <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
       </ul>
     </div>
@@ -208,5 +210,25 @@
   });
   
       </script>
+
+               <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.split("/").pop(); // e.g., 'japanese-clients.html'
+    const currentHash = window.location.hash; // e.g., '#case-study-section'
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      const href = link.getAttribute('href');
+      const [linkPath, linkHash] = href.split("#");
+
+      const isSamePage = linkPath === currentPath;
+      const isSameHash = ("#" + linkHash) === currentHash;
+
+      if (isSamePage && (linkHash ? isSameHash : !currentHash)) {
+        link.classList.add('current');
+      }
+    });
+  });
+</script>
+
   </body>
 </html>

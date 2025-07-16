@@ -112,6 +112,14 @@
   padding: 1rem;
 }
 
+.menu a.current {
+  font-weight: 700;
+  color: #073E35;
+  text-decoration: underline;
+  text-decoration-color: #073E35;
+  text-underline-offset: 4px; 
+}
+
 /* Default: mobile */
 .nav-right {
   display: none;

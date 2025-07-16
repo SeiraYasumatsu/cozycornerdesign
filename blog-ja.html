@@ -34,6 +34,7 @@
           <li class="page"><a href="service-ja.html">サービス</a></li>
           <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog-ja.html">BLOG</a></li>
+          <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
           <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
         </ul>
     
@@ -51,6 +52,7 @@
       <li class="page"><a href="service-ja.html">サービス</a></li>
       <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog-ja.html">BLOG</a></li>
+      <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
       <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
     </ul>
   </div>
@@ -179,5 +181,34 @@ mobileLinks.forEach(link => {
 
                 gtag('config', 'UA-140417621-1');
               </script>
+            
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.split("/").pop(); // e.g., blog-post.html
+    const currentHash = window.location.hash;
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      const href = link.getAttribute('href');
+      const temp = document.createElement('a');
+      temp.href = href;
+      const linkPath = temp.pathname.split("/").pop(); // normalize ../ or / to filename
+      const linkHash = temp.hash.replace("#", "");
+
+      const linkMatchesPath =
+        (!linkPath && currentPath.endsWith("index.html")) ||
+        linkPath === currentPath ||
+        (linkPath === "blog-ja.html" && currentPath.startsWith("blog-"));
+
+      const linkMatchesHash = currentHash === ("#" + linkHash);
+
+      if (linkMatchesPath && (linkHash ? linkMatchesHash : true)) {
+        link.classList.add('current');
+      }
+    });
+  });
+</script>
+
+
+
            </body>
          </html>

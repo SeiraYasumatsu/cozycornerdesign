@@ -31,10 +31,11 @@
       
           <div class="nav-right">
         <ul class="menu" id="menu">
-          <li class="page"><a href="service-ja.html">サービス</a></li>
-          <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
-          <li class="page"><a href="blog-ja.html">BLOG</a></li>
-          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          <li class="page"><a href="../service-ja.html">サービス</a></li>
+          <li class="page"><a href="../japanese-clients.html#case-study-section">CASE STUDY</a></li>
+          <li class="page"><a href="../blog-ja.html">BLOG</a></li>
+          <li class="page"><a href="../japanese-clients.html#faq-section">FAQ</a></li>
+          <li class="page"><a href="../japanese-clients.html">日本のお客様へ</a></li>
         </ul>
     
         <div class="cta-desktop">
@@ -48,10 +49,11 @@
       <!-- Mobile Menu Wrapper -->
   <div class="mobile-menu-wrapper">
     <ul class="menu" id="menu-mobile">
-      <li class="page"><a href="service-ja.html">サービス</a></li>
-      <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
-      <li class="page"><a href="blog-ja.html">BLOG</a></li>
-      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      <li class="page"><a href="../service-ja.html">サービス</a></li>
+      <li class="page"><a href="../japanese-clients.html#case-study-section">CASE STUDY</a></li>
+      <li class="page"><a href="../blog-ja.html">BLOG</a></li>
+      <li class="page"><a href="../japanese-clients.html#faq-section">FAQ</a></li>
+      <li class="page"><a href="../japanese-clients.html">日本のお客様へ</a></li>
     </ul>
   </div>
 </nav>
@@ -171,5 +173,30 @@
 
             gtag('config', 'UA-140417621-1');
           </script>
+          <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.split("/").pop(); // e.g., blog-post.html
+    const currentHash = window.location.hash;
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      const href = link.getAttribute('href');
+      const [linkPath, linkHash] = href.split("#");
+
+      // Normalize for anchor-only or missing links
+      const linkMatchesPath =
+        (!linkPath && window.location.pathname.endsWith("index.html")) || 
+        linkPath === currentPath ||
+        // Handle blog.html and blog-post.html group
+        (linkPath === "blog.html" && currentPath.startsWith("blog-"));
+
+      const linkMatchesHash = currentHash === ("#" + (linkHash || ""));
+
+      if (linkMatchesPath && (linkHash ? linkMatchesHash : true)) {
+        link.classList.add('current');
+      }
+    });
+  });
+</script>
+
        </body>
      </html>

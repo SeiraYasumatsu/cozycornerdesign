@@ -40,8 +40,9 @@
                         </ul>
                     </li>
           <li class="page"><a href="service.html">SERVICE</a></li>
-          <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
+          <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
+          <li class="page"><a href="index.html#faq-section">FAQ</a></li>
           <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
         </ul>
     
@@ -65,8 +66,9 @@
                     </ul>
                 </li>
       <li class="page"><a href="service.html">SERVICE</a></li>
-      <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
+      <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
+      <li class="page"><a href="index.html#faq-section">FAQ</a></li>
       <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
     </ul>
   </div>
@@ -290,5 +292,31 @@ mobileLinks.forEach(link => {
 
                 gtag('config', 'UA-140417621-1');
               </script>
+
+           <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.split("/").pop(); // e.g., blog-post.html
+    const currentHash = window.location.hash;
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      const href = link.getAttribute('href');
+      const [linkPath, linkHash] = href.split("#");
+
+      // Normalize for anchor-only or missing links
+      const linkMatchesPath =
+        (!linkPath && window.location.pathname.endsWith("index.html")) || 
+        linkPath === currentPath ||
+        // Handle blog.html and blog-post.html group
+        (linkPath === "blog.html" && currentPath.startsWith("blog-"));
+
+      const linkMatchesHash = currentHash === ("#" + (linkHash || ""));
+
+      if (linkMatchesPath && (linkHash ? linkMatchesHash : true)) {
+        link.classList.add('current');
+      }
+    });
+  });
+</script>
+
            </body>
          </html>

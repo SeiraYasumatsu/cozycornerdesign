@@ -38,6 +38,7 @@
             <li class="page"><a href="service-ja.html">サービス</a></li>
             <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
             <li class="page"><a href="blog-ja.html">BLOG</a></li>
+            <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
             <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
           </ul>
       
@@ -55,6 +56,7 @@
         <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
         <li class="page"><a href="service-ja.html">サービス</a></li>
         <li class="page"><a href="blog-ja.html">BLOG</a></li>
+        <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
         <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
       </ul>
     </div>
@@ -290,7 +292,7 @@
           </div>
         </section>
 
-        <section class="faq-section">
+         <section id="faq-section" class="faq-section">
           <h2 class="faq-title">よくある質問</h2>
 
            <details class="faq-item">
@@ -298,10 +300,18 @@
             <p>制作期間は通常4〜16週間程度です。内容や機能、ご要望の範囲によって異なりますが、標準的なサイトであれば8〜12週間ほどかかることが多いです。ヒアリング後に具体的なスケジュールをご提案しますので、ご安心ください。</p>
           </details>
         
-          <details class="faq-item">
-            <summary>ウェブサイト制作の費用はいくらですか？</summary>
-            <p>ご希望の内容や機能、デザインの複雑さによって費用は変わります。柔軟なパッケージをご用意しており、目的を伺った上でお見積もりをご提案いたします。</p>
+         <details class="faq-item">
+          <summary>ウェブサイトの費用はどのくらいかかりますか？</summary>
+          <p>料金は、お客様の具体的なご希望や機能、プロジェクトの複雑さによって変わります。シンプルな1ページのサイトから、カスタムデザインや多言語対応を含む本格的なサイトまで、柔軟なパッケージをご用意しています。</p>
+          <p>例えば：</p>
+          <ul>
+            <li><strong>単一言語のウェブサイト</strong>（1～5ページ）：$1,000 ～ $3,000</li>
+            <li><strong>カスタムまたは多言語対応サイト</strong>（文化的な翻訳も含む）：$4,000 ～ $8,000以上</li>
+            <li><strong>UX/UIデザイン＋開発</strong>（異文化戦略を含む）：$5,000 ～ $12,000</li>
+          </ul>
+          <p>まだ具体的なご要望が定まっていなくても、ご安心ください。お客様のプロジェクトについて詳しくお伺いし、ご希望やご予算に合わせたお見積もりを作成いたします。一緒に最適なプランを考えていきましょう。無理な押し付けはいたしませんので、お気軽にご相談ください。</p>
           </details>
+
 
           <details class="faq-item">
             <summary>制作を始めるには何が必要ですか？</summary>
@@ -447,5 +457,25 @@ hamburger.addEventListener("click", function () {
 
             gtag('config', 'UA-140417621-1');
           </script>
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.split("/").pop(); // e.g., 'japanese-clients.html'
+    const currentHash = window.location.hash; // e.g., '#case-study-section'
+
+    document.querySelectorAll('.menu a').forEach(link => {
+      const href = link.getAttribute('href');
+      const [linkPath, linkHash] = href.split("#");
+
+      const isSamePage = linkPath === currentPath;
+      const isSameHash = ("#" + linkHash) === currentHash;
+
+      if (isSamePage && (linkHash ? isSameHash : !currentHash)) {
+        link.classList.add('current');
+      }
+    });
+  });
+</script>
+
+
        </body>
      </html>
