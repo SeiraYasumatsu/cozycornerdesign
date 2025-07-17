@@ -385,6 +385,8 @@ a:focus + .cta-tagline {
   margin-bottom: 2rem;
   margin-top: 2rem;
   max-width: 680px;
+  text-indent: -1.5em;      /* aligns first line with bullet */
+  margin-left: 1.5em;   
 }
 
 
@@ -875,8 +877,8 @@ a:focus + .cta-tagline {
 .right-content ul {
   list-style: inside;
   /*padding-left: 20px;*/
-  text-indent: -1em;      /* aligns first line with bullet */
-  margin-left: 1em;   
+  text-indent: -1.5em;      /* aligns first line with bullet */
+  margin-left: 1.5em;   
 }
 
 .right-content li {
@@ -885,7 +887,7 @@ a:focus + .cta-tagline {
   font-size: 16px;
   font-weight: normal;
   color: #cbd5d0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .right-content h4 {

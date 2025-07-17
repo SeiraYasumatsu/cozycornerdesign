@@ -348,6 +348,8 @@
   margin-bottom: 2rem;
   margin-top: 2rem;
   max-width: 680px;
+  text-indent: -1.5em;      /* aligns first line with bullet */
+  margin-left: 1.5em;   
 }
   
   .work1 {
@@ -774,6 +776,8 @@
   .right-content ul {
     list-style: inside;
     /*padding-left: 20px;*/
+    text-indent: -1.5em;      /* aligns first line with bullet */
+    margin-left: 1.5em;  
   }
   
   .right-content li {
@@ -1287,6 +1291,8 @@
 
   .problem-item {
     font-size: 18px; /* 18px */
+    text-indent: -1.5em;      /* aligns first line with bullet */
+    margin-left: 1.5em;   
   }
 
   .logo img{
