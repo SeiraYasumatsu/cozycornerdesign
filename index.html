@@ -536,6 +536,30 @@ mobileLinks.forEach(link => {
   });
 </script>
 
+<!-- MailerLite Universal -->
+<script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '1667930');
+</script>
+
+<!-- Delay + Poll for ML script readiness -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function checkMailerLiteReady() {
+      if (typeof ml === 'function') {
+        ml('show', 'dhZEMt', true); // Replace with your actual form ID
+      } else {
+        setTimeout(checkMailerLiteReady, 500); // Check again in 500ms
+      }
+    }, 3000); // Initial 3 second wait
+  });
+</script>
+
+
+
 
        </body>
      </html>
