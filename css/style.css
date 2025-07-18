@@ -935,19 +935,26 @@ flex-direction: column;
 align-items: center;
 width: 100%;
 }
+
 .work-image {
-display: flex; /* Set display to flex */
-flex-direction: column; /* Stack the children (image and link) vertically */
-justify-content: center; /* Center the content horizontally */
-align-items: center; /* Center the content vertically */
-width: 100%; /* Ensure it takes full width */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .work-image img {
-width: 50%; /* Ensure the image fills its container */
-display: block;
-margin: 0 auto; /* Center the image horizontally */
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain; /* or cover, depending on cropping preference */
+  display: block;
+  margin-bottom: 8px;
 }
+
+
 
 .website-link {
 display: block;
@@ -1779,7 +1786,7 @@ margin: 0 auto;
 }
 
 .work-image img {
-  width: 60%;
+  width: 80%;
   display:block;
   margin: 0 auto; /* Center the image horizontally */
 }

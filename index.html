@@ -102,9 +102,12 @@
                 </div>                
                </div>
              </div>
-             <div class="work1">
-              <img src="images/hero-multi.png" alt="example multilingual Work">
-             </div>
+          <div class="work1">
+           <picture>
+             <source srcset="images/hero-multi.webp" type="image/webp">
+             <img src="images/hero-multi.png" alt="example multilingual Work" loading="lazy">
+           </picture>
+         </div>
            </div>
          </div>
 
@@ -180,7 +183,10 @@
 
             <div class="case-study-card">
                 <div class="case-study-image-container">
-                    <img src="images/hisami-tn2.png" alt="Case Study Image for Hisami Shirahama">
+                    <picture>
+                       <source srcset="images/hisami-tn2.webp" type="image/webp">
+                       <img src="images/hisami-tn2.png" alt="Case Study Image for Hisami Shirahama" loading="lazy" width="400" height="250">
+                    </picture>
                 </div>
                 <div class="case-content">
                     <h3>Helping Hisami Reach a Global Audience – 80 Followers in 7 Days!</h3>
@@ -285,12 +291,14 @@
               <div class="swiper-wrapper">
                 <!-- Testimonial Slide 1 -->
                 <div class="swiper-slide work-item">
-                  <div class="work-image">
-                    <a href="https://www.hisamishirahama.com/" target="_blank" rel="noopener noreferrer">
-                      <img src="images/hisami-review.png" alt="HisamiShirahama Work Image">
-                    </a>
-                    <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
-                  </div>
+                <div class="work-image">
+                  <a href="https://www.hisamishirahama.com/" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                    <source srcset="images/hisami-review.webp" type="image/webp">
+                    <img src="images/hisami-review.png" alt="HisamiShirahama Work Image" loading="lazy" width="600" height="500">
+                    </picture></a>
+                       <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
+                </div>
                   <div class="testimonial">
                     <img src="images/quotationIcon.png" alt="Quotation Mark">
                     <p class="testimonial-text">What impressed me most was Seira's outstanding design sense and English language skills. Creating a logo and website was a completely new experience for me. During our meetings, she listened attentively and helped draw out my vision for the site. She clearly explained what I needed to do, and delivered everything by our target completion date, which was incredibly helpful.
@@ -306,8 +314,12 @@
         
                 <!-- Testimonial Slide 2 -->
                 <div class="swiper-slide work-item">
-                  <div class="work-image">
-                    <img src="images/abejitasWork.png" alt="Recent Work Image">
+                   <div class="work-image">
+                   <a href="https://www.abejitasmontessori.com/" target="_blank" rel="noopener noreferrer">
+                   <picture>
+                     <source srcset="images/abejitasWork.webp" type="image/webp">
+                     <img src="images/abejitasWork.png" alt="Recent Work Image" loading="lazy" width="600" height="500">
+                    </picture></a>
                     <a href="https://www.abejitasmontessori.com/" class="website-link">Abejitas Montessori</a>
                   </div>
                   <div class="testimonial">
@@ -545,18 +557,23 @@ mobileLinks.forEach(link => {
   ml('account', '1667930');
 </script>
 
-<!-- Delay + Poll for ML script readiness -->
+<!-- Delay + Poll for ML script readiness with session-based once-per-session check -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function checkMailerLiteReady() {
-      if (typeof ml === 'function') {
-        ml('show', 'dhZEMt', true); // Replace with your actual form ID
-      } else {
-        setTimeout(checkMailerLiteReady, 500); // Check again in 500ms
-      }
-    }, 3000); // Initial 3 second wait
+    // Check if popup was already shown in this session
+    if (!sessionStorage.getItem('crossCulturalPopupShown')) {
+      setTimeout(function checkMailerLiteReady() {
+        if (typeof ml === 'function') {
+          ml('show', 'dhZEMt', true); // Replace with your actual form ID
+          sessionStorage.setItem('crossCulturalPopupShown', 'true'); // Remember that popup was shown this session
+        } else {
+          setTimeout(checkMailerLiteReady, 500);
+        }
+      }, 3000); // Show after 3 seconds
+    }
   });
 </script>
+
 
 
 
