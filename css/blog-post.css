@@ -241,6 +241,19 @@ body{
   align-items: center;
 }
 
+.disclaimer-box {
+  border: 2px solid #e0e0e0;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+.disclaimer-box h2 {
+  margin-top: 1rem;
+  color: #b00020; /* optional: red tone to match the 🛑 icon */
+  line-height: 1.6;
+}
+
 .postimage{
   width: 100%;
   margin-bottom:30px;
@@ -276,6 +289,7 @@ body{
 
 .published-date {
   display: block;
+  font-size: 12px;
 }
 
 .separator {
