@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>日本と欧米サイトに見るナビゲーション順序の違いと多言語サイト設計のポイント</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="日本語サイトと英語サイトでは、ナビゲーションの並び順や情報の優先度が大きく異なります。本記事では、文化ごとの違いを解説し、日英バイリンガルサイトや多言語サイトを設計する際に役立つ実践的なポイントやチェックリストを紹介。信頼を築き、海外ユーザーにも使いやすいウェブサイトを作るためのヒントが満載です。">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;800&family=Karla:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <nav class="nav">
+        <div class="header">
+          <div class="logo">
+            <a href="../index.html"><img src="../images/logo6.png" alt="Logo"></a>
+          </div>
+      
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+      
+        <div class="nav-right">
+        <ul class="menu" id="menu">
+          <li class="page"><a href="../service-ja.html">サービス</a></li>
+          <li class="page"><a href="../japanese-clients.html#case-study-section">CASE STUDY</a></li>
+          <li class="page"><a href="../blog-ja.html">BLOG</a></li>
+          <li class="page"><a href="../japanese-clients.html#faq-section">FAQ</a></li>
+          <li class="page"><a href="../japanese-clients.html">日本のお客様へ</a></li>
+        </ul>
+    
+        <div class="cta-desktop">
+          <a href="mailto:cozycornerdesign.ca@gmail.com">
+            <button type="button" class="btn-default">ご相談はこちら</button>
+          </a>
+        </div>
+       </div> 
+      </div>
+
+      <!-- Mobile Menu Wrapper -->
+  <div class="mobile-menu-wrapper">
+    <ul class="menu" id="menu-mobile">
+      <li class="page"><a href="../service-ja.html">サービス</a></li>
+      <li class="page"><a href="../japanese-clients.html#case-study-section">CASE STUDY</a></li>
+      <li class="page"><a href="../blog-ja.html">BLOG</a></li>
+      <li class="page"><a href="../japanese-clients.html#faq-section">FAQ</a></li>
+      <li class="page"><a href="../japanese-clients.html">日本のお客様へ</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <main>
+      <div class="container">
+        <div class="post-header">
+           <h1 class="post-title">日本と欧米サイトに見るナビゲーション順序の違いと多言語サイト設計のポイント</h1>
+         <div class= "post-details">
+           <span class="tag multi">multilingual design</span>
+           <span class="published-date">Published: September  30, 2025</span>
+         </div>
+        </div>
+           <hr class="separator">
+       <div class="post-content">
+           <p>日本語サイトと英語サイトの違いから見る、ナビゲーションの流れ</p>
+           <p>多言語サイトを作るとき、まず気にするのは「翻訳」や「ラベル名」かもしれません。でも実は、もうひとつ大きな影響を与えるポイントがあります。――それが 「メニューの並び順」 です。</p>
+           <p>一見ささいなことに思えますが、メニューの順序はユーザー体験を大きく左右します。特に日本語サイトと英語サイトでは、「何を先に見せるか」の感覚が大きく異なり、信頼感や行動の流れに直結します。</p> 
+           <div class="disclaimer-box">
+              <h2>⚠️ ご参考までに:</h2>
+              <p>本記事では、英語圏および日本のユーザーに信頼されるウェブサイトを作るための一般的なデザインの考え方をご紹介しています。ただし、プロジェクトごとに目的やターゲット、状況は異なり、文化的な好みや価値観も多様です。そのため、ここでの内容はあくまでヒントや参考情報としてご活用いただき、最終的な判断は各ビジネスの状況に合わせて行っていただければ幸いです。</p>
+            </div>
+            
+            <div class="postimage">
+           <img src="../images/navigationOrder-blog.png" alt="japanese and western navigation menu comparison image">
+         </div>
+             <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">なぜメニューの順序が重要なのか</h1>
+             <p>ナビゲーションはユーザーが最初に触れる「地図」です。順序次第でユーザーは:</p>
+            
+             <p class ="list-p">&#x2022; 何を重要と感じるか（文化によって読み方や目の動きも変わる）</p>
+             <p class ="list-p">&#x2022; どこから行動を始めるか（すぐ離脱するか、深く読み進めるか）</p>
+             <p class ="list-p">&#x2022; 安心できるか（見慣れた並びなら「自分向け」だと感じる）</p>
+
+             <h2 style="padding-top:16px;">💡 ポイント: </h2>
+             <p>「About」や「会社概要」の位置が違うだけで、使いやすさや印象は大きく変わります。</p>
+
+             <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">日本語サイト：会社の信頼性からスタート</h1>
+             <p>日本の会社のサイトでは、まず会社そのものを紹介するのが一般的です。よくある並びは：</p>
+
+             <p class ="list-p">1.&nbsp;&nbsp; 会社案内 (Company Information)</p>
+             <p class ="list-p">2.&nbsp;&nbsp; 事業内容 (Services/Business)</p>
+             <p class ="list-p">3.&nbsp;&nbsp; 採用情報 (Careers)</p>
+             <p class ="list-p">4.&nbsp;&nbsp; お問い合わせ (Contact)</p>
+
+             <h2 style="padding-top:16px;">💡 ポイント:</h2>
+             <p>日本では「何をしている会社か」よりも「どんな会社か」を先に示すことで信頼を得ます。<br>👉 B2Cのサイトでも、会社プロフィールが目立つ位置にあるのが普通です。</p>
+
+             <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">英語サイト：行動とストーリーが先</h1>
+             <p>一方、英語圏のサイトではまず ユーザーが取れる行動やブランドの物語を先に出します。よくある並びは：</p>
+            
+             <p class ="list-p">1.&nbsp;&nbsp; Home</p>
+             <p class ="list-p">2.&nbsp;&nbsp; about</p>
+             <p class ="list-p">3.&nbsp;&nbsp; services / Products</p>
+             <p class ="list-p">4.&nbsp;&nbsp; Blog / Resources </p>
+             <p class ="list-p">5.&nbsp;&nbsp; Contact</p>
+
+             <h2 style="padding-top:16px;">💡 ポイント: </h2>
+             <p>ユーザーの意識は「あなたは私に何をしてくれるのか？」が先。<br>👉 会社情報は必要に応じてあとから確認する、という流れです。</p>
+             
+
+             <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">微妙だけど大きな違い</h1>
+             
+             <h2 style="padding-top:16px;">1. 「採用情報」の位置</h2>
+             <p class ="list-p">&#x2022; <strong>日本:</strong> &nbsp;&nbsp;上位に配置するのが一般的。会社の成長や透明性を示す役割もある。</p>
+             <p class ="list-p">&#x2022; <strong>英語圏:</strong> &nbsp;&nbsp; 多くは下層ページやフッターに置かれ、求職者向けの情報として扱われる。</p>
+
+             <h2 style="padding-top:16px;">2. 「お問い合わせ」の位置</h2>
+             <p class ="list-p">&#x2022; <strong>日本:</strong>&nbsp;&nbsp;最後に置かれることが多い。十分な情報を読んだ上で行動する前提。</p>
+             <p class ="list-p">&#x2022; <strong>英語圏:</strong>&nbsp;&nbsp; トップナビの右端やCTAボタンとして配置され、すぐ行動を促す。</p>
+             
+             <h2 style="padding-top:16px;">3. 「Home」と「会社案内」の役割</h2>
+             <p class ="list-p">&#x2022; <strong>日本:</strong>&nbsp;&nbsp; ロゴをクリックすればホームに戻れるので、あえて「Home」を入れず「会社案内」を起点にする場合もある。</p>
+             <p class ="list-p">&#x2022; <strong>英語圏:</strong>&nbsp;&nbsp; 必ず「Home」が先頭にあり、サイトの出発点として機能する。</p>
+             
+             
+             <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:3rem;">多言語サイトではどうする？</h1>
+             <p>日英両方のユーザーに対応する場合、順序は戦略的な選択になります。</p>
+            
+             <p class ="list-p">&#x2022; 日本向けには「会社案内」を先に。</p>
+             <p class ="list-p">&#x2022; 海外向けには「Home」「Services」を優先。</p>
+             <p class ="list-p">&#x2022; または言語切り替えでメニュー順を調整するのも有効。</p>
+
+             <p>👉 例：トヨタのグローバルサイトは英語版で「Vehicles」から始まりますが、日本語版では「会社概要」から始まります。同じ企業でも、見せ方を文化ごとに変えているのです。</p>
+
+             <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:3rem;">多言語ナビゲーション配置チェックリスト</h1>
+             <p>📋 ぜひ現在のサイトのナビゲーションを確認するためにこのミニチェックリストを使ってみて下さい:</p>
+            
+             <p class ="list-p">1.&nbsp;&nbsp; 文化ごとの ユーザー優先順位 を反映していますか？</p>
+             <p class ="list-p">2.&nbsp;&nbsp; 「会社案内／About」は期待通りの位置にありますか？</p>
+             <p class ="list-p">3.&nbsp;&nbsp; 「採用情報」が隠れすぎていませんか（日本向け）？</p>
+             <p class ="list-p">4.&nbsp;&nbsp; 「お問い合わせ」が行動を誘導する配置になっていませんか？</p>
+             <p class ="list-p">5.&nbsp;&nbsp; 「Home」やロゴクリックでの戻り方は、文化に合っていますか？</p>
+             
+
+            <h1 style="color: #073E35; margin-top: 50px; font-size: 28px; padding-bottom: 5px;">最後に</h1>
+            <p>ナビゲーションの並び順は単なるデザイン調整ではなく、文化的なメッセージ です。ユーザーの期待に合わせて順序を設計することで、ただクリックを導くのではなく、信頼とスムーズな流れを生み出すことができます。</p>
+        </div>
+
+       <div class="cta-read-english">
+        <a class="cta-link-btn" href="../blog/How-Navigation-Order-Shapes-User-Flow.html" aria-label="Read the English version: How Navigation Order Shapes User-Flow Across Cultures">
+            英語で日本人向けのサイトのヒントを読む: How Navigation Order shapes user-flow
+        <span aria-hidden="true">↗</span>
+        </a>
+        </div>
+
+       <div class="share-section">
+            <p>シェアする:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.cozycornerdesign-ca.com/blog/How-Navigation-Order-Shapes-User-Flow-ja.html" target="_blank" rel="noopener noreferrer">
+              <img src="../images/facebook-icon.png" alt="Facebook Icon">
+            </a>
+          <!--  <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
+            <img src="pinterest-icon.png" alt="Pinterest Icon">
+            </a>-->
+        </div>
+         <div class="btn"><a href="../blog-ja.html" class="read-more-btn">他の記事も読む</a></div>
+      </div>
+
+     <div class="cta">
+      <section class="cta-section">
+         <h3 class="cta-title">ウェブサイトの新規作成やリニューアルをお考えですか？</h3>
+        <p class="cta-text">私はUX／プロダクトデザイナーとして、日本語と英語、両方の文化を理解したデジタル体験とマーケティングのデザインを行っています。医療・ヘルスケア・AI分野での5年以上の実務経験を活かし、ユーザー中心の視点と多文化的な背景を組み合わせて、東洋と西洋をつなぐ使いやすく効果的なデザインソリューションを提供しています。日米両方の文化の中で暮らし働いてきたからこそできる、一般的なデザインサービスを超えたご提案が可能です。</p>
+        <p class="cta-text">ご一緒にお仕事できたら嬉しいです。文化の壁を越えて伝わるデザイン、一緒に形にしてみませんか？ぜひお気軽にご相談ください。</p>
+        <div> <a href="https://calendly.com/cozycornerdesign-ca/30min" target="_blank" rel="noopener">
+        <button class="book-button">無料相談を予約する</button>
+        </a></div>
+      </section>
+     </div>
+    </main>
+    <footer class="footer">
+            <div class="footer-content">
+               <div class="footer-logo">
+               <img src="../images/Logo2.png" alt="Logo">
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
+                <i class="fas fa-envelope"></i>
+               cozycornerdesign.ca@gmail.com
+               </a>
+               <span class="footer-instagram-link">
+                <a href="https://www.instagram.com/cozycornerdesignca/?next=%2F" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    cozycornerdesignca
+                </a></span>
+            </div>
+            </div>
+            <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
+    </footer>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-140417621-1');
+          </script>
+       </body>
+     </html>
