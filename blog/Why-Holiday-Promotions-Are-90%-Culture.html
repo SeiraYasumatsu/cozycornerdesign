@@ -147,6 +147,100 @@
              <p class ="list-p">&#x2022; <strong><mark>Localize the Promotion Funnel by Language:</mark></strong>&nbsp;&nbsp;<strong>English page</strong>&nbsp;&nbsp;Switch the hero banner to a sales announcement, and implement a prominent countdown timer.<br><strong>Japanese page</strong>&nbsp;&nbsp;The banner should serve as a "Happy New Year" greeting and a gentle guide to a dedicated (quietly-designed) special page, maintaining a reserved atmosphere.</p>
              <p class ="list-p">&#x2022; <strong><mark>Use Pop-ups Based on Intent:</mark></strong>&nbsp;&nbsp;<strong>English page</strong>&nbsp;&nbsp;Use strong, conversion-focused pop-ups.<br><strong>Japanese page</strong>&nbsp;&nbsp;Limit pop-ups to non-intrusive banners for "limited-time coupons (subtle design)" or "seasonal greetings," ensuring they don't disrupt the user's experience.</p>
 
+             <div class="quiz-wrapper">
+  <p>* We’ve looked at Japanese vs. Western websites—now it’s time to see which style your site leans toward.  
+  Take this quick quiz to find out!</p>
+
+  <h2 class="quiz-main-title">Is Your Site “Western” or “Japanese”? Quick Quiz</h2>
+  <p class="quiz-subtitle">Answer 7 simple questions to see your site’s style.</p>
+
+  <form id="quiz" class="card" aria-labelledby="quizTitle">
+    <div id="quizTitle" style="display:none">Quick Quiz Form</div>
+
+    <div class="q" data-q="hero">
+      <label class="question">1. What’s right below your hero banner?</label>
+      <div class="options" role="radiogroup" aria-labelledby="">
+        <label class="option"><input type="radio" name="hero" value="west"> A CTA (buy/sign-up button)</label>
+        <label class="option"><input type="radio" name="hero" value="japan"> A service description or greeting</label>
+      </div>
+      <div class="helper">* Do you push users to act immediately, or explain first?</div>
+    </div>
+
+    <div class="q" data-q="impression">
+      <label class="question">2. First impression of your site?</label>
+      <div class="options">
+        <label class="option"><input type="radio" name="impression" value="west"> Bold motion or sales highlights</label>
+        <label class="option"><input type="radio" name="impression" value="japan"> Calm, article-like tone</label>
+      </div>
+    </div>
+
+    <div class="q" data-q="sale">
+      <label class="question">3. How are promotions shown?</label>
+      <div class="options">
+        <label class="option"><input type="radio" name="sale" value="west"> Countdown or discounts stand out</label>
+        <label class="option"><input type="radio" name="sale" value="japan"> Explained carefully on LP before action</label>
+      </div>
+    </div>
+
+    <div class="q" data-q="popup">
+      <label class="question">4. How are pop-ups used?</label>
+      <div class="options">
+        <label class="option"><input type="radio" name="popup" value="west"> Strong offer immediately on visit</label>
+        <label class="option"><input type="radio" name="popup" value="japan"> Rare or subtle</label>
+      </div>
+    </div>
+
+    <div class="q" data-q="lp">
+      <label class="question">5. Role of landing pages (LP)?</label>
+      <div class="options">
+        <label class="option"><input type="radio" name="lp" value="west"> Focus on CTA, encourage quick action</label>
+        <label class="option"><input type="radio" name="lp" value="japan"> Build understanding with info and guidance</label>
+      </div>
+    </div>
+
+    <div class="q" data-q="trust">
+      <label class="question">6. How is trust built?</label>
+      <div class="options">
+        <label class="option"><input type="radio" name="trust" value="west"> Show numbers or reviews early</label>
+        <label class="option"><input type="radio" name="trust" value="japan"> Share stories or background in detail</label>
+      </div>
+    </div>
+
+    <div class="q" data-q="mood">
+      <label class="question">7. What vibe does your site give?</label>
+      <div class="options">
+        <label class="option"><input type="radio" name="mood" value="west"> Energetic, urgent</label>
+        <label class="option"><input type="radio" name="mood" value="japan"> Calm, relaxed</label>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button" id="run" class="btn">Take Quiz</button>
+      <button type="button" id="reset" class="btn secondary">Reset</button>
+      <div style="margin-left:auto" class="small">Time: ~1 min</div>
+    </div>
+
+    <div id="result" role="status" aria-live="polite" style="display:none" class="card">
+      <p class="result-title" id="resultTitle">Your Result</p>
+      <p class="result-body" id="resultText"></p>
+
+      <div class="score-bars" aria-hidden="true">
+        <div style="width:120px" class="small">Western</div>
+        <div class="bar"><div id="westBar" class="bar-fill" style="width:0%"></div></div>
+        <div style="width:120px; text-align:right" class="small">Japanese</div>
+        <div class="bar"><div id="japanBar" class="bar-fill" style="width:0%"></div></div>
+      </div>
+
+      <p class="small" id="advice"></p>
+
+      <div style="display:flex; gap:8px; margin-top:12px;">
+        <button id="share" class="btn secondary" type="button">Share</button>
+        <button id="print" class="btn secondary" type="button">Print</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 
             <h1 style="color: #073E35; margin-top: 50px; font-size: 28px; padding-bottom: 5px;">Final thoughts</h1>
             <p>Website holiday promotion is not just a design skill—it's a User Experience (UX) strategy centered on meeting cultural expectations.</p>
@@ -204,6 +298,132 @@
             </div>
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
+
+    <!--for Quiz-->
+<script>
+(function(){
+  const runBtn = document.getElementById('run');
+  const resetBtn = document.getElementById('reset');
+  const resultWrap = document.getElementById('result');
+  const resultText = document.getElementById('resultText');
+  const resultTitle = document.getElementById('resultTitle');
+  const advice = document.getElementById('advice');
+  const westBar = document.getElementById('westBar');
+  const japanBar = document.getElementById('japanBar');
+  const shareBtn = document.getElementById('share');
+  const printBtn = document.getElementById('print');
+  const form = document.getElementById('quiz');
+
+  function collectAnswers(){
+    const names = ['hero','impression','sale','popup','lp','trust','mood'];
+    const counts = {west:0,japan:0,unanswered:0};
+    names.forEach(name=>{
+      const val = (form.querySelector(`input[name="${name}"]:checked`) || {}).value;
+      if(val==='west') counts.west++;
+      else if(val==='japan') counts.japan++;
+      else counts.unanswered++;
+    });
+    return counts;
+  }
+
+  function showResult(){
+    const c = collectAnswers();
+    const totalAnswered = 7 - c.unanswered;
+
+    // If nothing answered, show prompt
+    if(totalAnswered === 0){
+      resultTitle.textContent = 'No result';
+      resultText.textContent = 'Please select an answer for each question first.';
+      advice.textContent = '';
+      westBar.style.width = '0%';
+      japanBar.style.width = '0%';
+      resultWrap.style.display = 'block';
+      return;
+    }
+
+    const westPct = Math.round((c.west / 7) * 100);
+    const japanPct = Math.round((c.japan / 7) * 100);
+
+    // Determine label
+    let label = '';
+    if(westPct >= 60 && westPct > japanPct) label = 'Mostly Western-Style (Action-Oriented)';
+    else if(japanPct >= 60 && japanPct > westPct) label = 'Mostly Japanese-Style (Info-Oriented)';
+    else label = 'Hybrid Style (Mix of both)';
+
+    resultTitle.textContent = 'Quiz Result';
+    resultText.innerHTML = `<strong>${label}</strong><br>(Western: ${westPct}% / Japanese: ${japanPct}% / Unanswered: ${c.unanswered})`;
+
+    // Bars
+    westBar.style.width = westPct + '%';
+    japanBar.style.width = japanPct + '%';
+
+    // Advice text
+    let adv = '';
+    if(label.includes('Western')) {
+      adv = 'Your site encourages immediate action. It works well for English-speaking audiences, but adding informational pages or explanations can increase trust for Japanese users.';
+    } else if(label.includes('Japanese')) {
+      adv = 'Your site provides detailed information and is well-suited for the Japanese market. For Western audiences, adding prominent CTAs or a sense of urgency can improve results.';
+    } else {
+      adv = 'Your site has a mix of both styles. For multilingual sites, consider optimizing promotion paths per language (switching hero content, separate LPs, etc.).';
+    }
+    advice.textContent = adv;
+
+    resultWrap.style.display = 'block';
+    resultWrap.scrollIntoView({behavior:'smooth', block:'center'});
+    resultWrap.focus && resultWrap.focus();
+  }
+
+  runBtn.addEventListener('click', showResult);
+  resetBtn.addEventListener('click', ()=>{
+    form.reset();
+    resultWrap.style.display = 'none';
+    westBar.style.width = '0%';
+    japanBar.style.width = '0%';
+  });
+
+  shareBtn.addEventListener('click', async ()=>{
+    const c = collectAnswers();
+    const westPct = Math.round((c.west / 7) * 100);
+    const japanPct = Math.round((c.japan / 7) * 100);
+    const text = `Quiz Result: Your site is ${westPct}% Western / ${japanPct}% Japanese.\n(Quick Assessment)`;
+    if(navigator.share){
+      try{
+        await navigator.share({title:'Site Quiz', text});
+      }catch(e){
+        alert('Sharing was canceled.');
+      }
+    } else {
+      // fallback - copy to clipboard
+      try{
+        await navigator.clipboard.writeText(text);
+        alert('Result copied to clipboard. You can paste it on social media to share.');
+      }catch(e){
+        alert('Sharing is not available. Please copy the result manually.');
+      }
+    }
+  });
+
+  printBtn.addEventListener('click', ()=> window.print());
+
+  // allow pressing Enter on a radio to move to next question
+  document.querySelectorAll('input[type="radio"]').forEach((r)=>{
+    r.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        const names = ['hero','impression','sale','popup','lp','trust','mood'];
+        const idx = names.indexOf(r.name);
+        if(idx >=0 && idx < names.length - 1){
+          const nextName = names[idx+1];
+          const nextFirst = form.querySelector(`input[name="${nextName}"]`);
+          if(nextFirst) nextFirst.focus();
+        }
+      }
+    });
+  });
+
+})();
+</script>
+
      <!--hamburger menu-->
 <script>
 const hamburger = document.getElementById("hamburger");
