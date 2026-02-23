@@ -316,7 +316,7 @@
 }
 
 .about-me-image img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
   border-radius: 8px;
@@ -363,7 +363,6 @@
 .snapshot-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
 }
 
 .snapshot-item {
@@ -551,7 +550,7 @@
 
    .snapshot-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    gap: 2rem;
   }
 
   .snapshot-item {
@@ -616,6 +615,10 @@
    .gain {
     padding: 5rem 3rem 6rem;
   }
+
+  .about-me-image img {
+  width: 100%;
+}
 
    .about-me {
     padding: 5rem 3rem 6rem;
