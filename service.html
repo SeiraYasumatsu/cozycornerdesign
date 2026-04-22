@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>Multilingual Website Design – Japanese-English WordPress Sites with Cultural Sensitivity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -34,10 +35,10 @@
     <nav class="nav">
       <div class="header">
         <div class="logo">
-          <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+          <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
         </div>
     
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -57,7 +58,7 @@
           <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
           <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
         </ul>
     
         <div class="cta-desktop">
@@ -83,7 +84,7 @@
       <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
       <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
     </ul>
   </div>
 </nav>
@@ -291,7 +292,7 @@
            <p><strong>✔ Human-Level Translation</strong><br> Natural, trustworthy messaging that sounds right — no awkward or robotic language.</p>
 
         <div class="why-it-matters">
-          <h4>🌟 Why it matters: A truly bilingual website gives you a competitive edge that goes beyond simple translation:</p>
+          <h4>🌟 Why it matters: A truly bilingual website gives you a competitive edge that goes beyond simple translation:</h4>
           <ul>
             <li>Helps people from both cultures feel at home when they visit your site</li>
             <li>Encourages trust and action by speaking clearly to each audience</li>
@@ -335,7 +336,7 @@
            <p><strong>✔ Accessibility Enhancements</strong><br> Meet modern standards and include users with all abilities</p>
 
         <div class="why-it-matters">
-          <h4>🌟 Why it matters: A thoughtful redesign not only makes your site easier to use, but also ensures everyone feels welcome and included.</p>
+          <h4>🌟 Why it matters: A thoughtful redesign not only makes your site easier to use, but also ensures everyone feels welcome and included.</h4>
           <ul>
             <li>Improves your site's performance across devices and cultures</li>
             <li>Makes it easier for users to navigate and take action</li>
@@ -379,7 +380,7 @@
            <p><strong>✔ A style guide you can use across your site, merch, and marketing</strong><br> A simple reference for consistent branding — fonts, colors, and layout rules all in one place.</p>
         </p>
         <div class="why-it-matters">
-          <h4>🌟 Why it matters: Your brand is often the first impression — thoughtful, culturally aware design helps you connect with the people you’re trying to reach in a genuine and lasting way.</p>
+          <h4>🌟 Why it matters: Your brand is often the first impression — thoughtful, culturally aware design helps you connect with the people you’re trying to reach in a genuine and lasting way.</h4>
           <ul>
             <li>Helps you stand out and stay memorable</li>
             <li>Builds consistency and credibility</li>
@@ -415,7 +416,7 @@
                   <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
                 </div>
                 <div class="testimonial">
-                  <img src="images/quotationIcon.png" alt="Quotation Mark">
+                  <img src="images/quotationIcon.png" alt="">
                   <p class="testimonial-text">What impressed me most was Seira's outstanding design sense and English language skills. Creating a logo and website was a completely new experience for me. During our meetings, she listened attentively and helped draw out my vision for the site. She clearly explained what I needed to do, and delivered everything by our target completion date, which was incredibly helpful.
                     <br></br>
                     As a writer, I also asked her to translate my written work (poems and stories) into English. Translation requires deep familiarity with both languages and an understanding of both cultures. Seira translated my work more beautifully than I could have imagined, achieving results that were far beyond my own English abilities and expression. Thanks to her English translations, my readership expanded from 'Japanese people' to 'people around the world.' This is truly remarkable.
@@ -434,7 +435,7 @@
                   <a href="https://www.abejitasmontessori.com/" class="website-link">Abejitas Montessori</a>
                 </div>
                 <div class="testimonial">
-                  <img src="images/quotationIcon.png" alt="Quotation Mark">
+                  <img src="images/quotationIcon.png" alt="">
                   <p class="testimonial-text">Seira was patient and diligent in helping design my logo first and then my website. I was so happy with the results, I didn't hesitate to share it with friends and families I was working with. Being a small-first time business owner I wanted something that reflected my personality and show case  a high quality service I wanted to provide; both the logo and website demonstrate that and I couldn't be happier. I highly recommend Seira and would definitely work with her again. </p>
                   <p class="testimonial-author">- Elizabeth, the owner of Abejitas Montessori in Menlo park, CA</p>
                 </div>
@@ -450,7 +451,7 @@
           </div>
         </div>
       </section>
-</section>
+
         
 <section id="contact-form-section" class="form-container">
     <h2 class="form-title">Contact Us</h2>
@@ -489,7 +490,7 @@
 
 <script src="script.js"></script>
 
-  <!--hamburger menu-->
+<!--hamburger menu-->
 <script>
 const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
@@ -497,6 +498,8 @@ const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Mobile dropdown toggle
@@ -518,9 +521,11 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
   });
 });
 </script>
+
 
 <script>
   const form = document.getElementById("contact-form");
@@ -561,7 +566,7 @@ mobileLinks.forEach(link => {
          <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="images/logo6.png" alt="Logo">
+               <img src="images/logo6.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">

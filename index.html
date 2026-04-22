@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>Cozy Corner Design – Japanese-English Websites That Bridge Cultures | Multilingual Web & UX Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -35,10 +36,10 @@
     <nav class="nav">
       <div class="header">
         <div class="logo">
-          <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+          <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
         </div>
     
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -58,7 +59,7 @@
           <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
           <li class="page"><a href="#faq-section">FAQ</a></li>
-          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
         </ul>
     
         <div class="cta-desktop">
@@ -84,7 +85,7 @@
       <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
       <li class="page"><a href="#faq-section">FAQ</a></li>
-      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
     </ul>
   </div>
 </nav>
@@ -124,7 +125,7 @@
          <div class="problem-section">
           <div class="problem-container">
             <div class="problem-image">
-              <img src="images/problem.png" alt="abstract image">
+              <img src="images/problem.png" alt="">
             </div>
             <div class="problem-content">
               <h2 class="problem-title">Your Global Website Shouldn't Be Your Biggest Struggle</h2>
@@ -460,6 +461,8 @@ const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Mobile dropdown toggle
@@ -481,6 +484,7 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
   });
 });
 </script>

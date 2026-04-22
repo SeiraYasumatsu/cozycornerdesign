@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
     <title>サービス一覧 – 日英バイリンガルWebサイト・ブランディング・UXデザイン</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -35,10 +36,10 @@
     <nav class="nav">
       <div class="header">
         <div class="logo">
-          <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+          <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
         </div>
     
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -161,7 +162,7 @@
       <a href="#all-inclusive" class="service-card-link">
         <div class="service-card2">
           <div class="image-container">
-            <img src="images/website.png" alt="Service 1 Icon" class="service-icon" />
+            <img src="images/website.png" alt="" class="service-icon">
           </div>
           <div class="service-content">
             <p>テクニカルな作業や迷いは不要。日本語と英語のブランディング＋サイトをまるごとお任せできます。</p>
@@ -173,7 +174,7 @@
       <a href="#multilingual-web-design" class="service-card-link">
         <div class="service-card2">
           <div class="image-container">
-            <img src="images/multilingual.png" alt="Multilingual icon" class="service-icon" />
+            <img src="images/multilingual.png" alt="" class="service-icon">
           </div>
           <div class="service-content">
             <p>国内外のユーザーにしっかり届く、文化に配慮した多言語対応のサイトが欲しい方へ。</p>
@@ -185,7 +186,7 @@
       <a href="#UXdesign" class="service-card-link">
         <div class="service-card2">
           <div class="image-container">
-            <img src="images/UX.png" alt="UX icon" class="service-icon" />
+            <img src="images/UX.png" alt="" class="service-icon">
           </div>
           <div class="service-content">
             <p>見やすく伝わるサイトで、お問い合わせにつながるデザインにリフレッシュしたい方へ。</p>
@@ -197,7 +198,7 @@
       <a href="#branding" class="service-card-link">
         <div class="service-card2">
           <div class="image-container">
-            <img src="images/branding-logo.png" alt="Branding icon" class="service-icon" />
+            <img src="images/branding-logo.png" alt="" class="service-icon">
           </div>
           <div class="service-content">
             <p>日本語・英語のどちらでも印象に残る、信頼感あるブランドを作りたい方へ。</p>
@@ -356,11 +357,11 @@
 
       <!-- RIGHT SIDE -->
       <div class="web-design-right">
-        <p class="subtitle">含まれる内容</p>
+        <p class="subtitle">含まれる内容 </p>
            <p><strong>✔ 複数フォーマットで納品するカスタムロゴデザイン</strong><br>印刷物、デジタル、SNSなど幅広く使えるプロ仕様のロゴ。</p>
            <p><strong>✔ 文化に合った色・フォント・レイアウトのガイド</strong><br>ターゲットの文化的期待や価値観に合ったデザインを提案します。</p>
            <p><strong>✔ サイト、グッズ、マーケティングで使えるスタイルガイド</strong><br>フォント・色・レイアウトのルールをまとめたブランドの簡単な参照資料。</p>
-        </p>
+        
         <div class="why-it-matters">
           <h4>🌟 なぜ重要?：ブランドは第一印象です。文化に配慮した丁寧なデザインが、あなたの想いを本当に届けたい人にしっかりつなげます。</h4>
           <ul>
@@ -394,7 +395,7 @@
                   <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
                 </div>
                 <div class="testimonial">
-                  <img src="images/quotationIcon.png" alt="Quotation Mark">
+                  <img src="images/quotationIcon.png" alt="">
                   <p class="testimonial-text">一番印象的なのは、セイラさんのデザインセンスの素晴らしさと英語の表現力です。
                     私にとってロゴやウェブサイトを作るのは今回が初めてのことでした。ミーティングでは丁寧にヒアリングしてくれ、どんなサイトにしたいかイメージを引き出してくれました。また私がやる事を明確に説明してくれ、目標としていた完成日にもきちんと間に合い、とても助かりました。
                     <br></br>
@@ -430,7 +431,7 @@
           </div>
         </div>
       </section>
-</section>
+
         
 <section id="contact-form-section" class="form-container">
     <h2 class="form-title">お気軽に連絡、質問どうぞ</h2>
@@ -469,16 +470,40 @@
 
 <script src="script.js"></script>
 
- <!--humburger menu-->
- <script>
-  const hamburger = document.getElementById("hamburger");
+ <!--hamburger menu-->
+<script>
+const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 
 hamburger.addEventListener("click", function () {
-hamburger.classList.toggle("open");
-menuWrapper.classList.toggle("active");
+  hamburger.classList.toggle("open");
+  menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
+// Mobile dropdown toggle
+const mobileDropdowns = document.querySelectorAll('.mobile-menu-wrapper .dropdown');
+mobileDropdowns.forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+  
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+  });
+});
+
+// Close mobile menu when clicking on a non-dropdown link
+const mobileLinks = document.querySelectorAll('.mobile-menu-wrapper a:not(.dropdown > a)');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
+  });
+});
 </script>
 
 <script>
@@ -519,7 +544,7 @@ menuWrapper.classList.toggle("active");
          <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="images/logo6.png" alt="Logo">
+               <img src="images/logo6.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">

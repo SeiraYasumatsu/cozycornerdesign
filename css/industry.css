@@ -259,8 +259,8 @@ margin-left: 1rem;
   padding: 0 10px;
 }
 
-.hero-text h3 {
-  font-size: 10px;
+.hero-text p {
+  font-size: 16px;
   font-weight: 600;
   color: #073E35;
   margin: 0 0 10px;
@@ -668,7 +668,7 @@ margin-left: 1rem;
 
 /* Text and Button Styling */
 .cta-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     color: #333;
     margin-bottom: 15px;
@@ -1034,7 +1034,7 @@ margin-left: 1rem;
   }
 
   .problem-subtitle {
-    font-size: 18px; /* 18px */
+    font-size: 19px; /* 18px */
   }
 
   .problem-item {

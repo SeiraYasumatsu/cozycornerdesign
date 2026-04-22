@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>Case Studies – Bilingual Web Design & Branding in Action</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -29,10 +30,10 @@
     <nav class="nav">
         <div class="header">
           <div class="logo">
-            <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+            <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
           </div>
       
-          <div class="hamburger" id="hamburger">
+          <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -52,7 +53,7 @@
           <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
           <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
         </ul>
       
           <div class="cta-desktop">
@@ -78,7 +79,7 @@
       <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
       <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
     </ul>
     </div>
   </nav>
@@ -89,13 +90,13 @@
              <div class="content">
                  <!-- "Read in Japanese" Link -->
             <div class="language-link">
-                <a href="casestudy-hisami-ja.html">日本語で読む</a>
+                <a href="casestudy-hisami-ja.html" lang="ja">日本語で読む</a>
             </div>
 
                <div class="statement">
                    <h1>Bringing Hisami’s Vision to Life with a Seamless, Engaging Website & Brand identity</h1>
                    <h3 class= "title">client</h3>
-                   <h3 class= "client-name">Hisami Shirahama | writer, author, creator</h3>
+                   <h3 class= "client-name">Hisami Shirahama | writer, author, creator </h3>
 
                 <div class="project-tasks">
                     <div class="task-item">
@@ -144,9 +145,9 @@
         </div>
         <div class="three-images-section">
             <div class="three-images-container">
-                <img src="images/phone1.png" alt="Image 1">
-                <img src="images/phone2.png" alt="Image 2">
-                <img src="images/phone3.png" alt="Image 3">
+                <img src="images/phone1.png" alt="Hisami's website on mobile - her book">
+                <img src="images/phone2.png" alt="Hisami's website on mobile - social media">
+                <img src="images/phone3.png" alt="Hisami's website on mobile - stories">
             </div>
         </div>
         <section class="branding-section">
@@ -168,12 +169,12 @@
             </div>
         </section>
         <section class="full-width-image">
-            <img src="images/desktop.png" alt="Full Width Image">
+            <img src="images/desktop.png" alt="">
         </section>
         <section class="testimonial-section">
             <div class="testimonial-container">
             <div class="testimonial-image">
-            <img src="images/quotationIcon.png" alt="Quotation Mark"></div>
+            <img src="images/quotationIcon.png" alt=""></div>
             <div class="testimonial-text">
             <p class="testimonial-text">What impressed me most was Seira's outstanding design sense and English language skills. Creating a logo and website was a completely new experience for me. During our meetings, she listened attentively and helped draw out my vision for the site. She clearly explained what I needed to do, and delivered everything by our target completion date, which was incredibly helpful.
               <br></br>
@@ -198,7 +199,7 @@
                 <div class="cta-image-container">
                     <img src="images/CTA-cos.png" alt="CTA Image">
                 </div>
-               <h3 class="cta-title">Are you thinking about creating or updating your website?</h3>
+               <h2 class="cta-title">Are you thinking about creating or updating your website?</h2>
                <p class="cta-text">Whether you're considering a website update or starting from scratch, I'm here to turn your vision into reality. With creative solutions tailored to your business needs, let's collaborate and craft the perfect website together. Don't let uncertainty hold you back – reach out today, and let's get started on transforming your online presence!</p>
                <div><a href="https://calendly.com/cozycornerdesign-ca/30min" target="_blank" rel="noopener"><button type="button" class="btn-default">Start free consultation</button></a></div>
             </section>
@@ -208,7 +209,7 @@
          <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="images/Logo6.png" alt="Logo">
+               <img src="images/Logo6.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
@@ -225,7 +226,8 @@
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
 
-    <!--hamburger menu-->
+
+<!--hamburger menu-->
 <script>
 const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
@@ -233,6 +235,8 @@ const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Mobile dropdown toggle
@@ -254,9 +258,11 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
   });
 });
 </script>
+
 
       <script>
   document.addEventListener("DOMContentLoaded", function () {

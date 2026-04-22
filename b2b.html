@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>Web Design for Multinational Companies – Japanese-English Market Expertise</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,10 +39,10 @@
     <nav class="nav">
       <div class="header">
         <div class="logo">
-          <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+          <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
         </div>
     
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -61,7 +62,7 @@
           <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
           <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
         </ul>
     
         <div class="cta-desktop">
@@ -87,7 +88,7 @@
       <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
       <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
     </ul>
   </div>
 </nav>
@@ -98,7 +99,7 @@
 
     <!-- Heading & CTA -->
     <div class="hero-text">
-      <h3>Multinational companies</h3>
+      <p>Multinational companies</p>
       <h1>Sell more by speaking the language and the culture</h1>
     </div>
 
@@ -122,7 +123,7 @@
  <section class="problem-section">
           <div class="problem-container">
             <div class="problem-image">
-              <img src="images/global.png" alt="Japan & world image">
+              <img src="images/global.png" alt="Globe representing international business reach">
             </div>
             <div class="problem-content">
               <h2 class="problem-title">Want to grow internationally?</h2>
@@ -162,7 +163,7 @@
       <div class="benefits-container">
         <div class="benefit-card">
           <div class="image-container">
-              <img src="images/trust.png" alt="benefit 1 Icon" class="benefit-icon">
+              <img src="images/trust.png" alt="" class="benefit-icon">
           </div>
           <div class="benefit-title"><p>Instant trust</p></div>
           <div class="benefit-content">
@@ -172,7 +173,7 @@
       <div class="benefit-card">
         <!-- Benefit Card 2 -->
             <div class="image-container">
-                <img src="images/sales.png" alt="benefit 2 Icon" class="benefit-icon">
+                <img src="images/sales.png" alt="" class="benefit-icon">
             </div>
             <div class="benefit-title"><p>More sales</p></div>
             <div class="benefit-content">
@@ -183,7 +184,7 @@
      <div class="benefit-card">
         <!-- Benefit Card 3 -->
             <div class="image-container">
-                <img src="images/comp.png" alt="benefit 3 Icon" class="benefit-icon">
+                <img src="images/comp.png" alt="" class="benefit-icon">
             </div>
             <div class="benefit-title"><p>Competitive advantage</p></div>
             <div class="benefit-content">
@@ -193,7 +194,7 @@
      <div class="benefit-card">
         <!-- Benefit Card 4 -->
             <div class="image-container">
-                <img src="images/better.png" alt="benefit 4 Icon" class="benefit-icon">
+                <img src="images/better.png" alt="" class="benefit-icon">
             </div>
             <div class="benefit-title"><p>Better Clients</p></div>
             <div class="benefit-content">
@@ -211,7 +212,7 @@
 <section class="cultural-section">
           <div class="problem-container">
             <div class="problem-image">
-              <img src="images/cultural.png" alt="a woman looking at the phone image">
+              <img src="images/cultural.png" alt="A woman browsing a website on her phone">
             </div>
             <div class="problem-content">
               <h2 class="problem-title">Why Cultural Intelligence Matters in Global Business</h2>
@@ -300,7 +301,7 @@
  <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="images/logo6.png" alt="Logo">
+               <img src="images/logo6.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
@@ -325,6 +326,8 @@ const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Mobile dropdown toggle
@@ -346,9 +349,11 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
   });
 });
 </script>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {

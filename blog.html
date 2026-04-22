@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>Unlock Success: Explore, Learn, & Elevate Your Business Journey with Cozy Corner Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -21,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;800&family=Karla:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
@@ -29,10 +31,10 @@
     <nav class="nav">
       <div class="header">
         <div class="logo">
-          <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+          <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
         </div>
     
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -52,7 +54,7 @@
           <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
           <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
         </ul>
     
         <div class="cta-desktop">
@@ -78,7 +80,7 @@
       <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
       <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
     </ul>
   </div>
 </nav>
@@ -88,19 +90,18 @@
                 <h1 class="title">Explore, Learn, & Elevate your business Journey with us</h1>
           </section>
 
-          <div class="filter-buttons">
-             <button data-filter="all">All</button>
-             <button data-filter="multi">multilingual webdesign</button>
-             <button data-filter="community">Community</button>
-             <button data-filter="business">Business</button>
-             <button data-filter="how-to">How-To</button>
-             <!--<button data-filter="inspiration">Inspiration</button>-->
-           </div>
+       <div class="filter-buttons">
+          <button type="button" data-filter="all">All</button>
+          <button type="button" data-filter="multi">multilingual webdesign</button>
+          <button type="button" data-filter="community">Community</button>
+          <button type="button" data-filter="business">Business</button>
+          <button type="button" data-filter="how-to">How-To</button>
+      </div>
 
           <div class="container">
-             <div class="card" data-category="community" data-date="2024-05-07"><a href="blog/Unlocking-Growth-Why-your-Business-needs-a-website.html">
+             <div class="card" data-category="community" data-date="2024-05-07">
                <a href="blog/Unlocking-Growth-Why-your-Business-needs-a-website.html">
-               <img src="images/blog1TN4.png" alt="Blog 1 Image"></a>
+               <img src="images/blog1TN4.png" alt="Unlocking Growth why your business needs a website">
              <div class="content">
                <span class="tag community">Community</span>
                  <h2 class="blog-title"><a href="blog/Unlocking-Growth-Why-your-Business-needs-a-website.html">Unlocking Growth: Why your Business needs a website</a></h2>
@@ -111,9 +112,9 @@
             </a>
             </div>
 
-               <div class="card" data-category="business" data-date="2024-05-14"><a href="blog/Introducing-Abejitas-Montessori.html">
+               <div class="card" data-category="business" data-date="2024-05-14">
                  <a href="blog/Introducing-Abejitas-Montessori.html">
-                 <img src="images/blog2TN.png" alt="Blog 2 Image"></a>
+                 <img src="images/blog2TN.png" alt="Introducing Abejitas Montessori">
                <div class="content">
                  <span class="tag business">Business</span>
                    <h2 class="blog-title"><a href="blog/Introducing-Abejitas-Montessori.html">Introducing: Abejitas Montessori</a></h2>
@@ -124,10 +125,9 @@
               </a>
               </div>
 
-                <div class="card" data-category="community" data-date="2024-05-22"><a href="blog/A-Beginners-Guide-to-SEO.html">
+                <div class="card" data-category="community" data-date="2024-05-22">
                  <a href="blog/A-Beginners-Guide-to-SEO.html">
-                   <img src="images/blog3TN.png" alt="Beginner's guide to SEO Image">
-                   <a href="blog/A-Beginners-Guide-to-SEO.html">
+                   <img src="images/blog3TN.png" alt="Beginner's guide to SEO">
                  <div class="content">
                    <span class="tag community">Community</span>
                      <h2 class="blog-title"><a href="blog/A-Beginners-Guide-to-SEO.html">Boost Your Online Presence: A Beginner's Guide to SEO</a></h2>
@@ -135,11 +135,13 @@
                      <a href="blog/A-Beginners-Guide-to-SEO.html" class="read-more">Continue Reading</a>
                   <span class="published-date">May 22, 2024</span>
                 </div>
+                   </a>
               </div>
 
-              <div class="card" data-category="community" data-date="2024-05-29"><a href="blog/Why-User-Experience-Matters.html">
-                 <img src="images/blog4TN.png" alt="Why User Experience Matters TN Image">
-                 <a href="blog/Why-User-Experience-Matters.html">
+              <div class="card" data-category="community" data-date="2024-05-29">
+                <a href="blog/Why-User-Experience-Matters.html">
+                <img src="images/blog4TN.png" alt="Why User Experience Matters">
+                 
                <div class="content">
                  <span class="tag community">Community</span>
                    <h2 class="blog-title"><a href="blog/Why-User-Experience-Matters.html">Why User Experience Matters: The Key to Business Success</a></h2>
@@ -147,12 +149,12 @@
                    <a href="blog/Why-User-Experience-Matters.html" class="read-more">Continue Reading</a>
                 <span class="published-date">May 29, 2024</span>
                </div>
+                </a>
              </div>
 
               <div class="card" data-category="how-to" data-date="2024-06-05">
                  <a href="blog/How-to-Create-a-User-Centered-Website.html">
-                 <img src="images/blog5TN-2.png" alt="How to create a User-Centered website TN Image">
-                 <a href="blog/How-to-Create-a-User-Centered-Website.html">
+                 <img src="images/blog5TN-2.png" alt="How to create a User-Centered website">
                <div class="content">
                  <span class="tag how-to">How To</span>
                    <h2 class="blog-title"><a href="blog/How-to-Create-a-User-Centered-Website.html">How to Create a User-Centered Website that Converts Visitors into Customers</a></h2>
@@ -160,11 +162,12 @@
                    <a href="blog/How-to-Create-a-User-Centered-Website.html" class="read-more">Continue Reading</a>
                 <span class="published-date">June 5, 2024</span>
                </div>
+              </a>
              </div>
 
-             <div class="card" data-category="community" data-date="2024-06-12"><a href="blog/Boosting-Website-Engagement-with-InteractiveElements.html"></a>
-                <img src="images/blog6TN.png" alt="Boosting Website Engagement with Interactive Elements TN Image">
-                <a href="blog/Boosting-Website-Engagement-with-InteractiveElements.html">
+             <div class="card" data-category="community" data-date="2024-06-12">
+              <a href="blog/Boosting-Website-Engagement-with-InteractiveElements.html">
+                <img src="images/blog6TN.png" alt="Boosting Website Engagement with Interactive Elements">
               <div class="content">
                 <span class="tag community">Community</span>
                   <h2 class="blog-title"><a href="blog/Boosting-Website-Engagement-with-InteractiveElements.html">Boost Website Engagement: Interactive Elements for UX & Conversions</a></h2>
@@ -172,10 +175,13 @@
                   <a href="blog/Boosting-Website-Engagement-with-InteractiveElements.html" class="read-more">Continue Reading</a>
                <span class="published-date">June 12, 2024</span>
               </div>
+              </a>
             </div>
-            <div class="card" data-category="how-to" data-date="2024-06-19"><a href="blog/Steps-to-create-a-Strong-Brand-Identity.html"></a>
+
+            <div class="card" data-category="how-to" data-date="2024-06-19">
+              <a href="blog/Steps-to-create-a-Strong-Brand-Identity.html">
                <img src="images/blog7TN-2.png" alt="How to build a Brand Identity: From Concept to Execution TN Image">
-               <a href="blog/Steps-to-create-a-Strong-Brand-Identity.html">
+  
              <div class="content">
                <span class="tag how-to">How To</span>
                  <h2 class="blog-title"><a href="blog/Steps-to-create-a-Strong-Brand-Identity.html">How to Build a Brand Identity: From Concept to Execution</a></h2>
@@ -183,10 +189,13 @@
                  <a href="blog/Steps-to-create-a-Strong-Brand-Identity.html" class="read-more">Continue Reading</a>
               <span class="published-date">June 19, 2024</span>
              </div>
+             </a>
            </div>
-           <div class="card" data-category="how-to" data-date="2024-06-26"><a href="blog/How-to-Design-Your-Own-Website-Tips-and-Strategies-for-Beginners-Part1.html"></a>
+
+           <div class="card" data-category="how-to" data-date="2024-06-26">
+            <a href="blog/How-to-Design-Your-Own-Website-Tips-and-Strategies-for-Beginners-Part1.html">
               <img src="images/blog8TN.png" alt="How to Design Your Own Website Using Existing Resources: Tips and Strategies for Beginners (Part 1) TN Image">
-              <a href="blog/How-to-Design-Your-Own-Website-Tips-and-Strategies-for-Beginners-Part1.html">
+              
             <div class="content">
               <span class="tag how-to">How To</span>
                 <h2 class="blog-title"><a href="blog/How-to-Design-Your-Own-Website-Tips-and-Strategies-for-Beginners-Part1.html">How to Design Your Own Website Using Existing Resources: Tips and Strategies for Beginners (Part 1)</a></h2>
@@ -194,10 +203,13 @@
                 <a href="blog/How-to-Design-Your-Own-Website-Tips-and-Strategies-for-Beginners-Part1.html" class="read-more">Continue Reading</a>
              <span class="published-date">June 26, 2024</span>
             </div>
+            </a>
           </div>
-          <div class="card" data-category="multi" data-date="2025-05-13"><a href="blog/The-Art-and-culture-of-Japanese-Business-Cards.html"></a>
-            <img src="images/BC-TN.png" alt="Beyond Size: The Art and Culture of Japanese Business Cards">
+
+          <div class="card" data-category="multi" data-date="2025-05-13">
             <a href="blog/The-Art-and-culture-of-Japanese-Business-Cards.html">
+            <img src="images/BC-TN.png" alt="Beyond Size: The Art and Culture of Japanese Business Cards">
+            
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/The-Art-and-culture-of-Japanese-Business-Cards.html">Beyond Size: The Art and Culture of Japanese Business Cards</a></h2>
@@ -205,10 +217,11 @@
               <a href="blog/The-Art-and-culture-of-Japanese-Business-Cards.html" class="read-more">Continue Reading</a>
            <span class="published-date">May 13, 2025</span>
           </div>
+            </a>
         </div>
-          <div class="card" data-category="multi" data-date="2025-06-10"><a href="blog/Why-DirectTranslation-website-isn't-enough.html"></a>
+
+          <div class="card" data-category="multi" data-date="2025-06-10"><a href="blog/Why-DirectTranslation-website-isn't-enough.html">
             <img src="images/TranslateTN.png" alt="Don't Just Translate - connect">
-            <a href="blog/Why-DirectTranslation-website-isn't-enough.html">
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/Why-DirectTranslation-website-isn't-enough.html">Why a “Direct Translation” Website Isn’t Enough</a></h2>
@@ -216,10 +229,12 @@
               <a href="blog/Why-DirectTranslation-website-isn't-enough.html" class="read-more">Continue Reading</a>
            <span class="published-date">July 10, 2025</span>
           </div>
+          </a>
         </div>
-          <div class="card" data-category="multi" data-date="2025-07-25"> <a href="blog/JapanesevsWesternUX-keyDifferences.html"></a>
+
+          <div class="card" data-category="multi" data-date="2025-07-25"> <a href="blog/JapanesevsWesternUX-keyDifferences.html">
             <img src="images/2cultures.png" alt="Designing for 2 cultures">
-            <a href="blog/JapanesevsWesternUX-keyDifferences.html">
+            
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/JapanesevsWesternUX-keyDifferences.html">Designing for Two Cultures: How Japanese and Western Users Navigate Websites Differently</a></h2>
@@ -227,10 +242,12 @@
               <a href="blog/JapanesevsWesternUX-keyDifferences.html" class="read-more">Continue Reading</a>
            <span class="published-date">July 25, 2025</span>
           </div>
+        </a>
         </div>
-        <div class="card" data-category="multi" data-date="2025-08-22"> <a href="blog/How-to-Build-Trust-with-JapaneseUsers.html"></a>
+
+        <div class="card" data-category="multi" data-date="2025-08-22"> <a href="blog/How-to-Build-Trust-with-JapaneseUsers.html">
             <img src="images/BuildTrust.png" alt="Build Trust with Japanese Users">
-            <a href="blog/How-to-Build-Trust-with-JapaneseUsers.html">
+         
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/How-to-Build-Trust-with-JapaneseUsers.html">How to Build Trust with Japanese Users on Your English Website</a></h2>
@@ -238,10 +255,12 @@
               <a href="blog/How-to-Build-Trust-with-JapaneseUsers.html" class="read-more">Continue Reading</a>
            <span class="published-date">August 22, 2025</span>
           </div>
+        </a>
         </div>
-        <div class="card" data-category="multi" data-date="2025-09-30"> <a href="blog/How-Navigation-Order-Shapes-User-Flow.html"></a>
+
+        <div class="card" data-category="multi" data-date="2025-09-30"> <a href="blog/How-Navigation-Order-Shapes-User-Flow.html">
             <img src="images/NavigationOrder.png" alt="Japanese navigation and western navigation">
-            <a href="blog/How-Navigation-Order-Shapes-User-Flow.html">
+            
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/How-Navigation-Order-Shapes-User-Flow.html">Navigation Order: How It Shapes User Flow</a></h2>
@@ -249,10 +268,12 @@
               <a href="blog/How-Navigation-Order-Shapes-User-Flow.html" class="read-more">Continue Reading</a>
            <span class="published-date">September 30, 2025</span>
           </div>
+        </a>
         </div>
-          <div class="card" data-category="multi" data-date="2025-11-26"> <a href="blog/How-many-characters-are-JustRight.html"></a>
+
+          <div class="card" data-category="multi" data-date="2025-11-26"> <a href="blog/How-many-characters-are-JustRight.html">
             <img src="images/howmanycharacters.png" alt="Guide to readability in Japanese vs. English">
-            <a href="blog/How-many-characters-are-JustRight.html">
+        
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/How-many-characters-are-JustRight.html">How Many Characters Are “Just Right”? Readability in Japanese vs. English</a></h2>
@@ -260,10 +281,12 @@
               <a href="blog/How-many-characters-are-JustRight.html" class="read-more">Continue Reading</a>
            <span class="published-date">November 26, 2025</span>
           </div>
+          </a>
         </div>
-        <div class="card" data-category="multi" data-date="2025-12-19"> <a href="blog/Why-Holiday-Promotions-Are-90%-Culture.html"></a>
+
+        <div class="card" data-category="multi" data-date="2025-12-19"> <a href="blog/Why-Holiday-Promotions-Are-90%-Culture.html">
             <img src="images/HolidayBlogTN.png" alt="Why holiday promotions are 90% culture">
-            <a href="blog/Why-Holiday-Promotions-Are-90%-Culture.html">
+    
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/Why-Holiday-Promotions-Are-90%-Culture.html">Web Design for Japan: Why Holiday Promotions are 90% Culture</a></h2>
@@ -271,10 +294,12 @@
               <a href="blog/Why-Holiday-Promotions-Are-90%-Culture.html" class="read-more">Continue Reading</a>
            <span class="published-date">December 19, 2025</span>
           </div>
+          </a>
         </div>
-         <div class="card" data-category="multi" data-date="2026-1-23"> <a href="blog/How-to-start-reaching-Japanese-audience.html"></a>
+
+         <div class="card" data-category="multi" data-date="2026-1-23"> <a href="blog/How-to-start-reaching-Japanese-audience.html">
             <img src="images/Jan2026-EN-TN .png" alt="How to start reaching Japanese audience">
-            <a href="blog/How-to-start-reaching-Japanese-audience.html">
+            
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/How-to-start-reaching-Japanese-audience.html">How to start reaching Japanese audience</a></h2>
@@ -282,18 +307,20 @@
               <a href="blog/How-to-start-reaching-Japanese-audience.html" class="read-more">Continue Reading</a>
            <span class="published-date">January 23, 2026</span>
           </div>
+          </a>
         </div>
 
-          <div class="card" data-category="multi" data-date="2026-2-20"> <a href="blog/Who-actually-needs-Japanese-Website.html"></a>
+          <div class="card" data-category="multi" data-date="2026-2-20"> <a href="blog/Who-actually-needs-Japanese-Website.html">
             <img src="images/Feb2026-EN-TN.png" alt="Who actually needs a Website for the Japanese Market?">
-            <a href="blog/Who-actually-needs-Japanese-Website.html">
+            
           <div class="content">
             <span class="tag multi">multilingual design</span>
               <h2 class="blog-title"><a href="blog/Who-actually-needs-Japanese-Website.html">Who actually needs a Website for the Japanese Market?</a></h2>
               <p class="blog-text"><a href="blog/Who-actually-needs-Japanese-Website.html">Does your business need a Japanese website? Beyond translation, it’s about building trust. Learn how a localized presence turns anonymous traffic into meaningful connections with travelers and fans in Japan.</a></p>
               <a href="blog/Who-actually-needs-Japanese-Website.html" class="read-more">Continue Reading</a>
-           <span class="published-date">Feburary 20, 2026</span>
+           <span class="published-date">February 20, 2026</span>
           </div>
+            </a>
         </div>
 
      </div>
@@ -301,7 +328,7 @@
         <footer class="footer">
                 <div class="footer-content">
                    <div class="footer-logo">
-                   <img src="../images/logo6.png" alt="Logo">
+                   <img src="../images/logo6.png" alt="Cozy Corner Design">
                 </div>
                 <div class="footer-contact">
                     <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
@@ -318,7 +345,7 @@
                 <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
         </footer>
 
- <!--hamburger menu-->
+<!--hamburger menu-->
 <script>
 const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
@@ -326,6 +353,8 @@ const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Mobile dropdown toggle
@@ -347,6 +376,7 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
   });
 });
 </script>

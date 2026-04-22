@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>Web Design for Agencies & Consultants – Japanese-English Communication Made Easy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -36,10 +37,10 @@
     <nav class="nav">
       <div class="header">
         <div class="logo">
-          <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+          <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
         </div>
     
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -59,7 +60,7 @@
           <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
           <li class="page"><a href="blog.html">BLOG</a></li>
           <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-          <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+          <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
         </ul>
     
         <div class="cta-desktop">
@@ -85,7 +86,7 @@
       <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
       <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-      <li class="page"><a href="japanese-clients.html">日本のお客様へ</a></li>
+      <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
     </ul>
   </div>
 </nav>
@@ -96,7 +97,7 @@
 
     <!-- Heading & CTA -->
     <div class="hero-text">
-      <h3>Agencies | Consultants</h3>
+      <p>Agencies | Consultants</p>
       <h1>Where cultural insight meets creative strategy</h1>
     </div>
 
@@ -120,7 +121,7 @@
  <section class="problem-section">
           <div class="problem-container">
             <div class="problem-image">
-              <img src="images/global.png" alt="Japan & world image">
+              <img src="images/global.png" alt="Globe representing international business reach">
             </div>
             <div class="problem-content">
               <h2 class="problem-title">You’re Great at What You Do — Let the Right Clients See It</h2>
@@ -159,7 +160,7 @@
       <div class="benefits-container">
         <div class="benefit-card">
           <div class="image-container">
-              <img src="images/global2.png" alt="benefit 1 Icon" class="global-icon">
+              <img src="images/global2.png" alt="" class="global-icon">
           </div>
           <div class="benefit-title"><p>Global confidence</p></div>
           <div class="benefit-content">
@@ -169,7 +170,7 @@
       <div class="benefit-card">
         <!-- Benefit Card 2 -->
             <div class="image-container">
-                <img src="images/inquiries.png" alt="benefit 2 Icon" class="moreInquiries-icon">
+                <img src="images/inquiries.png" alt="" class="moreInquiries-icon">
             </div>
             <div class="benefit-title"><p>More inquiries</p></div>
             <div class="benefit-content">
@@ -180,7 +181,7 @@
      <div class="benefit-card">
         <!-- Benefit Card 3 -->
             <div class="image-container">
-                <img src="images/comp.png" alt="benefit 3 Icon" class="benefit-icon">
+                <img src="images/comp.png" alt="" class="benefit-icon">
             </div>
             <div class="benefit-title"><p>Personal + Strategic</p></div>
             <div class="benefit-content">
@@ -190,7 +191,7 @@
      <div class="benefit-card">
         <!-- Benefit Card 4 -->
             <div class="image-container">
-                <img src="images/easyAccess.png" alt="benefit 4 Icon" class="benefit-icon">
+                <img src="images/easyAccess.png" alt="" class="benefit-icon">
             </div>
             <div class="benefit-title"><p>Accessible & Easy</p></div>
             <div class="benefit-content">
@@ -208,7 +209,7 @@
 <section class="cultural-section">
           <div class="problem-container">
             <div class="problem-image">
-              <img src="images/creatives2.png" alt="2people working collboratively">
+              <img src="images/creatives2.png" alt="Two people working collaboratively">
             </div>
             <div class="problem-content">
               <h2 class="problem-title">Bridging Cultures with Clear, Confident Design</h2>
@@ -281,7 +282,7 @@
              <!---<div class="cta-image-container">
                     <img src="images/CTA-cos.png" alt="CTA Image">
                 </div>-->
-               <h3 class="cta-title">Let’s build a website that works across borders</h3>
+               <h2 class="cta-title">Let’s build a website that works across borders</h2>
                <p class="cta-text">Let’s talk about how your site can support your creative work and attract the right clients, in both English and Japanese. Free 30-minute Website Consultation where we'll discuss:</p>
                <ul class="problem-list">
                 <li class="problem-item">Your goals</li>
@@ -299,7 +300,7 @@
  <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="images/logo6.png" alt="Logo">
+               <img src="images/logo6.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
@@ -324,6 +325,8 @@ const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Mobile dropdown toggle
@@ -345,9 +348,11 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
   });
 });
 </script>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {

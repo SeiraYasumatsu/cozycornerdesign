@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
     <title>Cozy Corner Design – 日英バイリンガルWebデザイン・ブランディング・UX設計</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -22,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
@@ -33,10 +35,10 @@
        <nav class="nav">
         <div class="header">
           <div class="logo">
-            <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+            <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
           </div>
       
-          <div class="hamburger" id="hamburger">
+           <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -109,7 +111,7 @@
          <div class="problem-section">
           <div class="problem-container">
             <div class="problem-image">
-              <img src="images/problem.png" alt="abstract image">
+              <img src="images/problem.png" alt="">
             </div>
             <div class="problem-content">
               <h2 class="problem-title">海外に繋がるウェブサイトづくり、始めませんか？</h2>
@@ -140,7 +142,7 @@
              </div>
           </div>
 
-          <section id="case-study-section"  section class="case-study-section">
+          <section id="case-study-section"  class="case-study-section">
             <!-- Wrapper to contain the title within the section width -->
           <div class="case-study-title-wrapper">
             <h2 class="case-study-section-title">CASE STUDY</h2> 
@@ -272,7 +274,7 @@
                        <a href="https://www.hisamishirahama.com/" class="website-link">hisamishirahama.com</a>
                 </div>
                   <div class="testimonial">
-                    <img src="images/quotationIcon.png" alt="Quotation Mark">
+                    <img src="images/quotationIcon.png" alt="">
                     <p class="testimonial-text">一番印象的なのは、セイラさんのデザインセンスの素晴らしさと英語の表現力です。
                       私にとってロゴやウェブサイトを作るのは今回が初めてのことでした。ミーティングでは丁寧にヒアリングしてくれ、どんなサイトにしたいかイメージを引き出してくれました。また私がやる事を明確に説明してくれ、目標としていた完成日にもきちんと間に合い、とても助かりました。
                       <br></br>
@@ -398,7 +400,7 @@
     <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="images/logo6.png" alt="Logo">
+               <img src="images/logo6.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
@@ -415,17 +417,42 @@
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
 
-    <!--humburger menu-->
-    <script>
-      const hamburger = document.getElementById("hamburger");
+    <!--hamburger menu-->
+<script>
+const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
-    </script>
+// Mobile dropdown toggle
+const mobileDropdowns = document.querySelectorAll('.mobile-menu-wrapper .dropdown');
+mobileDropdowns.forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+  
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+  });
+});
+
+// Close mobile menu when clicking on a non-dropdown link
+const mobileLinks = document.querySelectorAll('.mobile-menu-wrapper a:not(.dropdown > a)');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
+  });
+});
+</script>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {

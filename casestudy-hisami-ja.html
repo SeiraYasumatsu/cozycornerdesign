@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
     <title>事例紹介 – 日英バイリンガルWebデザインとブランディングの実績</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
@@ -29,10 +30,10 @@
        <nav class="nav">
         <div class="header">
           <div class="logo">
-            <a href="index.html"><img src="images/logo6.png" alt="Logo"></a>
+            <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
           </div>
       
-          <div class="hamburger" id="hamburger">
+          <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -40,7 +41,7 @@
       
           <div class="nav-right">
           <ul class="menu" id="menu">
-            <li class="page"><a href="service.html">サービス</a></li>
+            <li class="page"><a href="service-ja.html">サービス</a></li>
             <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
             <li class="page"><a href="blog-ja.html">BLOG</a></li>
             <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
@@ -58,7 +59,7 @@
         <!-- Mobile Menu Wrapper -->
     <div class="mobile-menu-wrapper">
       <ul class="menu" id="menu-mobile">
-        <li class="page"><a href="service.html">サービス</a></li>
+        <li class="page"><a href="service-ja.html">サービス</a></li>
         <li class="page"><a href="japanese-clients.html#case-study-section">CASE STUDY</a></li>
         <li class="page"><a href="blog-ja.html">BLOG</a></li>
         <li class="page"><a href="japanese-clients.html#faq-section">FAQ</a></li>
@@ -130,9 +131,9 @@
         </div>
         <div class="three-images-section">
             <div class="three-images-container">
-                <img src="images/phone1.png" alt="Image 1">
-                <img src="images/phone2.png" alt="Image 2">
-                <img src="images/phone3.png" alt="Image 3">
+                <img src="images/phone1.png" alt="Hisami's website on mobile - her book">
+                <img src="images/phone2.png" alt="Hisami's website on mobile - social media">
+                <img src="images/phone3.png" alt="Hisami's website on mobile - stories">
             </div>
         </div>
         <section class="branding-section">
@@ -150,12 +151,12 @@
             </div>
         </section>
         <section class="full-width-image">
-            <img src="images/desktop.png" alt="Full Width Image">
+            <img src="images/desktop.png" alt="">
         </section>
         <section class="testimonial-section">
             <div class="testimonial-container">
             <div class="testimonial-image">
-            <img src="images/quotationIcon.png" alt="Quotation Mark"></div>
+            <img src="images/quotationIcon.png" alt=""></div>
             <div class="testimonial-text">
             <p class="testimonial-text">一番印象的なのは、聖良さんのデザインセンスの素晴らしさと英語の表現力です。
                 私にとってロゴやウェブサイトを作るのは今回が初めてのことでした。ミーティングでは丁寧にヒアリングしてくれ、どんなサイトにしたいかイメージを引き出してくれました。また私がやる事を明確に説明してくれ、目標としていた完成日にもきちんと間に合い、とても助かりました。                
@@ -179,7 +180,7 @@
         <div class="cta">
             <section class="cta-section">
                 <div class="cta-image-container">
-                    <img src="images/CTA-cos.png" alt="CTA Image">
+                    <img src="images/CTA-cos.png" alt="Cosmos the black fluffy dog">
                 </div>
                <h3 class="cta-title">あなたもウェブサイトの作成や更新をお考えですか？</h3>
                <p class="cta-text">ウェブサイトの更新を検討されていますか、自分らしいウェブサイトを作ってみたいとお考えですか？あなたの考えているビジョンを現実にするお手伝いをいたします。あなたのビジネスニーズに合わせた創造的なソリューションで、一緒に世界で一つのウェブサイトを作り上げましょう。ぜひ、気軽にお問い合わせいただき、一緒にあなたのオンラインプレゼンスの変革を始めましょう！</p>
@@ -191,7 +192,7 @@
          <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="images/Logo6.png" alt="Logo">
+               <img src="images/Logo6.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
@@ -208,18 +209,41 @@
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
 
-    <!--humburger menu-->
-    <script>
-        const hamburger = document.getElementById("hamburger");
-  const menuWrapper = document.querySelector(".mobile-menu-wrapper");
-  
-  hamburger.addEventListener("click", function () {
-    hamburger.classList.toggle("open");
-    menuWrapper.classList.toggle("active");
-  });
-  
-      </script>
+    <!--hamburger menu-->
+<script>
+const hamburger = document.getElementById("hamburger");
+const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("open");
+  menuWrapper.classList.toggle("active");
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
+});
+
+// Mobile dropdown toggle
+const mobileDropdowns = document.querySelectorAll('.mobile-menu-wrapper .dropdown');
+mobileDropdowns.forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+  
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+  });
+});
+
+// Close mobile menu when clicking on a non-dropdown link
+const mobileLinks = document.querySelectorAll('.mobile-menu-wrapper a:not(.dropdown > a)');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
+  });
+});
+</script>
                <script>
   document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname.split("/").pop(); // e.g., 'japanese-clients.html'
