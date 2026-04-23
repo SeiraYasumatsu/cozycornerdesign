@@ -172,7 +172,7 @@
             text-align: left;
             display: block;
             transition: all 0.3s;
-            font-size: 1.1rem;
+            font-size: 16px;
         }
 
         .dropdown-content a:hover {
@@ -1008,11 +1008,12 @@ h3.client-name {
      margin-left: 0;
     }
 
- .dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
- }
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
  .dropdown-content a {
     padding: 0.8rem 1.2rem;
@@ -1034,9 +1035,10 @@ h3.client-name {
     font-size: 0.7em;
 }
 
-.dropdown:hover > a::after {
-   transform: rotate(180deg);
- }
+.dropdown:hover > a::after,
+.dropdown.active > a::after {
+  transform: rotate(180deg);
+}
 
           
           .header {

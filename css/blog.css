@@ -580,11 +580,12 @@ a:hover {
      margin-left: 0;
     }
 
- .dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
- }
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
  .dropdown-content a {
     padding: 0.8rem 1.2rem;
@@ -606,9 +607,10 @@ a:hover {
     font-size: 0.7em;
 }
 
-.dropdown:hover > a::after {
-   transform: rotate(180deg);
- }
+.dropdown:hover > a::after,
+.dropdown.active > a::after {
+  transform: rotate(180deg);
+}
 
  
   .header {

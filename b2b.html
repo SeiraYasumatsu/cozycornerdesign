@@ -36,58 +36,56 @@
   </head>
 
   <body>
-    <nav class="nav">
-      <div class="header">
-        <div class="logo">
-          <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
-        </div>
-    
-        <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-    
-        <div class="nav-right">
-       <ul class="menu" id="menu">
-          <li class="page dropdown">
-                        <a href="#clients">WORK WITH US</a>
-                        <ul class="dropdown-content">
-                            <li><a href="b2b.html">Multinational companies</a></li>
-                            <li><a href="creatives.html">Agencies | Consultants</a></li>
-                           <!---<li><a href="#travel-lodging">Travel | Lodging</a></li>-->
-                        </ul>
-                    </li>
-          <li class="page"><a href="service.html">SERVICE</a></li>
-          <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
-          <li class="page"><a href="blog.html">BLOG</a></li>
-          <li class="page"><a href="index.html#faq-section">FAQ</a></li>
-          <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
-        </ul>
-    
-        <div class="cta-desktop">
-          <a href="mailto:cozycornerdesign.ca@gmail.com">
-            <button type="button" class="btn-default">Say hi!</button>
-          </a>
-        </div>
-       </div> 
-      </div>
+   <nav class="nav">
+     <div class="header">
+     <div class="logo">
+      <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
+     </div>
 
-      <!-- Mobile Menu Wrapper -->
+     <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+       <div class="bar"></div>
+       <div class="bar"></div>
+       <div class="bar"></div>
+     </div>
+
+     <div class="nav-right">
+      <ul class="menu" id="menu">
+        <li class="page dropdown">
+          <a href="#clients" aria-haspopup="true" aria-expanded="false">WORK WITH US</a>
+          <ul class="dropdown-content">
+            <li><a href="b2b.html">Multinational companies</a></li>
+            <li><a href="creatives.html">Agencies | Consultants</a></li>
+          </ul>
+        </li>
+        <li class="page"><a href="service.html">SERVICE</a></li>
+        <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
+        <li class="page"><a href="blog.html">BLOG</a></li>
+        <li class="page"><a href="#faq-section">FAQ</a></li>
+        <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
+      </ul>
+
+      <div class="cta-desktop">
+        <a href="mailto:cozycornerdesign.ca@gmail.com">
+          <button type="button" class="btn-default">Say hi!</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Wrapper -->
   <div class="mobile-menu-wrapper">
     <ul class="menu" id="menu-mobile">
       <li class="page dropdown">
-                    <a href="#clients">WORK WITH US</a>
-                    <ul class="dropdown-content">
-                        <li><a href="b2b.html">Multinational companies</a></li>
-                        <li><a href="creatives.html">Agencies | Consultants</a></li>
-                    <!---    <li><a href="#travel-lodging">Travel | Lodging</a></li>-->
-                    </ul>
-                </li>
+        <a href="#clients" aria-haspopup="true" aria-expanded="false">WORK WITH US</a>
+        <ul class="dropdown-content">
+          <li><a href="b2b.html">Multinational companies</a></li>
+          <li><a href="creatives.html">Agencies | Consultants</a></li>
+        </ul>
+      </li>
       <li class="page"><a href="service.html">SERVICE</a></li>
-      <li class="page"><a href="index.html#case-study-section">CASE STUDY</a></li>
+      <li class="page"><a href="#case-study-section">CASE STUDY</a></li>
       <li class="page"><a href="blog.html">BLOG</a></li>
-      <li class="page"><a href="index.html#faq-section">FAQ</a></li>
+      <li class="page"><a href="#faq-section">FAQ</a></li>
       <li class="page"><a href="japanese-clients.html" lang="ja">日本のお客様へ</a></li>
     </ul>
   </div>
@@ -318,7 +316,7 @@
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
     </footer>
 
-<!--hamburger menu-->
+<!--hamburger menu------fully keyboard and screen reader accessible------------->
 <script>
 const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
@@ -330,19 +328,6 @@ hamburger.addEventListener("click", function () {
   hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
-// Mobile dropdown toggle
-const mobileDropdowns = document.querySelectorAll('.mobile-menu-wrapper .dropdown');
-mobileDropdowns.forEach(dropdown => {
-  const link = dropdown.querySelector('a');
-  const content = dropdown.querySelector('.dropdown-content');
-  
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle('active');
-    content.classList.toggle('active');
-  });
-});
-
 // Close mobile menu when clicking on a non-dropdown link
 const mobileLinks = document.querySelectorAll('.mobile-menu-wrapper a:not(.dropdown > a)');
 mobileLinks.forEach(link => {
@@ -351,6 +336,76 @@ mobileLinks.forEach(link => {
     menuWrapper.classList.remove('active');
     hamburger.setAttribute("aria-expanded", false);
   });
+});
+
+// Desktop dropdown — keyboard + mouse accessible
+document.querySelectorAll('.nav-right .dropdown').forEach(dropdown => {
+  const trigger = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+
+  // Toggle on click
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isOpen = dropdown.classList.contains('active');
+    closeAllDropdowns(); // close others first
+    if (!isOpen) {
+      dropdown.classList.add('active');
+      content.classList.add('active');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Toggle on Enter or Space, close on Escape
+  trigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      trigger.click();
+    }
+    if (e.key === 'Escape') {
+      closeAllDropdowns();
+      trigger.focus();
+    }
+  });
+
+  // Close when focus leaves the dropdown entirely
+  dropdown.addEventListener('focusout', (e) => {
+    if (!dropdown.contains(e.relatedTarget)) {
+      dropdown.classList.remove('active');
+      content.classList.remove('active');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+// Mobile dropdown toggle
+document.querySelectorAll('.mobile-menu-wrapper .dropdown').forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+    const isExpanded = dropdown.classList.contains('active');
+    link.setAttribute('aria-expanded', String(isExpanded));
+  });
+});
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.nav-right .dropdown').forEach(d => {
+    d.classList.remove('active');
+    const c = d.querySelector('.dropdown-content');
+    const t = d.querySelector('a');
+    if (c) c.classList.remove('active');
+    if (t) t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-right .dropdown')) {
+    closeAllDropdowns();
+  }
 });
 </script>
 
