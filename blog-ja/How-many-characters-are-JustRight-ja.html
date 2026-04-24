@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
       <title>ちょうど良い文字数とは？日本語と英語の「読みやすさ」の違いを比較してみました。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="日本語と英語の最適な文字数（CPL）をデスクトップ、タブレット、モバイルで比較。言語ごとに文字数が異なる理由や、読みやすい多言語レイアウトを設計するためのポイントを分かりやすく簡単に解説します。">
@@ -20,10 +21,10 @@
     <nav class="nav">
         <div class="header">
           <div class="logo">
-            <a href="../index.html"><img src="../images/logo6.png" alt="Logo"></a>
+            <a href="../index.html"><img src="../images/logo6.png" alt="Cozy Corner Design"></a>
           </div>
       
-          <div class="hamburger" id="hamburger">
+         <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0"></div>
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -254,7 +255,7 @@
     <footer class="footer">
             <div class="footer-content">
                <div class="footer-logo">
-               <img src="../images/Logo2.png" alt="Logo">
+               <img src="../images/Logo2.png" alt="Cozy Corner Design">
             </div>
             <div class="footer-contact">
                 <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
@@ -271,7 +272,7 @@
             <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
 </footer>
 
- <!--hamburger menu-->
+ <!--hamburger menu------fully keyboard and screen reader accessible------------->
 <script>
 const hamburger = document.getElementById("hamburger");
 const menuWrapper = document.querySelector(".mobile-menu-wrapper");
@@ -279,19 +280,8 @@ const menuWrapper = document.querySelector(".mobile-menu-wrapper");
 hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
-});
-
-// Mobile dropdown toggle
-const mobileDropdowns = document.querySelectorAll('.mobile-menu-wrapper .dropdown');
-mobileDropdowns.forEach(dropdown => {
-  const link = dropdown.querySelector('a');
-  const content = dropdown.querySelector('.dropdown-content');
-  
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle('active');
-    content.classList.toggle('active');
-  });
+  const isExpanded = hamburger.classList.contains("open");
+  hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Close mobile menu when clicking on a non-dropdown link
@@ -300,9 +290,81 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    hamburger.setAttribute("aria-expanded", false);
   });
 });
+
+// Desktop dropdown — keyboard + mouse accessible
+document.querySelectorAll('.nav-right .dropdown').forEach(dropdown => {
+  const trigger = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+
+  // Toggle on click
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isOpen = dropdown.classList.contains('active');
+    closeAllDropdowns(); // close others first
+    if (!isOpen) {
+      dropdown.classList.add('active');
+      content.classList.add('active');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Toggle on Enter or Space, close on Escape
+  trigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      trigger.click();
+    }
+    if (e.key === 'Escape') {
+      closeAllDropdowns();
+      trigger.focus();
+    }
+  });
+
+  // Close when focus leaves the dropdown entirely
+  dropdown.addEventListener('focusout', (e) => {
+    if (!dropdown.contains(e.relatedTarget)) {
+      dropdown.classList.remove('active');
+      content.classList.remove('active');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+// Mobile dropdown toggle
+document.querySelectorAll('.mobile-menu-wrapper .dropdown').forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+    const isExpanded = dropdown.classList.contains('active');
+    link.setAttribute('aria-expanded', String(isExpanded));
+  });
+});
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.nav-right .dropdown').forEach(d => {
+    d.classList.remove('active');
+    const c = d.querySelector('.dropdown-content');
+    const t = d.querySelector('a');
+    if (c) c.classList.remove('active');
+    if (t) t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-right .dropdown')) {
+    closeAllDropdowns();
+  }
+});
 </script>
+
 
        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>

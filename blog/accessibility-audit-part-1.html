@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Why Accessibility Matters for Small Businesses (And How I'm Auditing My Own Website)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Accessibility isn't just about compliance — it's about clarity, usability, and how people actually experience your site. Learn how I'm auditing my own website and what I've found so far.">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;800&family=Karla:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+ 
+  <body>
+    <nav class="nav">
+        <div class="header">
+          <div class="logo">
+            <a href="../index.html"><img src="../images/logo6.png" alt="Cozy Corner Design"></a>
+          </div>
+      
+          <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+      
+          <div class="nav-right">
+          <ul class="menu" id="menu">
+            <li class="page"><a href="../index.html#case-study-section">CASE STUDY</a></li>
+            <li class="page"><a href="../service.html">SERVICE</a></li>
+            <li class="page"><a href="../blog.html">BLOG</a></li>
+            <li class="page"><a href="../japanese-clients.html" lang="ja">日本のお客様へ</a></li>
+          </ul>
+      
+          <div class="cta-desktop">
+            <a href="mailto:cozycornerdesign.ca@gmail.com">
+              <button type="button" class="btn-default">Say hi!</button>
+            </a>
+          </div>
+         </div> 
+        </div>
+  
+        <!-- Mobile Menu Wrapper -->
+    <div class="mobile-menu-wrapper">
+      <ul class="menu" id="menu-mobile">
+        <li class="page"><a href="../index.html#case-study-section">CASE STUDY</a></li>
+        <li class="page"><a href="../service.html">SERVICE</a></li>
+        <li class="page"><a href="../blog.html">BLOG</a></li>
+        <li class="page"><a href="../japanese-clients.html" lang="ja">日本のお客様へ</a></li>
+      </ul>
+    </div>
+  </nav>
+ 
+      <main>
+      <div class="container">
+        <div class="post-header">
+           <h1 class="post-title">Why Accessibility Matters for Small Businesses<br>(And How I'm Auditing My Own Website)</h1>
+         <div class= "post-details">
+           <span class="tag accessibility">accessibility</span>
+           <span class="published-date">Published: April 24, 2026</span>
+         </div>
+        </div>
+           <hr class="separator">
+      <div class="post-content">
+ 
+           <p>When we think about accessibility, it's easy to assume it's something complex — or something only large companies need to worry about.</p>
+           <p>But as I started looking more closely at my own website, I realized something simple:</p>
+           <p>Accessibility isn't just about compliance. It's about clarity, usability, and how people actually experience your site.</p>
+           <p>So this month, I decided to take a step back and audit my own website starting with my homepage and services page to better understand where I can improve.</p>
+ 
+         <div class="disclaimer-box">
+            <h2>⚠️ Disclaimer:</h2>
+            <p>This audit reflects my own website and learning process as I explore web accessibility and WCAG. The observations and improvements shared here may vary depending on your website, goals, and users. Please use this as a reference, not a fixed standard.</p>
+        </div>
+            
+            <div class="postimage">
+           <img src="../images/april2026main.png" alt="website audit details">
+         </div>
+
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">Why Accessibility Matters (Especially for Small Businesses)</h1>
+           <p>Accessibility is often associated with supporting users with disabilities — and that's absolutely important. But in practice, it goes beyond that.</p>
+           <p>Have you ever injured your hand and couldn't use a mouse for a while? Or strained your eyes and found it difficult to read a screen?</p>
+           <p>Situations like these can happen to anyone. They may not be permanent, but even temporary changes can affect how we interact with a website.</p>
+           <p>Many people assume accessibility doesn't apply to them. But in reality, there are moments when we all rely on features we may not have noticed before.</p>
+           <p>Accessibility affects:</p>
+           <p class="list-p">&#x2022; how easily someone can read your content</p>
+           <p class="list-p">&#x2022; how clearly your message comes across</p>
+           <p class="list-p">&#x2022; how confidently someone can navigate your site</p>
+           <br>
+           <p>For small businesses, this directly connects to:</p>
+           <p class="list-p">&#x2022; trust</p>
+           <p class="list-p">&#x2022; user experience</p>
+           <p class="list-p">&#x2022; and ultimately, conversion</p>
+           <br>
+           <p>Guidelines from organizations like the World Wide Web Consortium provide a helpful foundation, but accessibility isn't just a checklist — it's an ongoing design consideration.</p>
+           <p>As I continue learning about web accessibility and WCAG as a designer, I wanted to understand how to apply these principles in a practical way — how to create accessible content, identify issues, and make meaningful improvements.</p>
+           <p>As I started looking more closely at my own site, I realized there were things I hadn't questioned before — especially in how people actually navigate and experience it.</p>
+           <p>By auditing my website, I'm able to step into a different perspective, notice details like features, labels, and color choices I might otherwise overlook, and improve the overall clarity and accessibility of both my own work and future client projects.</p>
+           <p>It feels like a small step, but an important one for reflection.</p>
+ 
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">What I'm Auditing</h1>
+           <p>Rather than reviewing every page at once, I chose to start with my homepage and services page.</p>
+           <p>These pages represent key moments in the user journey — from first landing on the site, to understanding what I offer, to deciding whether to take action.</p>
+           <p class="list-p">&#x2022; The homepage shapes the first impression and sets the tone.</p>
+           <p class="list-p">&#x2022; The services page helps users evaluate whether my work aligns with their needs.</p>
+           <br>
+           <p>By focusing on these areas first, I'm able to better understand how accessible and clear the experience is at the most important decision points.</p>
+ 
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">Tools I'm Using</h1>
+           <p>To get a baseline, I'm using a combination of tools and manual testing.</p>
+           <p>Automated tools:</p>
+           <p class="list-p">&#x2022; Google Chrome (Lighthouse)</p>
+           <p class="list-p">&#x2022; WAVE Evaluation Tool</p>
+           <br>
+           <p>These tools help highlight technical issues like contrast or missing attributes. But they only show part of the picture.</p>
+ 
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">The Questions I'm Asking</h1>
+           <p>The most valuable part of this process isn't the tools — it's the questions. Here are some of the things I'm actively asking as I review my site:</p>
+ 
+           <h2 style="padding-top:8px;">👀 &nbsp;&nbsp; Visual clarity</h2>
+           <p class="list-p">&#x2022; Is the text easy to read?</p>
+           <p class="list-p">&#x2022; Do important elements stand out clearly?</p>
+ 
+           <h2 style="padding-top:8px;">⌨️ &nbsp;&nbsp; Keyboard navigation</h2>
+           <p class="list-p">&#x2022; Can I navigate the entire site without a mouse?</p>
+           <p class="list-p">&#x2022; Can I access menus, buttons, and links using only the keyboard?</p>
+ 
+           <h2 style="padding-top:8px;">🔊 &nbsp;&nbsp; Screen reader experience <span style="font-weight:400;">(using VoiceOver)</span></h2>
+           <p class="list-p">&#x2022; Does the content make sense when read aloud?</p>
+           <p class="list-p">&#x2022; Are links and buttons clearly labeled?</p>
+ 
+           <h2 style="padding-top:8px;">🔍 &nbsp;&nbsp; Zoom &amp; readability</h2>
+           <p class="list-p">&#x2022; Is the site still usable at 200% zoom?</p>
+           <p class="list-p">&#x2022; Does anything break or become difficult to read?</p>
+ 
+           <h2 style="padding-top:8px;">🌏 &nbsp;&nbsp; Language clarity</h2>
+           <p class="list-p">&#x2022; Is the content easy to understand for non-native English speakers?</p>
+           <p class="list-p">&#x2022; Are instructions simple and clear?</p>
+           <p>This is especially important to me as a bilingual designer working across cultures.</p>
+ 
+           <h2 style="padding-top:8px;">🧱 &nbsp;&nbsp; Technical structure</h2>
+           <p class="list-p">&#x2022; Is the HTML structured in a meaningful way?</p>
+           <p class="list-p">&#x2022; Are ARIA attributes used appropriately (and not overused)?</p>
+ 
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">What I've Learned So Far</h1>
+           <p>Even at this early stage, a few things have stood out.</p>
+           <p>When I tried navigating my site using only a keyboard, I realized something I hadn't noticed before — the navigation dropdown menu couldn't be opened using the Tab or Enter keys.</p>
+           <p>It made me pause, because it meant that some users wouldn't be able to access key pages at all.</p>
+           <p>After updating the menu to support keyboard interaction and improving the focus states, I started to see navigation differently. It's not just about how something looks or works with a mouse — it's about making sure it works for different ways people move through a site.</p>
+           <p>Beyond that moment, a few broader patterns have become clear:</p>
+           <p class="list-p">&#x2022; Accessibility issues are often subtle, but impactful</p>
+           <p class="list-p">&#x2022; Design decisions that feel visually "right" don't always translate to usability</p>
+           <p class="list-p">&#x2022; Small changes can make a big difference in how someone experiences a site</p>
+           <br>
+           <p>Most importantly, I've started to see my own work from a different perspective.</p>
+ 
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">What's Next</h1>
+           <p>In the next post, I'll share the specific issues I found using the tools mentioned in this blog, how I documented them, and how I approached fixing them.</p>
+           <p>I'll also walk through what those changes mean for users with different needs and abilities, and how even small adjustments can improve the overall experience.</p>
+ 
+           <h1 style="color: #073E35; margin-top: 50px; font-size: 28px; padding-bottom: 5px;">My final thoughts</h1>
+           <p>I don't see accessibility as something you "finish." It's something you consider from the beginning — and continue to refine as you design.</p>
+           <p>In reality, though, accessibility can sometimes become an afterthought due to timelines, delivery pressures, or budget constraints. That was the case in parts of my own website.</p>
+           <p>Through this process, I wanted to take a step back and work through those gaps more intentionally — and share that process honestly.</p>
+           <p>This is still the beginning, but it's already helping me create more thoughtful, inclusive work.</p>
+ 
+           <div class="cta-soft">
+             <a href="mailto:cozycornerdesign.ca@gmail.com" class="btn-default">
+             Tell me about your business
+             </a>
+           </div>
+           <br></br>
+           <p>Thank you for reading until the end. I hope you'll come back for the next post 🌱</p>
+        </div>
+  
+     <div class="cta-read-english">
+        <a class="cta-link-btn" href="../blog-ja/accessibility-audit-part1-ja.html" aria-label="Read the Japanese version: 小さなビジネスにとってアクセシビリティが大切な理由（そして自分のサイトを見直しているわけ）">
+            Read the Japanese version: 小さなビジネスにとってアクセシビリティが大切な理由（そして自分のサイトを見直しているわけ）
+        <span aria-hidden="true">↗</span>
+        </a>
+        </div>
+
+       <div class="share-section">
+            <p>Share It:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.cozycornerdesign-ca.com/blog/accessibility-audit-part1.html" target="_blank" rel="noopener noreferrer">
+              <img src="../images/facebook-icon.png" alt="Facebook Icon">
+            </a>
+        </div>
+         <div class="btn"><a href="../blog.html" class="read-more-btn">Read Other Articles</a></div>
+      </div>
+ 
+     <div class="cta">
+      <section class="cta-section">
+         <h3 class="cta-title">Are you thinking about creating or updating your website?</h3>
+         <p class="cta-text">I am a UX/product designer who brings Japanese-English cultural fluency to digital experiences and marketing. With over 5 years of professional experience in health, medical, and AI sectors, I combine my bicultural background with human-centered design expertise to create accessible, effective solutions that bridge Eastern and Western audiences. Having lived and worked in both cultural contexts, I offer unique insights that go beyond typical design services.</p>
+         <p class="cta-text">Interested in working together? I'd love to help you create designs that resonate across cultures. Let's chat how we can bring your cross-cultural vision to life.</p>
+         <div> <a href="https://calendly.com/cozycornerdesign-ca/30min" target="_blank" rel="noopener">
+            <button class="book-button">Start free consultation</button>
+          </a></div>
+      </section>
+     </div>
+    </main>
+    <footer class="footer">
+            <div class="footer-content">
+               <div class="footer-logo">
+               <img src="../images/Logo2.png" alt="Cozy Corner Design">
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
+                <i class="fas fa-envelope"></i>
+               cozycornerdesign.ca@gmail.com
+               </a>
+               <span class="footer-instagram-link">
+                <a href="https://www.instagram.com/cozycornerdesignca/?next=%2F" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    cozycornerdesignca
+                </a></span>
+            </div>
+            </div>
+            <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
+    </footer>
+ 
+<!--hamburger menu-->
+<script>
+const hamburger = document.getElementById("hamburger");
+const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+ 
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("open");
+  menuWrapper.classList.toggle("active");
+});
+ 
+// Mobile dropdown toggle
+const mobileDropdowns = document.querySelectorAll('.mobile-menu-wrapper .dropdown');
+mobileDropdowns.forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+  
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+  });
+});
+ 
+// Close mobile menu when clicking on a non-dropdown link
+const mobileLinks = document.querySelectorAll('.mobile-menu-wrapper a:not(.dropdown > a)');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    menuWrapper.classList.remove('active');
+  });
+});
+</script>
+ 
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+ 
+            gtag('config', 'UA-140417621-1');
+          </script>
+       </body>
+     </html>
