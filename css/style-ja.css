@@ -455,7 +455,7 @@
   .case-study-section-title {
     font-size: 56px;
     font-weight: bold;
-    color: #CBCBCB;
+    color: #4B5563;
     text-align: left;
     margin: 0;           /* Remove extra margin */
   }
@@ -818,7 +818,7 @@
     text-align: center;
     margin-bottom: 20px;
     margin-top: 30px;
-    color: #333333
+    color: #333333;
   }
 
   .section-title {
@@ -855,7 +855,7 @@
   .website-link {
     display: block;
     margin-top: 10px; /* Add spacing between image and link */
-    color: #828282;
+    color: #4B5563;
     font-size: 16px;
     text-align: center;
   }
@@ -1486,6 +1486,11 @@
   padding: 20px;
   margin: 0 auto;
 }
+
+.recent-work .section-title {
+  font-size: 30px;
+  
+  }
 
 .section-title {
       font-size: 20px;

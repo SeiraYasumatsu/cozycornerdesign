@@ -610,7 +610,7 @@ a:focus + .cta-tagline {
 .case-study-section-title {
   font-size: 56px;
   font-weight: bold;
-  color: #CBCBCB;
+  color: #4B5563;
   text-align: left;
   margin: 0;           /* Remove extra margin */
 }
@@ -919,7 +919,7 @@ padding-bottom: 5rem;
 text-align: center;
 margin-bottom: 20px;
 margin-top: 30px;
-color: #828282;
+color: #333333;
 }
 
 .section-title {
@@ -959,7 +959,7 @@ width: 100%;
 .website-link {
 display: block;
 margin-top: 10px; /* Add spacing between image and link */
-color: #828282;
+color: #4B5563;
 font-size: 16px;
 text-align: center;
 }
@@ -1768,8 +1768,8 @@ margin: 0 auto;
   text-align: left;
   margin-bottom: 20px;
   margin-top: 30px;
-  color: #CBCBCB;
   font-size: 56px;
+  color: #333333;
   }
 
 
