@@ -43,9 +43,10 @@ body{
   width: 50%;
 }*/
 
-.logo img{
-width: 80px;
-margin-left: 1rem;
+.logo img {
+  width: 70px;
+  margin-left: 1rem;
+  display: block;
 }
 
 /* Hamburger */
@@ -59,6 +60,9 @@ margin-left: 1rem;
   margin-left: auto;
   margin-right: 1rem;
   z-index: 1001;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .hamburger .bar {
@@ -191,6 +195,19 @@ margin-left: 1rem;
             transform: rotate(180deg);
         }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: #0B6254;
+  color: white;
+}
+
 /*#btnScrollToTop {
     position: fixed;
     right: 2rem;
@@ -228,12 +245,6 @@ margin-left: 1rem;
     color: #0B6254;
     border: 2px solid #0B6254;
 }
-
-.mobile-center-button {
-  display: flex;
-  justify-content: center;
-}
-
 
 .cta-desktop {
   display: none;
@@ -1232,7 +1243,7 @@ opacity: 1; /* Make active dot more visible */
   margin-top: 5px;
 }
 
-.footer .copyright h4 {
+.footer .copyright p {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 11.5px;
   font-weight: 500;
@@ -1302,11 +1313,11 @@ opacity: 1; /* Make active dot more visible */
   }
 
   .hamburger {
-    display: none;
+    display: flex;
   }
 
   .mobile-menu-wrapper {
-    display: none;
+    display: block;
   }
 
   .menu {
@@ -1328,20 +1339,11 @@ opacity: 1; /* Make active dot more visible */
     white-space: nowrap; /* Prevents text from wrapping */
   }
 
-  .logo img{
-    /*width: 30%;*/
-    width: 120px;
-    padding-left: 1rem;
-    }
+  .logo img {
+  width: 100px;
+  padding-left: 1rem;
+}
 
-  /*
-  .logo{
-  padding: 2rem 0.5rem 2rem 2rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 50%;
-}*/
 
 
 #btnScrollToTop {
@@ -1383,10 +1385,6 @@ opacity: 1; /* Make active dot more visible */
     border: 2px solid #0B6254;
 }
 
-.mobile-center-button {
-  justify-content: flex-start;
-}
-
 .cta-desktop {
     display: block;
     margin-left: 2rem;
@@ -1397,10 +1395,11 @@ opacity: 1; /* Make active dot more visible */
     display: none;
   }
 
-  .page a {
-    padding: 0.5rem 0;
-    font-size: 1.3rem;
-  }
+/* In your 768px block */
+.page > a {
+  padding: 0.5rem 0;
+  font-size: 1.3rem;
+}
   
   /* Desktop Dropdown */
  .dropdown-content {
@@ -1453,6 +1452,10 @@ opacity: 1; /* Make active dot more visible */
   transform: rotate(180deg);
 }
 
+.dropdown-toggle {
+  display: none; /* ✅ hidden on desktop, CSS arrow handles it */
+}
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -1464,7 +1467,7 @@ opacity: 1; /* Make active dot more visible */
     display: flex;
     align-items: center;
     margin-left: auto;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: nowrap; /* Prevent wrapping */
     max-width: auto; /* Prevent it from pushing too far */
   }
@@ -1872,114 +1875,203 @@ margin: 0 auto;
   text-align: start;
 }
 
-.footer .copyright h4 {
+.footer .copyright p {
   font-size: 12px;
 }
 
 
 }
 
-@media screen and (min-width: 991px){/*----Desktop---*/
-.hero{
-  max-width: 1400px;
-  margin: 0 auto;
-}
+@media screen and (min-width: 991px) {
 
-.menu {
-  gap: 1.5rem; /* Reduce space for smaller screens */
-}
-
-.nav-right {
-  max-width: none; /* ✅ Let it grow naturally */
-}
-
-.logo{
-  padding-left: 5rem;
-}
-
-.page a{
-  padding-right: 5rem;
-}
-
-.title p{
-  font-size: 2rem;
-  width:140vh;
-}
-
-.statement {
-  /*margin-bottom: 40px; /* Add margin between text and button */
-  padding-left: 10rem;
-  padding-top: 10rem;
-}
-
-.statement h1{
-  font-size: 46px;
-}
-
-.about{
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-  /*gap: 30px;*/
-  margin-top: 5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-top: 7rem;
-  /*padding-bottom: 10rem;*/
-}
-
-.about .content{
-  /*padding:20px;*/
-  padding-left: 20rem;
-  padding-right: 5rem;
-}
-
-.about p{
-  font-size: 18px;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  max-width: 680px;
-  line-height: 1.7;
-}
-
-.about .image img{
-  max-width: 100%;
-  width: 60%;
-}
-
-.how-we-work {
-  margin-top: 10rem;
-  padding-top: 7rem;
-}
-
-.step-content {
-  flex: 1;
-  padding: 20px;
-}
-
-.work-step {
-  display: flex;
-  /*margin-bottom: 20px;*/
-  align-items: center;
-}
-
-.footer-logo img {
-  width: 15%; /* Adjust logo size as needed */
-}
-
-}
-
-@media screen and (min-width: 1600px){/*----LargeDesktop---*/
-  .logo img{ /*desktop logo size*/
-    width: 15%;
-   }
-
-  .footer-logo img {
-    width: 10%; /* Adjust logo size as needed */
+  .hero {
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
+  .logo {
+    flex-shrink: 0;
+    min-width: 100px;
+    padding-left: 1.5rem;
+  }
 
+  .title p {
+    font-size: 2rem;
+    width: 140vh;
+  }
+
+  .statement {
+    padding-left: 10rem;
+    padding-top: 10rem;
+  }
+
+  .statement h1 {
+    font-size: 46px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 7rem;
+  }
+
+  .about .content {
+    padding-left: 20rem;
+    padding-right: 5rem;
+  }
+
+  .about p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    max-width: 680px;
+    line-height: 1.7;
+  }
+
+  .about .image img {
+    max-width: 100%;
+    width: 60%;
+  }
+
+  .how-we-work {
+    margin-top: 10rem;
+    padding-top: 7rem;
+  }
+
+  .step-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .work-step {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    width: 15%;
+  }
+
+} /* end min-width: 991px */
+
+
+/* ---- Desktop nav: only show full nav above 1100px ---- */
+@media screen and (min-width: 1100px) {
+
+  .logo img {
+    width: 120px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-menu-wrapper {
+    display: none !important; /* override any .active state */
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    min-width: 0;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    padding: 0;
+    width: auto;
+    background: none;
+  }
+
+  .page > a {
+    padding: 0.5rem 2.5rem 0.5rem 0;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    letter-spacing: 0.2rem;
+  }
+
+  .cta-desktop {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .cta-mobile {
+    display: none;
+  }
+
+  .btn-default {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-right: 2rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+} /* end min-width: 1100px */
+
+
+/* ---- Hamburger shows below 1100px ---- */
+@media screen and (max-width: 1099px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .mobile-menu-wrapper.active {
+    display: block !important;
+    max-height: 500px;
+  }
+
+  .mobile-menu-wrapper .menu {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: flex-start; 
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    width: 100%;
+  }
+
+} /* end max-width: 1099px */
+
+
+@media screen and (min-width: 768px) and (max-width: 1099px) {
+  .mobile-menu-wrapper .menu {
+    padding: 2rem 3rem;   /* more breathing room on tablet */
+    gap: 2rem;            /* more space between links too */
+  }
 }
 
+@media screen and (min-width: 1600px) { /*---- Large Desktop ----*/
+
+  .footer-logo img {
+    width: 10%;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+} /* end min-width: 1600px */
+
+
+/* ---- Hide CTA button on small mobile ---- */
 @media (max-width: 768px) {
   .header .btn-default {
     display: none;
