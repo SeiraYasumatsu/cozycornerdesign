@@ -135,6 +135,24 @@
     color: #EFBB3F;
     font-weight: 800;
   }
+
+  /* Language switcher */
+.lang-switch {
+  border: 1.5px solid currentColor;
+  border-radius: 20px;
+  padding: 0.3rem 1.2rem !important;
+  font-size: 16px !important;
+  letter-spacing: 0.2rem !important;
+  opacity: 0.75;
+}
+
+.lang-switch:hover {
+  opacity: 1;
+  background-color: #EFBB3F;
+  border-color:#EFBB3F;
+  color: black !important;
+  font-weight: 600 !important;
+}
   
   /* Mobile Dropdown Styles */
         .dropdown {
@@ -427,9 +445,13 @@
   }
   
   .about .content{
-    /*padding:20px;*/
    text-align: left;
   }
+
+  .about > .content:last-child {
+  padding-top: 0;
+  margin-top: 0;
+}
   
   .about p{
     color: black;
@@ -449,6 +471,16 @@
     width: 70%;
     padding-left: 4rem
   }
+
+  /* About section spacing fixes */
+.about .content .btn-default {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about p {
+  margin-bottom: 1rem;
+}
 
   /* Instagram Link Styling */
 .instagram-link {
@@ -582,7 +614,7 @@
     text-align: center;
     font-size: 20px;
     margin-bottom: 22px;
-    padding-top: 16px;
+    /*padding-top: 16px;*/
   }
   
   .work-step {
@@ -874,7 +906,6 @@
 
   .section-title {
         text-align: center;
-        font-size: 18px;
       }
 
   
@@ -1470,10 +1501,9 @@
   }
     
    
-    .about .content{
-      /*padding:20px;*/
+   /* .about .content{
       padding: 20px 5rem;
-    }
+    }*/
   
     .about p{
       font-size: 18px;
@@ -1750,9 +1780,14 @@ h3.step-title  {
   }
   
   .about .content{
-    /*padding:20px;*/
     padding-left: 20rem;
     padding-right: 5rem;
+  }
+
+   /* ADD THIS: */
+  .about > .content:last-child {
+    padding-top: 0;
+    margin-top: 0;
   }
   
   .about p{

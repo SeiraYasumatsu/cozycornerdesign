@@ -137,6 +137,24 @@ body{
   text-decoration: none; /* <— add this */
 }
 
+  /* Language switcher */
+.lang-switch {
+  border: 1.5px solid currentColor;
+  border-radius: 20px;
+  padding: 0.3rem 1.2rem !important;
+  font-size: 16px !important;
+  letter-spacing: 0.2rem !important;
+  opacity: 0.75;
+}
+
+.lang-switch:hover {
+  opacity: 1;
+  background-color: #EFBB3F;
+  border-color:#EFBB3F;
+  color: black !important;
+  font-weight: 600 !important;
+}
+
 /* Mobile Dropdown Styles */
 .dropdown {
             position: relative;
