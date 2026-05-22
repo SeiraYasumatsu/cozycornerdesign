@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Accessibility Audit Part 2: What I Learned by Re-Evaluating My Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Going deeper on web accessibility: what I discovered by testing my homepage with keyboard navigation, VoiceOver, zoom testing, and mobile interaction — and what it taught me about accessibility design.">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;800&family=Karla:wght@200;300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="header">
+    <div class="logo">
+      <a href="index.html"><img src="../images/logo6.png" alt="Cozy Corner Design"></a>
+    </div>
+
+    <button type="button" class="hamburger" id="hamburger"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </button>
+
+    <div class="nav-right">
+      <ul class="menu" id="menu">
+        <li class="page dropdown">
+          <a href="#clients" aria-haspopup="true" aria-expanded="false">WORK WITH US</a>
+          <ul class="dropdown-content">
+            <li><a href="../b2b.html">Multinational companies</a></li>
+            <li><a href="../creatives.html">Agencies | Consultants</a></li>
+          </ul>
+        </li>
+        <li class="page"><a href="../service.html">SERVICE</a></li>
+        <li class="page"><a href="../index.html#case-study-section">CASE STUDY</a></li>
+        <li class="page"><a href="../blog.html">BLOG</a></li>
+        <li class="page"><a href="../index.html#faq-section">FAQ</a></li>
+        <li class="page"><a href="../japanese-clients.html" lang="ja">日本のお客様へ</a></li>
+      </ul>
+
+      <div class="cta-desktop">
+        <a href="mailto:cozycornerdesign.ca@gmail.com" class="btn-default" aria-label="Send us an email">Say hi!</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Wrapper -->
+  <div class="mobile-menu-wrapper" id="mobile-menu" hidden>
+    <ul class="menu" id="menu-mobile">
+      <li class="page dropdown">
+        <a href="#clients" aria-haspopup="true" aria-expanded="false">WORK WITH US</a>
+        <ul class="dropdown-content">
+          <li><a href="../b2b.html">Multinational companies</a></li>
+          <li><a href="../creatives.html">Agencies | Consultants</a></li>
+        </ul>
+      </li>
+      <li class="page"><a href="../service.html">SERVICE</a></li>
+      <li class="page"><a href="../index.html#case-study-section">CASE STUDY</a></li>
+      <li class="page"><a href="../blog.html">BLOG</a></li>
+      <li class="page"><a href="../index.html#faq-section">FAQ</a></li>
+      <li class="page"><a href="../japanese-clients.html" lang="ja">日本のお客様へ</a></li>
+    </ul>
+  </div>
+</nav>
+    
+    <!--<nav class="nav">
+        <div class="header">
+          <div class="logo">
+            <a href="../index.html"><img src="../images/logo6.png" alt="Cozy Corner Design"></a>
+          </div>
+
+          <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+          <div class="nav-right">
+          <ul class="menu" id="menu">
+            <li class="page"><a href="../index.html#case-study-section">CASE STUDY</a></li>
+            <li class="page"><a href="../service.html">SERVICE</a></li>
+            <li class="page"><a href="../blog.html">BLOG</a></li>
+            <li class="page"><a href="../japanese-clients.html" lang="ja">日本のお客様へ</a></li>
+          </ul>
+
+          <div class="cta-desktop">
+            <a href="mailto:cozycornerdesign.ca@gmail.com">
+              <button type="button" class="btn-default">Say hi!</button>
+            </a>
+          </div>
+         </div>
+        </div>
+
+    <div class="mobile-menu-wrapper">
+      <ul class="menu" id="menu-mobile">
+        <li class="page"><a href="../index.html#case-study-section">CASE STUDY</a></li>
+        <li class="page"><a href="../service.html">SERVICE</a></li>
+        <li class="page"><a href="../blog.html">BLOG</a></li>
+        <li class="page"><a href="../japanese-clients.html" lang="ja">日本のお客様へ</a></li>
+      </ul>
+    </div>
+  </nav>-->
+
+      <main>
+      <div class="container">
+        <div class="post-header">
+           <h1 class="post-title">Accessibility Audit Part 2: What I Learned by Re-Evaluating My Homepage</h1>
+         <div class="post-details">
+           <span class="tag accessibility">accessibility</span>
+           <span class="published-date">Published: May 22, 2026</span>
+         </div>
+        </div>
+           <hr class="separator">
+      <div class="post-content">
+
+           <p>Last month, I wrote about why accessibility matters for small businesses and why I decided to start reviewing my own website through a more accessibility-focused lens.</p>
+           <p>This month, I wanted to go a little deeper.</p>
+           <p>Rather than approaching accessibility as a broad concept, I focused on something much smaller and more specific: my homepage.</p>
+           <p>At first, I expected the process to be mostly technical. I assumed I would run a few tools, identify some issues, make a couple of fixes, and move on.</p>
+           <p>But as I started actively testing my site in different ways, I realized this process was much less about simply "passing accessibility checks" and much more about understanding how people actually experience a website.</p>
+           <p>Not just how it looks when everything is functioning normally, but how it feels when someone is:</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; navigating using only a keyboard</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; zooming in to comfortably read content</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; relying on touch interaction on mobile</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; or listening to content through screen readers and VoiceOver</p>
+           <br>
+           <div class="postimage">
+             <img src="../images/may2026main.png" alt="overlapping nav, proper heading order, low contrast issue">
+           </div>
+           <p>As I tested my site through those different experiences, issues started surfacing that would have been difficult to discover through normal browsing alone.</p>
+           <p>Some interactions looked completely fine visually, but became difficult to use with a keyboard. Some labels technically existed, but felt unclear when read aloud. Some layouts worked under normal conditions, but started breaking at higher zoom levels.</p>
+           <p>That shift in perspective became one of the most valuable parts of this process.</p>
+           <p>My website itself is relatively simple — built with HTML, CSS, and JavaScript rather than a website builder platform. Because of that, some of the technical fixes may look different depending on how a website is built. But the larger lessons behind them felt much more universal: clarity, usability, communication, and designing with different experiences and situations in mind.</p>
+           <p>More than anything, this process reminded me that accessibility issues are often difficult to discover unless we intentionally test websites in different ways.</p>
+
+        <div class="disclaimer-box">
+            <h2>⚠️ Disclaimer:</h2>
+            <p>This audit reflects my own website and learning process as I explore web accessibility and WCAG. The observations and improvements shared here may vary depending on your website, goals, and users. Please use this as a reference, not a fixed standard.</p>
+        </div>
+
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">Slowing Down Enough to Experience the Site Differently</h1>
+           <p>To evaluate my homepage, I combined automated tools with manual testing.</p>
+           <p><strong>I used tools like:</strong></p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; Google Chrome Lighthouse</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; WAVE Evaluation Tool</p>
+           <br>
+           <p>These helped surface technical issues such as low color contrast, touch target sizing, unclear labels, and structural accessibility concerns.</p>
+           <p>But after a while, I realized something important: the tools could tell me where problems existed, but they could not fully show me what the actual user experience felt like.</p>
+           <p>So instead of only reviewing reports and scores, I started interacting with my site differently.</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; I tried navigating without a mouse.</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; I zoomed the browser to 200%.</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; I tested mobile interactions more carefully.</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; I listened to how content and labels were read aloud through VoiceOver.</p>
+           <br>
+           <p>And through those experiences, I started noticing issues that would have been very easy to miss otherwise.</p>
+           <p>Not because the website was dramatically broken, but because certain problems only became visible when the site was experienced under different conditions and interaction methods.</p>
+           <p>That was one of the biggest takeaways from this process: accessibility auditing is not only about identifying technical problems. It is also about intentionally experiencing a website from perspectives we may not normally consider during everyday design and development work.</p>
+
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">Documenting the Process Changed the Way I Thought About It</h1>
+           <p>As I continued testing, I realized I needed a better way to organize what I was finding. So I created a simple accessibility audit sheet in Notion.</p>
+           <p>At first, it was mostly practical: a place to keep track of issues so I wouldn't get overwhelmed by them. But over time, it became something more valuable than I expected.</p>
+           <p><strong>For each issue, I documented:</strong></p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; the page</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; the affected component</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; issue type</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; priority and status</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; what I observed</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; how it could impact users</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; how I fixed it</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; and what I learned from the process</p>
+           <br>
+           <p>I also added screenshots to visually capture each issue as I discovered it.</p>
+           <p>What surprised me most was how much documenting slowed me down in a good way. Instead of immediately rushing to "fix" something, I started asking:</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; Why does this matter?</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; What kind of experience does this create?</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; Who could struggle with this?</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; When does this issue start affecting the experience?</p>
+           <br>
+           <p>That shift in mindset ended up becoming one of the most meaningful parts of the audit.</p>
+
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">The Things I Started Seeing Differently</h1>
+
+           <h2 style="padding-top:8px;">⌨️ &nbsp;&nbsp; Navigation Isn't Only About Menus</h2>
+           <br>
+           <p>One of the first things I noticed was that my dropdown navigation menu couldn't be opened using only a keyboard.</p>
+           <p>What stood out to me wasn't only the issue itself, but how differently the experience changed once I stopped relying on a mouse. Visually, the navigation looked completely functional. If I used a mouse, everything worked perfectly.</p>
+           <p>But the moment I removed that one method of interaction, important parts of the site became inaccessible.</p>
+           <p>That experience changed the way I think about navigation. I started realizing that navigation is not simply about organizing links neatly on a page. It's about helping different people move through a website comfortably using different methods and abilities.</p>
+           <p><mark>Something can feel polished on the surface while still quietly creating friction underneath.</mark></p>
+           <br>
+
+           <h2 style="padding-top:8px;">👀 &nbsp;&nbsp; Readability Is More Emotional Than I Realized</h2>
+           <br>
+           <p>Another thing I began noticing was how much readability affects the overall feeling of a website.</p>
+           <p>Some of my text colors were softer and lower contrast because visually they felt subtle and refined. But when I stepped back and reviewed the site more critically, I realized some areas were simply harder to read than they needed to be.</p>
+           <p>Not dramatically unreadable. Just slightly tiring. Slightly unclear. Slightly easier to skip over.</p>
+           <p>And those small moments add up.</p>
+           <p>That realization helped me understand accessibility less as a "requirement" and more as part of communication itself. When content is easier to read, users spend less energy trying to interpret the interface, which means they can focus more naturally on the content and message.</p>
+           <p><mark>It reminded me that clarity itself can be part of a calm and thoughtful user experience.</mark></p>
+           <br>
+
+           <h2 style="padding-top:8px;">📱 &nbsp;&nbsp; Mobile Interactions Feel Different in Real Life</h2>
+           <br>
+           <p>While testing on mobile, I also discovered several interactive elements that technically worked, but felt uncomfortable to tap. Buttons, pagination dots, and smaller interactive elements looked visually balanced on screen yet didn't always feel reliable during actual use.</p>
+           <p>That distinction became surprisingly important. Designing something that looks minimal and designing something that feels comfortable to interact with are not always the same thing.</p>
+           <p>What I appreciated about this discovery was realizing that accessibility improvements do not always require dramatic visual changes. Sometimes a user experience improves through invisible adjustments:</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; slightly larger interaction areas</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; better spacing</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; or more forgiving touch behavior</p>
+           <br>
+           <p>The interface may look almost identical while feeling noticeably easier to use.</p>
+           <br>
+
+           <h2 style="padding-top:8px;">🌏 &nbsp;&nbsp; Accessibility Is Also Reflected in Language</h2>
+           <br>
+           <p>One of the smallest changes I made ended up becoming one of the most memorable parts of this process.</p>
+           <p>Originally, my mobile navigation button used the aria-label: <strong>"Toggle navigation."</strong></p>
+           <p>From a developer's perspective, the label technically made sense. It accurately described the function of the button. But as I continued learning more about accessibility, I started thinking about how this label might be experienced differently by users relying on voice control tools.</p>
+           <p>For example, with tools like Apple Voice Control, users may interact with interfaces by literally speaking commands out loud. In reality, someone is much more likely to say "Open menu," "Tap menu," or simply "Menu" — rather than "Toggle navigation."</p>
+           <p>And if the label does not match the natural language people actually use, the interaction can become confusing or in some cases, difficult to trigger at all.</p>
+           <p>So I changed the label to something much simpler: <strong>"Menu."</strong></p>
+           <p>It was an extremely small change, but it shifted the way I think about accessibility quite a bit. This experience reminded me that accessibility is not only about technical structure or code compliance; it is also about choosing language that feels natural, intuitive, and easy for people to understand and interact with.</p>
+           <p>As someone working across languages and cultures, this felt especially meaningful to reflect on.</p>
+           <p><mark>In many ways, good accessibility and good communication are deeply connected.</mark></p>
+           <br>
+
+           <h2 style="padding-top:8px;">🔍 &nbsp;&nbsp; Responsive Design Doesn't End With Screen Size</h2>
+           <br>
+           <p>Another moment that stayed with me happened during zoom testing. At 200% browser zoom, parts of my navigation began overlapping and breaking.</p>
+           <p>What surprised me was that the layout had technically been responsive already. But responsive at default viewing conditions didn't necessarily mean usable at enlarged viewing conditions.</p>
+           <p>That distinction changed how I think about responsive design. It's not only about adapting to device widths. It's also about adapting to different ways people need to read and interact with content.</p>
+           <p>Zoom testing reminded me that layouts can behave very differently once people interact with them under conditions outside of default viewing settings.</p>
+
+           <h1 style="color: #073E35; font-size: 28px; padding-bottom: 5px; padding-top:5px;">What This Process Is Really Teaching Me</h1>
+           <p>One of the biggest things this accessibility audit has taught me is that many accessibility issues are difficult to notice during normal browsing.</p>
+           <p>It wasn't until I intentionally started testing my site in different ways that certain problems began to appear.</p>
+           <p><strong>For example:</strong></p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; navigating using only a keyboard</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; testing with VoiceOver and screen readers</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; zooming the browser to 200%</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; interacting with the site more carefully on mobile devices</p>
+           <br>
+           <p>Through those experiences, I started noticing issues that would have been easy to miss otherwise. Things that looked completely fine during normal use sometimes became difficult to access, harder to understand, or uncomfortable to interact with under different conditions.</p>
+           <p>That shift in perspective became one of the most valuable parts of this process. More than simply "finding problems," accessibility auditing started to feel like a way of better understanding how people actually experience a website.</p>
+           <p>It also reminded me that accessibility is not something to think about only after a website is finished. In many ways, it's something that should be considered throughout the design and development process: testing different interactions, questioning assumptions, and thinking about how a site feels across different situations and users.</p>
+           <p>And interestingly, many of the accessibility improvements I made also improved the overall user experience more broadly — making the site feel clearer, easier to navigate, and more comfortable to use in general.</p>
+
+           <h1 style="color: #073E35; margin-top: 50px; font-size: 28px; padding-bottom: 5px;">What's Next</h1>
+           <p>This is still very much an ongoing learning process for me. As I continue reviewing other parts of my website, I want to keep documenting not only the issues themselves, but also:</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; how they were discovered</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; how different testing methods changed my perspective</p>
+           <p class="list-p">&#x2022; &nbsp;&nbsp; and what these changes might mean for different users and situations</p>
+           <br>
+           <p>Accessibility can feel overwhelming or highly technical at first. But this experience has shown me that many improvements begin with something much simpler: taking the time to test intentionally, trying different ways of interacting with a site, and slowing down enough to experience it from perspectives we may not normally consider.</p>
+           <p>Thank you for reading, and I hope to continue sharing more of this process in future posts. 🌱</p>
+
+           <div class="cta-soft">
+             <a href="mailto:cozycornerdesign.ca@gmail.com" class="btn-default">
+             Tell me about your business
+             </a>
+           </div>
+           <br></br>
+        </div>
+
+     <div class="cta-read-english">
+        <a class="cta-link-btn" href="../blog-ja/accessibility-audit-part2-ja.html" aria-label="Read the Japanese version: アクセシビリティ監査 パート2：ホームページを見直して学んだこと">
+            Read the Japanese version: アクセシビリティ監査 パート2：ホームページを見直して学んだこと
+        <span aria-hidden="true">↗</span>
+        </a>
+        </div>
+
+       <div class="share-section">
+            <p>Share It:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.cozycornerdesign-ca.com/blog/accessibility-audit-part2.html" target="_blank" rel="noopener noreferrer">
+              <img src="../images/facebook-icon.png" alt="Facebook Icon">
+            </a>
+        </div>
+         <div class="btn"><a href="../blog.html" class="read-more-btn">Read Other Articles</a></div>
+      </div>
+
+     <div class="cta">
+      <section class="cta-section">
+         <h3 class="cta-title">Are you thinking about creating or updating your website?</h3>
+         <p class="cta-text">I am a UX/product designer who brings Japanese-English cultural fluency to digital experiences and marketing. With over 5 years of professional experience in health, medical, and AI sectors, I combine my bicultural background with human-centered design expertise to create accessible, effective solutions that bridge Eastern and Western audiences. Having lived and worked in both cultural contexts, I offer unique insights that go beyond typical design services.</p>
+         <p class="cta-text">Interested in working together? I'd love to help you create designs that resonate across cultures. Let's chat how we can bring your cross-cultural vision to life.</p>
+         <div> <a href="https://calendly.com/cozycornerdesign-ca/30min" target="_blank" rel="noopener">
+            <button class="book-button">Start free consultation</button>
+          </a></div>
+      </section>
+     </div>
+    </main>
+   <footer class="footer" aria-label="Site footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="../images/logo6.png" alt="Cozy Corner Design">
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        cozycornerdesign.ca@gmail.com
+      </a>
+      <a href="https://www.instagram.com/cozycornerdesignca/?next=%2F"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-instagram-link"
+        aria-label="Follow Cozy Corner Design on Instagram (opens in new tab)">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+        cozycornerdesignca
+      </a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2024 | Designed and Developed by Seira Yasumatsu</p>
+  </div>
+</footer>
+ 
+
+<!--hamburger menu------fully voice over, keyboard and screen reader accessible------------->
+<script>
+const hamburger = document.getElementById("hamburger");
+const menuWrapper = document.getElementById("mobile-menu");
+
+hamburger.addEventListener("click", function () {
+  const isOpen = hamburger.classList.toggle("open");
+  menuWrapper.classList.toggle("active");
+  menuWrapper.hidden = !isOpen;
+  hamburger.setAttribute("aria-expanded", isOpen);
+});
+
+// Close mobile menu when clicking on a non-dropdown link
+const mobileLinks = document.querySelectorAll('.mobile-menu-wrapper a:not(.dropdown > a)');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    menuWrapper.classList.remove('active');
+    menuWrapper.hidden = true;
+    hamburger.setAttribute("aria-expanded", false);
+  });
+});
+
+// Desktop dropdown — keyboard + mouse accessible
+document.querySelectorAll('.nav-right .dropdown').forEach(dropdown => {
+  const trigger = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+
+  // Toggle on click
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isOpen = dropdown.classList.contains('active');
+    closeAllDropdowns();
+    if (!isOpen) {
+      dropdown.classList.add('active');
+      content.classList.add('active');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Toggle on Enter or Space, close on Escape
+  trigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      trigger.click();
+    }
+    if (e.key === 'Escape') {
+      closeAllDropdowns();
+      trigger.focus();
+    }
+  });
+
+  // Close when focus leaves the dropdown entirely
+  dropdown.addEventListener('focusout', (e) => {
+    if (!dropdown.contains(e.relatedTarget)) {
+      dropdown.classList.remove('active');
+      content.classList.remove('active');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+// Mobile dropdown toggle
+document.querySelectorAll('.mobile-menu-wrapper .dropdown').forEach(dropdown => {
+  const link = dropdown.querySelector('a');
+  const content = dropdown.querySelector('.dropdown-content');
+
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
+    const isExpanded = dropdown.classList.contains('active');
+    link.setAttribute('aria-expanded', String(isExpanded));
+  });
+});
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.nav-right .dropdown').forEach(d => {
+    d.classList.remove('active');
+    const c = d.querySelector('.dropdown-content');
+    const t = d.querySelector('a');
+    if (c) c.classList.remove('active');
+    if (t) t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-right .dropdown')) {
+    closeAllDropdowns();
+  }
+});
+</script>
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-140417621-1');
+          </script>
+       </body>
+     </html>

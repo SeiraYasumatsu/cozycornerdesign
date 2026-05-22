@@ -27,19 +27,24 @@
   </head>
 
   <body>
-   <nav class="nav">
-     <div class="header">
-     <div class="logo">
+   <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="header">
+    <div class="logo">
       <a href="index.html"><img src="images/logo6.png" alt="Cozy Corner Design"></a>
-     </div>
+    </div>
 
-     <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
-       <div class="bar"></div>
-       <div class="bar"></div>
-       <div class="bar"></div>
-     </div>
+    <button type="button" class="hamburger" id="hamburger"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </button>
 
-     <div class="nav-right">
+    <div class="nav-right">
       <ul class="menu" id="menu">
         <li class="page dropdown">
           <a href="#clients" aria-haspopup="true" aria-expanded="false">WORK WITH US</a>
@@ -56,15 +61,13 @@
       </ul>
 
       <div class="cta-desktop">
-        <a href="mailto:cozycornerdesign.ca@gmail.com">
-          <button type="button" class="btn-default">Say hi!</button>
-        </a>
+        <a href="mailto:cozycornerdesign.ca@gmail.com" class="btn-default" aria-label="Send us an email">Say hi!</a>
       </div>
     </div>
   </div>
 
   <!-- Mobile Menu Wrapper -->
-  <div class="mobile-menu-wrapper">
+  <div class="mobile-menu-wrapper" id="mobile-menu" hidden>
     <ul class="menu" id="menu-mobile">
       <li class="page dropdown">
         <a href="#clients" aria-haspopup="true" aria-expanded="false">WORK WITH US</a>
@@ -81,6 +84,7 @@
     </ul>
   </div>
 </nav>
+
 
        <main>
          <div class="hero-container">
@@ -204,37 +208,41 @@
            </div>
     </main>
 
-         <footer class="footer">
-            <div class="footer-content">
-               <div class="footer-logo">
-               <img src="images/logo6.png" alt="Cozy Corner Design">
-            </div>
-            <div class="footer-contact">
-                <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
-                <i class="fas fa-envelope"></i>
-               cozycornerdesign.ca@gmail.com
-               </a>
-               <span class="footer-instagram-link">
-                <a href="https://www.instagram.com/cozycornerdesignca/?next=%2F" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                    cozycornerdesignca
-                </a></span>
-            </div>
-            </div>
-            <div class="copyright"><h4>&copy; 2024 | Designed and Developed by Seira Yasumatsu </h4></div>
-    </footer>
+<footer class="footer" aria-label="Site footer">
+      <div class="footer-content">
+      <div class="footer-logo">
+         <img src="images/logo6.png" alt="Cozy Corner Design">
+      </div>
+      <div class="footer-contact">
+          <a href="mailto:cozycornerdesign.ca@gmail.com" class="email-link">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+             cozycornerdesign.ca@gmail.com
+          </a>
+      <a href="https://www.instagram.com/cozycornerdesignca/?next=%2F"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-instagram-link"
+        aria-label="Follow Cozy Corner Design on Instagram (opens in new tab)">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+        cozycornerdesignca
+      </a>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2024 | Designed and Developed by Seira Yasumatsu</p>
+  </div>
+</footer>
 
-
-<!--hamburger menu------fully keyboard and screen reader accessible------------->
+<!--hamburger menu------fully voice over, keyboard and screen reader accessible------------->
 <script>
 const hamburger = document.getElementById("hamburger");
-const menuWrapper = document.querySelector(".mobile-menu-wrapper");
+const menuWrapper = document.getElementById("mobile-menu");
 
 hamburger.addEventListener("click", function () {
-  hamburger.classList.toggle("open");
+  const isOpen = hamburger.classList.toggle("open");
   menuWrapper.classList.toggle("active");
-  const isExpanded = hamburger.classList.contains("open");
-  hamburger.setAttribute("aria-expanded", isExpanded);
+  menuWrapper.hidden = !isOpen;
+  hamburger.setAttribute("aria-expanded", isOpen);
 });
 
 // Close mobile menu when clicking on a non-dropdown link
@@ -243,6 +251,7 @@ mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     menuWrapper.classList.remove('active');
+    menuWrapper.hidden = true;
     hamburger.setAttribute("aria-expanded", false);
   });
 });
@@ -256,7 +265,7 @@ document.querySelectorAll('.nav-right .dropdown').forEach(dropdown => {
   trigger.addEventListener('click', (e) => {
     e.preventDefault();
     const isOpen = dropdown.classList.contains('active');
-    closeAllDropdowns(); // close others first
+    closeAllDropdowns();
     if (!isOpen) {
       dropdown.classList.add('active');
       content.classList.add('active');
